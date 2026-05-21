@@ -54,9 +54,10 @@ export default function AboutPage() {
           </p>
           <h2>Édition</h2>
           <p>
-            C33 est édité par Yifei ZHANG, sous la maison d&apos;édition
-            Lumicome (en cours de constitution), depuis Bussy-Saint-Georges,
-            France.
+            C33 est dirigé par Kairos Zhang, au sein de la maison
+            d&apos;édition Lumicome (en cours de constitution), depuis
+            Bussy-Saint-Georges, France. L&apos;éditeur légal de la
+            publication est Yifei ZHANG.
           </p>
         </div>
       </div>
