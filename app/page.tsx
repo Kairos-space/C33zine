@@ -77,7 +77,7 @@ export default function HomePage() {
             两种欲望之间。
           </div>
           <div className="mt-12 font-sans text-[10px] uppercase tracking-[0.22em]">
-            — Kairos Zhang, directrice de la publication —
+            — Kairos Zhang, rédactrice en chef —
           </div>
         </div>
       </section>

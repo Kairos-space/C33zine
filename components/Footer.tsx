@@ -23,8 +23,8 @@ export default function Footer() {
       <div className="px-4 md:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-[10px] font-sans uppercase tracking-[0.16em]">
         <div className="space-y-1">
           <div>© C33 — Lumicome, 2026 · Tous droits réservés</div>
-          <div>Édité par Yifei ZHANG</div>
-          <div>Directrice de la publication : Kairos Zhang</div>
+          <div>Édition & direction de la publication : Yifei ZHANG</div>
+          <div>Rédactrice en chef : Kairos Zhang</div>
         </div>
         <div className="space-y-1 md:text-center">
           <div>ISSN — en cours d&apos;attribution</div>
