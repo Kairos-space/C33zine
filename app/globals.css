@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #ffffff;
+  --ink: #000000;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+/* Article prose */
+.prose-c33 {
+  font-family: var(--font-noto-serif-sc), "Songti SC", "SimSun", serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #000;
+}
+
+.prose-c33 p {
+  margin: 0 0 1.6em 0;
+}
+
+.prose-c33 h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 2.4em 0 1em;
+  letter-spacing: -0.01em;
+}
+
+.prose-c33 h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 2em 0 0.8em;
+}
+
+.prose-c33 blockquote {
+  border-left: 2px solid #000;
+  padding-left: 1.25em;
+  margin: 2em 0;
+  font-style: italic;
+  color: #222;
+}
+
+.prose-c33 a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-c33 hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 3em 0;
+}
+
+.prose-c33 img {
+  width: 100%;
+  height: auto;
+  margin: 2em 0;
+  display: block;
+}
+
+.prose-c33 code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: #f4f4f4;
+  padding: 0.1em 0.35em;
+}
+
+.prose-c33 pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #f4f4f4;
+  padding: 1em 1.25em;
+  overflow-x: auto;
+  margin: 2em 0;
+}
+
+.prose-c33 ul,
+.prose-c33 ol {
+  padding-left: 1.4em;
+  margin: 0 0 1.6em 0;
+}
+
+.prose-c33 li {
+  margin: 0.4em 0;
+}
