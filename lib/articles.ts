@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { getCategoryBySlug } from "./categories";
 
 export type ArticleMeta = {
   slug: string;
@@ -53,6 +54,21 @@ export function getArticlesByIssue(issue: string): Article[] {
     .filter((a) => a.issue === issue)
     .sort((a, b) => {
       // Explicit order wins; articles without order fall to the end, then by date.
+      const ao = a.order ?? Number.POSITIVE_INFINITY;
+      const bo = b.order ?? Number.POSITIVE_INFINITY;
+      if (ao !== bo) return ao - bo;
+      return (a.date ?? "").localeCompare(b.date ?? "");
+    });
+}
+
+export function getArticlesByCategorySlug(slug: string): Article[] {
+  const cat = getCategoryBySlug(slug);
+  if (!cat) return [];
+  return getAllArticles()
+    .filter((a) => a.category === cat.cn)
+    .sort((a, b) => {
+      // Newest issue first, then explicit order, then date.
+      if (a.issue !== b.issue) return b.issue.localeCompare(a.issue);
       const ao = a.order ?? Number.POSITIVE_INFINITY;
       const bo = b.order ?? Number.POSITIVE_INFINITY;
       if (ao !== bo) return ao - bo;

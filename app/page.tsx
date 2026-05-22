@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
+import { categories } from "@/lib/categories";
 import ArticleCard from "@/components/ArticleCard";
 
 export default function HomePage() {
@@ -125,22 +126,17 @@ export default function HomePage() {
             — Rubriques —
           </div>
           <ul className="flex flex-wrap justify-center items-baseline gap-x-8 md:gap-x-12 gap-y-3">
-            {[
-              { fr: "Édito", cn: "卷首" },
-              { fr: "Observations", cn: "观察" },
-              { fr: "Critiques", cn: "评论" },
-              { fr: "Archives", cn: "档案" },
-            ].map((r) => (
-              <li key={r.fr}>
+            {categories.map((c) => (
+              <li key={c.slug}>
                 <Link
-                  href={`/issue/${issue.slug}`}
+                  href={`/category/${c.slug}`}
                   className="group inline-flex items-baseline gap-2 hover:underline underline-offset-4 decoration-1"
                 >
                   <span className="font-display text-[20px] md:text-[24px] tracking-tight">
-                    {r.fr}
+                    {c.fr}
                   </span>
                   <span className="font-serif text-[13px] text-neutral-600 group-hover:text-black">
-                    {r.cn}
+                    {c.cn}
                   </span>
                 </Link>
               </li>
