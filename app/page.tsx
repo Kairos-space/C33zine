@@ -119,29 +119,33 @@ export default function HomePage() {
       </section>
 
       {/* SECTIONS — like Vogue's "Features / Agenda" navigation */}
-      <section>
-        <div className="px-6 md:px-10 py-16 md:py-24 text-center">
-          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-10">
+      <section className="border-t border-black">
+        <div className="px-6 md:px-10 py-10 md:py-14 text-center">
+          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-6">
             — Rubriques —
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-[1000px] mx-auto">
+          <ul className="flex flex-wrap justify-center items-baseline gap-x-8 md:gap-x-12 gap-y-3">
             {[
               { fr: "Édito", cn: "卷首" },
               { fr: "Observations", cn: "观察" },
               { fr: "Critiques", cn: "评论" },
               { fr: "Archives", cn: "档案" },
             ].map((r) => (
-              <div
-                key={r.fr}
-                className="border border-black aspect-square flex flex-col items-center justify-center p-4"
-              >
-                <div className="font-display text-[22px] md:text-[28px] tracking-tight">
-                  {r.fr}
-                </div>
-                <div className="font-serif mt-2 text-[14px]">{r.cn}</div>
-              </div>
+              <li key={r.fr}>
+                <Link
+                  href={`/issue/${issue.slug}`}
+                  className="group inline-flex items-baseline gap-2 hover:underline underline-offset-4 decoration-1"
+                >
+                  <span className="font-display text-[20px] md:text-[24px] tracking-tight">
+                    {r.fr}
+                  </span>
+                  <span className="font-serif text-[13px] text-neutral-600 group-hover:text-black">
+                    {r.cn}
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
     </div>
