@@ -61,6 +61,50 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
+
+      {/* Origine éditoriale */}
+      <div className="border-t border-black px-6 md:px-10 py-12 md:py-20">
+        <div className="max-w-prose mx-auto">
+          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-8 text-center">
+            — Origine éditoriale —
+          </div>
+          <div className="prose-c33">
+            <p>
+              C33 prolonge le travail éditorial mené depuis plusieurs années
+              sur Modezine, une plateforme chinoise d&apos;observation de la
+              mode et des récits de marque.
+            </p>
+            <p>
+              Là où Modezine commente le présent au rythme du sinophone, C33
+              vient le décoder à travers une lecture franco-chinoise et
+              trimestrielle.
+            </p>
+          </div>
+          <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-neutral-600 mt-2">
+            Modezine · WeChat 公众号 · accès en Chine continentale
+          </p>
+
+          <div className="font-display italic text-[22px] text-center my-12">
+            —
+          </div>
+
+          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-8 text-center">
+            — 编辑源流 —
+          </div>
+          <div className="prose-c33">
+            <p>
+              C33 延续了 Modezine 多年以来在中文圈关于时尚与品牌叙事的编辑工作。
+            </p>
+            <p>
+              Modezine 在中文语境里捕捉当下,C33
+              则以中法对照、季度的节奏,对当下进行解码。
+            </p>
+          </div>
+          <p className="font-serif text-[14px] text-neutral-600 mt-2">
+            Modezine · 微信公众号 · 中国大陆可见
+          </p>
+        </div>
+      </div>
     </article>
   );
 }
