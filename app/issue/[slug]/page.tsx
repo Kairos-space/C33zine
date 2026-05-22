@@ -78,10 +78,10 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
 
         <div className="text-center mt-12 md:mt-16">
           <p className="font-display italic text-[20px] md:text-[26px] leading-[1.4]">
-            Deux pièces, deux regards.
+            Trois pièces, trois regards.
           </p>
           <p className="font-serif text-[15px] md:text-[16px] mt-2 text-neutral-600">
-            两篇,两种凝视。
+            三篇,三种凝视。
           </p>
         </div>
       </section>
