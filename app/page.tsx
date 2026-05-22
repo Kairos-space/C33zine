@@ -124,10 +124,11 @@ export default function HomePage() {
           <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-10">
             — Rubriques —
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 max-w-[820px] mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 max-w-[1000px] mx-auto">
             {[
               { fr: "Édito", cn: "卷首" },
               { fr: "Observations", cn: "观察" },
+              { fr: "Critiques", cn: "评论" },
               { fr: "Archives", cn: "档案" },
             ].map((r) => (
               <div
