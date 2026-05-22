@@ -10,6 +10,7 @@ export type ArticleMeta = {
   category: string;
   date?: string;
   excerpt?: string;
+  order?: number;
 };
 
 export type Article = ArticleMeta & {
@@ -36,6 +37,7 @@ export function getAllArticles(): Article[] {
       category: data.category ?? "",
       date: data.date,
       excerpt: data.excerpt,
+      order: typeof data.order === "number" ? data.order : undefined,
       content,
     };
   });
@@ -47,5 +49,13 @@ export function getArticleBySlug(slug: string): Article | null {
 }
 
 export function getArticlesByIssue(issue: string): Article[] {
-  return getAllArticles().filter((a) => a.issue === issue);
+  return getAllArticles()
+    .filter((a) => a.issue === issue)
+    .sort((a, b) => {
+      // Explicit order wins; articles without order fall to the end, then by date.
+      const ao = a.order ?? Number.POSITIVE_INFINITY;
+      const bo = b.order ?? Number.POSITIVE_INFINITY;
+      if (ao !== bo) return ao - bo;
+      return (a.date ?? "").localeCompare(b.date ?? "");
+    });
 }
