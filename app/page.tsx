@@ -34,12 +34,12 @@ export default function HomePage() {
               <div className="font-display italic text-[12px] md:text-[14px] tracking-[0.1em] mb-4 md:mb-6">
                 — Premier Numéro —
               </div>
-              <h2 className="font-display font-medium text-[44px] md:text-[88px] leading-[0.95] tracking-[-0.02em] mb-6 md:mb-10">
-                代号 / 距离
+              <h2 className="font-display font-medium text-[36px] md:text-[80px] leading-[0.95] tracking-[-0.02em] mb-6 md:mb-10">
+                {issue.title}
               </h2>
-              <p className="font-display italic text-[14px] md:text-[18px] leading-[1.4] max-w-[520px]">
-                Sur la fabrique des récits — entre Paris et Shanghai, ce que
-                le nom transporte, ce que la distance déforme.
+              <p className="font-display italic text-[14px] md:text-[18px] leading-[1.4] max-w-[560px]">
+                La fabrique des récits — derrière la mode, le métier qui les
+                tient.
               </p>
             </div>
 

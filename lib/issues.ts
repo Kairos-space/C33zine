@@ -12,7 +12,7 @@ export const issues: Issue[] = [
   {
     slug: "01",
     number: "01",
-    title: "代号 / 距离",
+    title: "La fabrique / 制造",
     subtitle: "Premier numéro",
     season: "Printemps",
     year: "2026",
