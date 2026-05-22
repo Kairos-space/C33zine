@@ -81,7 +81,7 @@ export default function AboutPage() {
             </p>
           </div>
           <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-neutral-600 mt-2">
-            Modezine · WeChat 公众号 · accès en Chine continentale
+            Modezine · WeChat 公众号
           </p>
 
           <div className="font-display italic text-[22px] text-center my-12">
@@ -101,7 +101,7 @@ export default function AboutPage() {
             </p>
           </div>
           <p className="font-serif text-[14px] text-neutral-600 mt-2">
-            Modezine · 微信公众号 · 中国大陆可见
+            Modezine · 微信公众号
           </p>
         </div>
       </div>
