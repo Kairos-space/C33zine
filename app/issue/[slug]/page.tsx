@@ -87,7 +87,7 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
             Quatre pièces, quatre regards.
           </p>
           <p className="font-serif text-[15px] md:text-[16px] mt-2 text-neutral-600">
-            四篇,四种凝视。
+            四篇文章,四种视角。
           </p>
         </div>
       </section>

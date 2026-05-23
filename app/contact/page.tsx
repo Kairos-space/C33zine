@@ -52,8 +52,8 @@ export default function ContactPage() {
                 Pitch / 投稿
               </div>
               <p className="font-serif text-[17px] leading-[1.8]">
-                暂不开放公开投稿。如有合作或选题提案,
-                邮件主题请注明{" "}
+                本刊暂不接受自由投稿。如有特定的选题提案或内容合作,
+                请于邮件主题注明{" "}
                 <span className="font-mono text-[14px] bg-black text-white px-1.5">
                   [PITCH]
                 </span>
@@ -65,9 +65,7 @@ export default function ContactPage() {
                 Presse & partenariats
               </div>
               <p className="font-serif text-[17px] leading-[1.8]">
-                媒体与品牌合作请联系上述邮箱,
-                <br />
-                请注明{" "}
+                媒体咨询与品牌合作,请于邮件主题注明{" "}
                 <span className="font-mono text-[14px] bg-black text-white px-1.5">
                   [PARTNERSHIP]
                 </span>

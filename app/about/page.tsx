@@ -37,13 +37,13 @@ export default function AboutPage() {
       <div className="px-6 md:px-10 py-12 md:py-20">
         <div className="max-w-prose mx-auto prose-c33">
           <p>
-            C33 是一本中法双语的独立季刊,关注时尚产业的结构、品牌叙事的运作,
+            C33 是一本中法双语的独立季刊,关注时尚产业的结构、品牌叙事的实践,
             以及在中国与法国之间流动的人、物与符号。
           </p>
           <p>
             我们不做行业新闻,不做产品评测。我们试图把目光放在更慢一些的地方:
-            一种叙事是如何被构造的、一种「代号」是如何被生产和消费的、
-            一座城市的产业逻辑如何塑造它出口给世界的「形象」。
+            一种叙事是如何在具体的跨国分工中被构造的、那些精密的品牌符号是如何被设计与转译的,
+            以及两地的产业逻辑如何共同塑造出时装的表面形象。
           </p>
           <p>
             刊物以中文长文为主,辅以法语摘要与术语索引。每期一个主题,
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <p>
             «&nbsp;33&nbsp;» est l&apos;indicatif téléphonique de la France.
             «&nbsp;C&nbsp;» pour Chine, pour Code, pour Caractère.
-            C33,是一个号码,也是一个站位。
+            C33,是一个号码,亦是一种立足之点。
           </p>
           <h2>Édition</h2>
           <p>

@@ -57,11 +57,11 @@ export default async function Image() {
               fontSize: 26,
               fontStyle: "italic",
               marginTop: 32,
-              maxWidth: 800,
+              maxWidth: 900,
               lineHeight: 1.3,
             }}
           >
-            Sur la fabrique des récits — entre Paris et Shanghai.
+            La fabrique des récits — derrière la mode, le métier qui les tient.
           </div>
         </div>
 

@@ -68,14 +68,13 @@ export default function HomePage() {
             C33 décode les logiques de l&apos;industrie de la mode et des
             récits de marque,{" "}
             <span className="not-italic font-display font-medium">
-              à travers la distance et le lien
+              entre la France et la Chine
             </span>{" "}
-            entre la France et la Chine.
+            — entre les deux regards, les deux traductions, et leurs réalités
+            respectives.
           </p>
           <div className="mt-10 max-w-[640px] mx-auto font-serif text-[17px] md:text-[18px] leading-[1.85] text-neutral-700">
-            解码时尚产业与品牌叙事的逻辑——
-            在中国与法国之间的距离里,在两种凝视、两种翻译、
-            两种欲望之间。
+            解码时尚产业与品牌叙事的逻辑——在中国与法国的间距之中,在双重凝视、双向转译、以及各自面对的现实困局之间。
           </div>
           <div className="mt-12 font-sans text-[10px] uppercase tracking-[0.22em]">
             — Kairos Zhang, rédactrice en chef —
@@ -113,7 +112,7 @@ export default function HomePage() {
               Quatre pièces, quatre regards.
             </p>
             <p className="font-serif text-[15px] md:text-[16px] mt-2 text-neutral-600">
-              四篇,四种凝视。
+              四篇文章,四种视角。
             </p>
           </div>
         </div>
