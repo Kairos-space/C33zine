@@ -84,10 +84,10 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
 
         <div className="text-center mt-12 md:mt-16">
           <p className="font-display italic text-[20px] md:text-[26px] leading-[1.4]">
-            Quatre pièces, quatre regards.
+            Cinq pièces, cinq regards.
           </p>
           <p className="font-serif text-[15px] md:text-[16px] mt-2 text-neutral-600">
-            四篇文章,四种视角。
+            五篇文章,五种视角。
           </p>
         </div>
       </section>
