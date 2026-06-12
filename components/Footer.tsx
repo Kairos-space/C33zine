@@ -19,6 +19,39 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Sitemap links */}
+      <div className="border-b border-black px-4 md:px-8 py-8">
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-[10px] uppercase tracking-[0.16em]">
+          <Link href="/issues" className="hover:underline underline-offset-4">
+            Les numéros
+          </Link>
+          <Link href="/manifeste" className="hover:underline underline-offset-4">
+            Manifeste
+          </Link>
+          <Link href="/about" className="hover:underline underline-offset-4">
+            About
+          </Link>
+          <Link
+            href="/contributeurs"
+            className="hover:underline underline-offset-4"
+          >
+            Contributeurs
+          </Link>
+          <Link href="/pitch" className="hover:underline underline-offset-4">
+            Propositions
+          </Link>
+          <Link href="/medias" className="hover:underline underline-offset-4">
+            Médias
+          </Link>
+          <Link href="/contact" className="hover:underline underline-offset-4">
+            Contact
+          </Link>
+          <a href="/feed.xml" className="hover:underline underline-offset-4">
+            RSS
+          </a>
+        </nav>
+      </div>
+
       {/* Bottom strip */}
       <div className="px-4 md:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-[10px] font-sans uppercase tracking-[0.16em]">
         <div className="space-y-1">

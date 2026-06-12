@@ -3,6 +3,7 @@ import { getCurrentIssue } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import { categories } from "@/lib/categories";
 import ArticleCard from "@/components/ArticleCard";
+import Newsletter from "@/components/Newsletter";
 
 export default function HomePage() {
   const issue = getCurrentIssue();
@@ -142,6 +143,8 @@ export default function HomePage() {
           </ul>
         </div>
       </section>
+
+      <Newsletter />
     </div>
   );
 }

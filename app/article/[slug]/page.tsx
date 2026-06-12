@@ -10,6 +10,12 @@ import {
 import { getIssueBySlug } from "@/lib/issues";
 import ArticleCard from "@/components/ArticleCard";
 
+const mdxComponents = {
+  blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
+    <blockquote className="pull-quote" {...props} />
+  ),
+};
+
 export async function generateStaticParams() {
   return getAllArticles().map((a) => ({ slug: a.slug }));
 }
@@ -43,7 +49,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
   const issue = getIssueBySlug(article.issue);
-  const relatedArticles = getArticlesByIssue(article.issue)
+  const issueArticles = getArticlesByIssue(article.issue);
+  const folio = String(
+    issueArticles.findIndex((a) => a.slug === article.slug) + 1,
+  ).padStart(2, "0");
+  const relatedArticles = issueArticles
     .filter((a) => a.slug !== article.slug)
     .slice(0, 3);
 
@@ -107,28 +117,40 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         </div>
       </div>
 
-      {/* Title block — centered, Vogue-style */}
-      <header className="px-6 md:px-10 pt-16 md:pt-24 pb-12 md:pb-16 text-center border-b border-black">
-        <div className="max-w-[820px] mx-auto">
-          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-6">
-            — {article.category} —
+      {/* Ouverture — a black opener plate that gives each article a visual anchor */}
+      <div className="relative bg-black text-white overflow-hidden">
+        <div className="px-6 md:px-10 py-12 md:py-20 flex items-center justify-between gap-6">
+          <div
+            aria-hidden
+            className="font-display font-medium leading-[0.8] tracking-[-0.04em] text-[34vw] md:text-[22vw] opacity-[0.16] select-none -ml-2"
+          >
+            {folio}
           </div>
-          <h1 className="font-display font-medium text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] mb-8 md:mb-10">
-            {article.title}
-          </h1>
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <div className="font-sans text-[10px] uppercase tracking-[0.28em] mb-4">
+              {article.category}
+            </div>
+            <h1 className="font-display font-medium text-[36px] md:text-[68px] leading-[1.02] tracking-[-0.02em] max-w-[900px]">
+              {article.title}
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Deck + byline */}
+      <header className="px-6 md:px-10 pt-12 md:pt-16 pb-10 md:pb-14 text-center border-b border-black">
+        <div className="max-w-[820px] mx-auto">
           {article.excerpt && (
             <p className="font-display italic text-[20px] md:text-[24px] leading-[1.4] max-w-[640px] mx-auto mb-10">
               {article.excerpt}
             </p>
           )}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-[11px] uppercase tracking-[0.18em]">
+          <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 font-sans text-[11px] uppercase tracking-[0.18em]">
             <span>Par {article.author}</span>
-            {article.date && <span>· {article.date}</span>}
-            {issue && (
-              <span>
-                · {issue.season} {issue.year}
-              </span>
-            )}
+            {article.date && <span aria-hidden>·</span>}
+            {article.date && <span>{article.date}</span>}
+            <span aria-hidden>·</span>
+            <span>Lecture · {article.readingTime} min</span>
           </div>
         </div>
       </header>
@@ -136,7 +158,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       {/* Body */}
       <div className="px-6 md:px-10 py-12 md:py-20">
         <div className="max-w-prose mx-auto prose-c33">
-          <MDXRemote source={article.content} />
+          <MDXRemote source={article.content} components={mdxComponents} />
         </div>
       </div>
 

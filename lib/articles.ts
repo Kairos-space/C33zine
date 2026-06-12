@@ -12,11 +12,21 @@ export type ArticleMeta = {
   date?: string;
   excerpt?: string;
   order?: number;
+  readingTime: number;
 };
 
 export type Article = ArticleMeta & {
   content: string;
 };
+
+// Reading time for mixed CJK + Latin prose.
+// CJK readers average ~400 chars/min; Latin ~200 words/min.
+function estimateReadingTime(content: string): number {
+  const cjk = (content.match(/[一-鿿㐀-䶿]/g) || []).length;
+  const latinWords = (content.match(/[A-Za-zÀ-ÿ0-9]+/g) || []).length;
+  const minutes = cjk / 400 + latinWords / 200;
+  return Math.max(1, Math.round(minutes));
+}
 
 const ARTICLES_DIR = path.join(process.cwd(), "content", "articles");
 
@@ -39,6 +49,7 @@ export function getAllArticles(): Article[] {
       date: data.date,
       excerpt: data.excerpt,
       order: typeof data.order === "number" ? data.order : undefined,
+      readingTime: estimateReadingTime(content),
       content,
     };
   });
