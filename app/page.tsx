@@ -23,10 +23,9 @@ export default function HomePage() {
             {/* top metadata */}
             <div className="w-full flex justify-between items-start font-sans text-[10px] uppercase tracking-[0.22em]">
               <span>N° {issue.number}</span>
-              <span className="hidden md:block">
+              <span>
                 {issue.season} · {issue.year}
               </span>
-              <span>€ 18</span>
             </div>
 
             {/* center stack */}
