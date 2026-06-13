@@ -21,20 +21,21 @@ export default function ArticleTile({
         ratio={ratio}
         sizes={sizes}
         priority={priority}
-        label={article.category}
-        sublabel={`N° ${article.issue}`}
+        label={article.title}
+        sublabel={article.category}
         className="mb-5"
       />
-      <div className="text-[11px] uppercase tracking-[0.2em] text-muted mb-3">
-        {article.category}
+      <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-klein mb-3">
+        <span>{article.category}</span>
+        <span className="text-muted">N°{article.issue}</span>
       </div>
-      <h3 className="font-display text-[26px] md:text-[32px] leading-[1.1] tracking-[-0.01em] group-hover:italic">
+      <h3 className="font-display text-[26px] md:text-[32px] leading-[1.1] tracking-[-0.01em] group-hover:text-klein transition-colors">
         {article.title}
       </h3>
-      <div className="mt-4 flex items-center gap-3 text-[12px] tracking-[0.04em] text-muted">
+      <div className="mt-4 flex items-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
         <span>{article.author}</span>
-        <span aria-hidden>—</span>
-        <span>Lecture {article.readingTime} min</span>
+        <span aria-hidden>/</span>
+        <span>{article.readingTime} MIN</span>
       </div>
     </Link>
   );

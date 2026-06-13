@@ -18,15 +18,15 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="border-t border-black no-print">
-      <div className="px-6 md:px-10 py-14 md:py-20 text-center max-w-[680px] mx-auto">
-        <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-6">
-          — Newsletter —
+    <section className="border-t border-line no-print">
+      <div className="px-6 md:px-10 py-16 md:py-24 text-center max-w-[680px] mx-auto">
+        <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-7">
+          [ Newsletter ]
         </div>
-        <p className="font-display italic text-[22px] md:text-[30px] leading-[1.3] mb-3">
+        <p className="font-display italic text-[24px] md:text-[34px] leading-[1.3] mb-3">
           Le prochain numéro paraît à l&apos;été 2026.
         </p>
-        <p className="font-serif text-[15px] md:text-[16px] text-neutral-600 mb-8">
+        <p className="font-serif text-[15px] md:text-[16px] text-muted mb-9">
           留下邮箱,下一期上线时我们会通知你。
         </p>
 
@@ -46,11 +46,11 @@ export default function Newsletter() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="votre@email.com"
               aria-label="E-mail"
-              className="flex-1 border border-black bg-transparent px-4 h-11 font-sans text-[13px] tracking-[0.04em] placeholder:text-neutral-400 focus:outline-none focus:bg-black focus:text-white"
+              className="flex-1 border border-line bg-transparent px-4 h-12 font-mono text-[12px] tracking-[0.04em] placeholder:text-muted focus:outline-none focus:border-klein"
             />
             <button
               type="submit"
-              className="border border-black bg-black text-white h-11 px-6 font-sans text-[11px] uppercase tracking-[0.18em] hover:bg-white hover:text-black transition-colors"
+              className="border border-klein bg-klein text-white h-12 px-6 font-mono text-[11px] uppercase tracking-[0.18em] hover:bg-transparent hover:text-klein transition-colors"
             >
               S&apos;abonner
             </button>

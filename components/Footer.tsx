@@ -18,39 +18,39 @@ export default function Footer() {
 
       {/* Sitemap links */}
       <div className="border-b border-line px-5 md:px-10 py-8">
-        <nav className="flex flex-wrap justify-center gap-x-7 gap-y-2 text-[10px] uppercase tracking-[0.18em] text-muted">
-          <Link href="/issues" className="hover:text-ink transition-colors">
+        <nav className="flex flex-wrap justify-center gap-x-7 gap-y-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
+          <Link href="/issues" className="hover:text-klein transition-colors">
             Les numéros
           </Link>
-          <Link href="/manifeste" className="hover:text-ink transition-colors">
+          <Link href="/manifeste" className="hover:text-klein transition-colors">
             Manifeste
           </Link>
-          <Link href="/about" className="hover:text-ink transition-colors">
+          <Link href="/about" className="hover:text-klein transition-colors">
             About
           </Link>
           <Link
             href="/contributeurs"
-            className="hover:text-ink transition-colors"
+            className="hover:text-klein transition-colors"
           >
             Contributeurs
           </Link>
-          <Link href="/pitch" className="hover:text-ink transition-colors">
+          <Link href="/pitch" className="hover:text-klein transition-colors">
             Propositions
           </Link>
-          <Link href="/medias" className="hover:text-ink transition-colors">
+          <Link href="/medias" className="hover:text-klein transition-colors">
             Médias
           </Link>
-          <Link href="/contact" className="hover:text-ink transition-colors">
+          <Link href="/contact" className="hover:text-klein transition-colors">
             Contact
           </Link>
-          <a href="/feed.xml" className="hover:text-ink transition-colors">
+          <a href="/feed.xml" className="hover:text-klein transition-colors">
             RSS
           </a>
         </nav>
       </div>
 
       {/* Bottom strip */}
-      <div className="px-5 md:px-10 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-[10px] uppercase tracking-[0.16em] text-muted">
+      <div className="px-5 md:px-10 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
         <div className="space-y-1">
           <div>© C33 — Lumicome, 2026 · Tous droits réservés</div>
           <div>Rédactrice en chef : Kairos Zhang</div>
@@ -62,13 +62,13 @@ export default function Footer() {
         <div className="flex flex-col gap-1 md:items-end">
           <a
             href="mailto:contact@c33zine.com"
-            className="hover:text-ink transition-colors"
+            className="hover:text-klein transition-colors"
           >
             contact@c33zine.com
           </a>
           <Link
             href="/mentions-legales"
-            className="hover:text-ink transition-colors"
+            className="hover:text-klein transition-colors"
           >
             Mentions légales
           </Link>

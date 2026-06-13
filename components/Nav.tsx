@@ -7,11 +7,13 @@ export default function Nav() {
     <header lang="fr" className="border-b border-line">
       {/* Utility bar */}
       <div className="border-b border-line">
-        <div className="px-5 md:px-10 h-9 flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-muted">
-          <span className="hidden md:inline">France · Chine — Trimestriel</span>
-          <span className="md:hidden">FR · CN</span>
+        <div className="px-5 md:px-10 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+          <span className="hidden md:inline">
+            <span className="text-klein">+33</span> · France ↔ Chine
+          </span>
+          <span className="md:hidden text-klein">+33</span>
           <span>
-            Vol. 01 — N° {issue.number} · {issue.season} {issue.year}
+            Vol.01 — N°{issue.number} · {issue.season} {issue.year}
           </span>
           <span className="hidden md:inline">Bilingue 中 / FR</span>
         </div>
@@ -19,17 +21,17 @@ export default function Nav() {
 
       {/* Masthead */}
       <div className="px-5 md:px-10 py-7 md:py-10 grid grid-cols-3 items-center">
-        <nav className="flex items-center gap-4 md:gap-8 text-[11px] uppercase tracking-[0.16em] justify-self-start">
-          <Link href="/issues" className="hover:text-muted transition-colors">
+        <nav className="flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em] justify-self-start">
+          <Link href="/issues" className="hover:text-klein transition-colors">
             Issues
           </Link>
           <Link
             href="/manifeste"
-            className="hover:text-muted transition-colors hidden md:inline"
+            className="hover:text-klein transition-colors hidden md:inline"
           >
             Manifeste
           </Link>
-          <Link href="/about" className="hover:text-muted transition-colors">
+          <Link href="/about" className="hover:text-klein transition-colors">
             About
           </Link>
         </nav>
@@ -40,14 +42,14 @@ export default function Nav() {
         >
           C33
         </Link>
-        <nav className="flex items-center gap-4 md:gap-8 text-[11px] uppercase tracking-[0.16em] justify-self-end">
+        <nav className="flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em] justify-self-end">
           <Link
             href="/medias"
-            className="hover:text-muted transition-colors hidden md:inline"
+            className="hover:text-klein transition-colors hidden md:inline"
           >
             Médias
           </Link>
-          <Link href="/contact" className="hover:text-muted transition-colors">
+          <Link href="/contact" className="hover:text-klein transition-colors">
             Contact
           </Link>
         </nav>

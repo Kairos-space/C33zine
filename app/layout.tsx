@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Serif_SC, Bodoni_Moda } from "next/font/google";
+import {
+  Inter,
+  Noto_Serif_SC,
+  Bodoni_Moda,
+  Space_Mono,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -26,6 +31,13 @@ const bodoni = Bodoni_Moda({
   style: ["normal", "italic"],
   adjustFontFallback: false,
   fallback: ["Bodoni 72", "Didot", "Times New Roman", "serif"],
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`${inter.variable} ${notoSerifSC.variable} ${bodoni.variable}`}
+      className={`${inter.variable} ${notoSerifSC.variable} ${bodoni.variable} ${spaceMono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
         <Nav />

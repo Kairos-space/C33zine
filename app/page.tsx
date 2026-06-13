@@ -11,84 +11,112 @@ export default function HomePage() {
   const articles = getArticlesByIssue(issue.slug);
   const [lead, ...rest] = articles;
 
+  const ticker = [
+    "+33",
+    "DÉCODAGE",
+    `N°${issue.number}`,
+    "LA FABRIQUE",
+    "PARIS ↔ SHANGHAI",
+    `${issue.season.toUpperCase()} ${issue.year}`,
+  ];
+
   return (
     <div>
-      {/* HERO — the current issue, image-forward and spacious */}
-      <section className="px-5 md:px-10 pt-10 md:pt-16 pb-16 md:pb-24">
-        <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-            <div className="md:col-span-7">
-              <EditorialImage
-                src={issue.cover}
-                alt={issue.coverAlt ?? issue.title}
-                ratio="aspect-[5/6] md:aspect-[4/5]"
-                sizes="(min-width: 768px) 58vw, 100vw"
-                priority
-                label={`Numéro ${issue.number}`}
-                sublabel={`${issue.season} ${issue.year}`}
-              />
+      {/* CODE TICKER — the "+33 / décodage" terminal bar */}
+      <div className="bg-klein text-white overflow-hidden">
+        <div className="flex whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.3em] py-2">
+          {[0, 1].map((dup) => (
+            <div key={dup} className="flex shrink-0" aria-hidden={dup === 1}>
+              {ticker.concat(ticker).map((t, i) => (
+                <span key={`${dup}-${i}`} className="px-5">
+                  {t} ·
+                </span>
+              ))}
             </div>
-            <div className="md:col-span-5">
-              <div className="text-[11px] uppercase tracking-[0.24em] text-muted mb-6">
-                Le numéro courant — N° {issue.number}
-              </div>
-              <h1 className="font-display text-[44px] md:text-[68px] leading-[1.02] tracking-[-0.02em]">
+          ))}
+        </div>
+      </div>
+
+      {/* HERO — couture × code */}
+      <section className="border-b border-line">
+        <div className="grid grid-cols-1 md:grid-cols-12">
+          {/* Left — metadata + title */}
+          <div className="md:col-span-5 px-5 md:px-10 py-12 md:py-20 flex flex-col justify-between md:border-r border-line">
+            <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted flex flex-col gap-2">
+              <span>
+                <span className="text-klein">●</span> Numéro courant
+              </span>
+              <span>N°{issue.number} / {issue.season} {issue.year}</span>
+            </div>
+
+            <div className="my-12 md:my-0">
+              <h1 className="font-display text-[52px] md:text-[84px] leading-[0.98] tracking-[-0.03em]">
                 {issue.title}
               </h1>
-              <p className="font-display italic text-[20px] md:text-[24px] leading-[1.35] mt-6 max-w-[420px]">
+              <p className="font-display italic text-[20px] md:text-[26px] leading-[1.3] mt-6 max-w-[440px] text-ink/90">
                 La fabrique des récits — derrière la mode, le métier qui les
                 tient.
               </p>
-              <p className="font-serif text-[15px] leading-[1.9] text-muted mt-6 max-w-[420px]">
-                {issue.season} {issue.year} · {String(articles.length).padStart(2, "0")}{" "}
-                pièces
-              </p>
-              <Link
-                href={`/issue/${issue.slug}`}
-                className="inline-block mt-8 text-[12px] uppercase tracking-[0.2em] border-b border-ink pb-1 hover:text-muted hover:border-muted transition-colors"
-              >
-                Découvrir le numéro
-              </Link>
             </div>
+
+            <Link
+              href={`/issue/${issue.slug}`}
+              className="font-mono text-[12px] uppercase tracking-[0.2em] text-klein hover:text-ink transition-colors w-fit"
+            >
+              → Décoder le numéro
+            </Link>
+          </div>
+
+          {/* Right — image plate */}
+          <div className="md:col-span-7">
+            <EditorialImage
+              src={issue.cover}
+              alt={issue.coverAlt ?? issue.title}
+              ratio="aspect-[4/5] md:aspect-auto md:h-full"
+              sizes="(min-width: 768px) 58vw, 100vw"
+              priority
+              label={issue.title}
+              sublabel={`Numéro ${issue.number}`}
+              className="md:h-full"
+            />
           </div>
         </div>
       </section>
 
-      {/* ÉDITO — a calm editorial statement */}
-      <section className="border-t border-line">
-        <div className="px-5 md:px-10 py-20 md:py-28 max-w-[860px] mx-auto text-center">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-muted mb-10">
-            Édito
+      {/* ÉDITO */}
+      <section className="border-b border-line">
+        <div className="px-5 md:px-10 py-20 md:py-32 max-w-[920px] mx-auto text-center">
+          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
+            [ Édito ]
           </div>
-          <p className="font-display text-[26px] md:text-[40px] leading-[1.32] tracking-[-0.01em]">
+          <p className="font-display text-[28px] md:text-[44px] leading-[1.28] tracking-[-0.01em]">
             C33 décode les logiques de l&apos;industrie de la mode et des récits
-            de marque, <span className="italic">entre la France et la Chine</span>{" "}
-            — entre les deux regards, les deux traductions, et leurs réalités
-            respectives.
+            de marque, <span className="italic text-klein">entre la France et
+            la Chine</span> — entre les deux regards, les deux traductions, et
+            leurs réalités respectives.
           </p>
           <div className="mt-12 max-w-[600px] mx-auto font-serif text-[16px] md:text-[17px] leading-[1.95] text-muted">
             解码时尚产业与品牌叙事的逻辑——在中国与法国的间距之中,在双重凝视、双向转译、以及各自面对的现实困局之间。
           </div>
-          <div className="mt-12 text-[11px] uppercase tracking-[0.24em] text-muted">
-            Kairos Zhang · Rédactrice en chef
+          <div className="mt-12 font-mono text-[11px] uppercase tracking-[0.22em] text-muted">
+            Kairos Zhang — Rédactrice en chef
           </div>
         </div>
       </section>
 
-      {/* LE SOMMAIRE — image-forward article grid */}
-      <section className="border-t border-line">
+      {/* SOMMAIRE */}
+      <section className="border-b border-line">
         <div className="px-5 md:px-10 py-16 md:py-24">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex items-baseline justify-between mb-12 md:mb-16">
-              <h2 className="font-display text-[28px] md:text-[40px] tracking-[-0.01em]">
+              <h2 className="font-display text-[30px] md:text-[44px] tracking-[-0.01em]">
                 Le sommaire
               </h2>
-              <span className="text-[11px] uppercase tracking-[0.2em] text-muted">
-                目录 · N° {issue.number}
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+                目录 / N°{issue.number}
               </span>
             </div>
 
-            {/* Lead piece — full width, larger */}
             {lead && (
               <div className="mb-16 md:mb-24">
                 <ArticleTile
@@ -100,7 +128,6 @@ export default function HomePage() {
               </div>
             )}
 
-            {/* The rest — two-up grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16 md:gap-y-24">
               {rest.map((a) => (
                 <ArticleTile key={a.slug} article={a} />
@@ -111,8 +138,8 @@ export default function HomePage() {
               <p className="font-display italic text-[22px] md:text-[28px] leading-[1.4]">
                 Cinq pièces, cinq regards.
               </p>
-              <p className="font-serif text-[15px] mt-3 text-muted">
-                五篇文章,五种视角。
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] mt-4 text-muted">
+                五篇文章 / 五种视角
               </p>
             </div>
           </div>
@@ -120,10 +147,10 @@ export default function HomePage() {
       </section>
 
       {/* RUBRIQUES */}
-      <section className="border-t border-line">
+      <section className="border-b border-line">
         <div className="px-5 md:px-10 py-14 md:py-20 text-center">
-          <div className="text-[11px] uppercase tracking-[0.24em] text-muted mb-8">
-            Les rubriques
+          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-8">
+            [ Rubriques ]
           </div>
           <ul className="flex flex-wrap justify-center items-baseline gap-x-10 md:gap-x-16 gap-y-4">
             {categories.map((c) => (
@@ -132,10 +159,10 @@ export default function HomePage() {
                   href={`/category/${c.slug}`}
                   className="group inline-flex items-baseline gap-2"
                 >
-                  <span className="font-display text-[24px] md:text-[30px] tracking-tight group-hover:italic">
+                  <span className="font-display text-[24px] md:text-[32px] tracking-tight group-hover:text-klein transition-colors">
                     {c.fr}
                   </span>
-                  <span className="font-serif text-[13px] text-muted">
+                  <span className="font-mono text-[11px] text-muted">
                     {c.cn}
                   </span>
                 </Link>

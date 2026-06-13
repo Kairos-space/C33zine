@@ -23,12 +23,20 @@ const config: Config = {
           "Times New Roman",
           "serif",
         ],
+        mono: [
+          "var(--font-mono)",
+          "ui-monospace",
+          "SFMono-Regular",
+          "monospace",
+        ],
       },
       colors: {
-        ink: "#16130d",
-        paper: "#fbfaf7",
-        line: "#e4e0d6",
-        muted: "#8c887e",
+        // Dark "couture × code" system
+        paper: "#0a0a0b",
+        ink: "#f3f1ea",
+        line: "#26262a",
+        muted: "#7d7c84",
+        klein: "#1f2bff",
       },
       maxWidth: {
         prose: "680px",
