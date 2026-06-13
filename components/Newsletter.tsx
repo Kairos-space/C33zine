@@ -41,14 +41,29 @@ export default function Newsletter() {
     setState("loading");
     setErrorMsg(null);
     try {
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      setState("ok");
-      setEmail("");
+      // Buttondown's embed-subscribe endpoint expects form-encoded data
+      // and doesn't allow CORS, so we use no-cors mode. The request still
+      // reaches the server even if the browser cannot read the response.
+      const isButtondown = ENDPOINT.includes("buttondown.email");
+      if (isButtondown) {
+        const body = new URLSearchParams({ email });
+        await fetch(ENDPOINT, {
+          method: "POST",
+          mode: "no-cors",
+          body,
+        });
+        setState("ok");
+        setEmail("");
+      } else {
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        setState("ok");
+        setEmail("");
+      }
     } catch (err) {
       setState("error");
       setErrorMsg(err instanceof Error ? err.message : "Erreur réseau");
