@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { issues, getIssueBySlug } from "@/lib/issues";
+import { issues, getIssueBySlug, issueAccentStyle } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import ArticleCard from "@/components/ArticleCard";
 
@@ -32,7 +32,7 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
   const articles = getArticlesByIssue(issue.slug);
 
   return (
-    <div>
+    <div style={issueAccentStyle(issue)}>
       {/* Cover plate */}
       <section className="border-b border-black">
         <div className="relative">

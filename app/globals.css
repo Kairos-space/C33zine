@@ -22,8 +22,20 @@ body {
 }
 
 ::selection {
-  background: var(--klein);
+  background: var(--accent, var(--klein));
   color: #fff;
+}
+
+/* Language toggle — hide the off-language when a single-language mode is on.
+   FR-only hides any element marked lang="zh-CN", and vice versa. lang attrs
+   are present on Nav, Footer, Manifeste, About and most page body chunks. */
+body[data-lang-mode="fr"] [lang="zh-CN"],
+body[data-lang-mode="fr"] [lang="zh"] {
+  display: none !important;
+}
+body[data-lang-mode="cn"] [lang="fr"],
+body[data-lang-mode="cn"] [lang="en"] {
+  display: none !important;
 }
 
 /* Article prose */

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
+import LangToggle from "@/components/LangToggle";
 
 export default function Nav() {
   const issue = getCurrentIssue();
@@ -15,7 +16,9 @@ export default function Nav() {
           <span>
             Vol.01 — N°{issue.number} · {issue.season} {issue.year}
           </span>
-          <span className="hidden md:inline">Bilingue 中 / FR</span>
+          <span className="hidden md:inline-flex items-center">
+            <LangToggle />
+          </span>
         </div>
       </div>
 
@@ -26,10 +29,16 @@ export default function Nav() {
             Issues
           </Link>
           <Link
-            href="/manifeste"
+            href="/journal"
             className="hover:text-klein transition-colors hidden md:inline"
           >
-            Manifeste
+            Journal
+          </Link>
+          <Link
+            href="/lexique"
+            className="hover:text-klein transition-colors hidden md:inline"
+          >
+            Lexique
           </Link>
           <Link href="/about" className="hover:text-klein transition-colors">
             About

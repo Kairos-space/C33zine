@@ -22,6 +22,12 @@ export default function Footer() {
           <Link href="/issues" className="hover:text-klein transition-colors">
             Les numéros
           </Link>
+          <Link href="/journal" className="hover:text-klein transition-colors">
+            Journal
+          </Link>
+          <Link href="/lexique" className="hover:text-klein transition-colors">
+            Lexique
+          </Link>
           <Link href="/manifeste" className="hover:text-klein transition-colors">
             Manifeste
           </Link>

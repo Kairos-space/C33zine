@@ -31,13 +31,13 @@ const config: Config = {
         ],
       },
       colors: {
-        // Clean white system with one electric accent
+        // Clean white system with one electric accent (per-issue overridable)
         paper: "#ffffff",
         ink: "#0e0e10",
         line: "#e6e6e6",
         muted: "#7a7a7e",
-        klein: "#1f2bff",
-        kleinSoft: "#eef0ff",
+        klein: "var(--accent, #1f2bff)",
+        kleinSoft: "var(--accent-soft, #eef0ff)",
       },
       maxWidth: {
         prose: "680px",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getCurrentIssue } from "@/lib/issues";
+import { getCurrentIssue, issueAccentStyle } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import { categories } from "@/lib/categories";
 import { resolveCover } from "@/lib/cover";
@@ -17,7 +17,7 @@ export default function HomePage() {
     : [issue.title, ""];
 
   return (
-    <div>
+    <div style={issueAccentStyle(issue)}>
       {/* HERO — split: editorial title + image plate */}
       <section className="border-b border-line">
         <div className="grid grid-cols-1 md:grid-cols-12">
