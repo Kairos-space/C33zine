@@ -25,8 +25,11 @@ export default function ArticleTile({
         sublabel={article.category}
         className="mb-5"
       />
-      <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.18em] text-klein mb-3">
-        <span>{article.category}</span>
+      <div className="flex items-center gap-3 mb-3 font-mono text-[10px] uppercase tracking-[0.2em]">
+        <span className="inline-flex items-center gap-2 text-klein">
+          <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
+          {article.category}
+        </span>
         <span className="text-muted">N°{article.issue}</span>
       </div>
       <h3 className="font-display text-[26px] md:text-[32px] leading-[1.1] tracking-[-0.01em] group-hover:text-klein transition-colors">

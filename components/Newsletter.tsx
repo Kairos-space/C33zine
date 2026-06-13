@@ -20,8 +20,10 @@ export default function Newsletter() {
   return (
     <section className="border-t border-line no-print">
       <div className="px-6 md:px-10 py-16 md:py-24 text-center max-w-[680px] mx-auto">
-        <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-7">
-          [ Newsletter ]
+        <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-7">
+          <span aria-hidden className="h-px w-6 bg-klein" />
+          Newsletter
+          <span aria-hidden className="h-px w-6 bg-klein" />
         </div>
         <p className="font-display italic text-[24px] md:text-[34px] leading-[1.3] mb-3">
           Le prochain numéro paraît à l&apos;été 2026.

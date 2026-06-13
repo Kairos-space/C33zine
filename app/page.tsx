@@ -21,8 +21,9 @@ export default function HomePage() {
           {/* Left — metadata + title */}
           <div className="md:col-span-5 px-5 md:px-10 py-12 md:py-20 flex flex-col justify-between md:border-r border-line">
             <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted flex flex-col gap-2">
-              <span>
-                <span className="text-klein">●</span> Numéro courant
+              <span className="flex items-center gap-2">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
+                <span className="text-klein">Numéro courant</span>
               </span>
               <span>
                 N°{issue.number} / {issue.season} {issue.year}
@@ -41,9 +42,14 @@ export default function HomePage() {
 
             <Link
               href={`/issue/${issue.slug}`}
-              className="font-mono text-[12px] uppercase tracking-[0.2em] text-klein hover:text-ink transition-colors w-fit"
+              className="group inline-flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.2em] text-klein w-fit"
             >
-              → Découvrir le numéro
+              <span
+                aria-hidden
+                className="inline-block h-px w-8 bg-klein transition-all group-hover:w-12"
+              />
+              Découvrir le numéro
+              <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>
 
@@ -66,8 +72,10 @@ export default function HomePage() {
       {/* ÉDITO */}
       <section className="border-b border-line">
         <div className="px-5 md:px-10 py-20 md:py-32 max-w-[920px] mx-auto text-center">
-          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
-            [ Édito ]
+          <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
+            <span aria-hidden className="h-px w-6 bg-klein" />
+            Édito
+            <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <p className="font-display text-[28px] md:text-[44px] leading-[1.28] tracking-[-0.01em]">
             C33 décode les logiques de l&apos;industrie de la mode et des récits
@@ -79,7 +87,7 @@ export default function HomePage() {
             解码时尚产业与品牌叙事的逻辑——在中国与法国的间距之中,在双重凝视、双向转译、以及各自面对的现实困局之间。
           </div>
           <div className="mt-12 font-mono text-[11px] uppercase tracking-[0.22em] text-muted">
-            Kairos Zhang — Rédactrice en chef
+            <span className="text-klein">●</span> Kairos Zhang — Rédactrice en chef
           </div>
         </div>
       </section>
@@ -89,7 +97,8 @@ export default function HomePage() {
         <div className="px-5 md:px-10 py-16 md:py-24">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex items-baseline justify-between mb-12 md:mb-16">
-              <h2 className="font-display text-[30px] md:text-[44px] tracking-[-0.01em]">
+              <h2 className="font-display text-[30px] md:text-[44px] tracking-[-0.01em] relative pl-4 md:pl-6">
+                <span aria-hidden className="absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-9 w-[2px] bg-klein" />
                 Le sommaire
               </h2>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
@@ -115,6 +124,7 @@ export default function HomePage() {
             </div>
 
             <div className="text-center mt-20 md:mt-28">
+              <span aria-hidden className="inline-block h-px w-10 bg-klein mb-5" />
               <p className="font-display italic text-[22px] md:text-[28px] leading-[1.4]">
                 Cinq pièces, cinq regards.
               </p>
@@ -129,8 +139,10 @@ export default function HomePage() {
       {/* RUBRIQUES */}
       <section className="border-b border-line">
         <div className="px-5 md:px-10 py-14 md:py-20 text-center">
-          <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-8">
-            [ Rubriques ]
+          <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
+            <span aria-hidden className="h-px w-6 bg-klein" />
+            Rubriques
+            <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <ul className="flex flex-wrap justify-center items-baseline gap-x-10 md:gap-x-16 gap-y-4">
             {categories.map((c) => (
@@ -139,7 +151,7 @@ export default function HomePage() {
                   href={`/category/${c.slug}`}
                   className="group inline-flex items-baseline gap-2"
                 >
-                  <span className="font-display text-[24px] md:text-[32px] tracking-tight group-hover:text-klein transition-colors">
+                  <span className="font-display text-[24px] md:text-[32px] tracking-tight border-b border-transparent group-hover:border-klein group-hover:text-klein transition-all">
                     {c.fr}
                   </span>
                   <span className="font-mono text-[11px] text-muted">

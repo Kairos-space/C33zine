@@ -32,7 +32,7 @@ export default function EditorialImage({
 }: Props) {
   return (
     <div
-      className={`relative ${ratio} w-full overflow-hidden bg-[#f2f2f2] ${className}`}
+      className={`relative ${ratio} w-full overflow-hidden bg-[#171719] ${className}`}
     >
       {src ? (
         <Image
@@ -44,11 +44,11 @@ export default function EditorialImage({
           className="object-cover"
         />
       ) : (
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-klein">
-            {sublabel ?? "C33"}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 text-white/85">
+          <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-klein mb-4">
+            ● {sublabel ?? "C33"}
           </div>
-          <div className="font-display italic text-[16px] md:text-[19px] leading-snug mt-3 text-muted">
+          <div className="font-display italic text-[18px] md:text-[22px] leading-snug text-white/70">
             {label ?? "Image à venir"}
           </div>
         </div>

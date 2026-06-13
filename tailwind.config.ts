@@ -33,10 +33,11 @@ const config: Config = {
       colors: {
         // Clean white system with one electric accent
         paper: "#ffffff",
-        ink: "#111111",
+        ink: "#0e0e10",
         line: "#e6e6e6",
-        muted: "#8a8a8a",
+        muted: "#7a7a7e",
         klein: "#1f2bff",
+        kleinSoft: "#eef0ff",
       },
       maxWidth: {
         prose: "680px",
