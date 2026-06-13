@@ -11,33 +11,9 @@ export default function HomePage() {
   const articles = getArticlesByIssue(issue.slug);
   const [lead, ...rest] = articles;
 
-  const ticker = [
-    "+33",
-    "DÉCODAGE",
-    `N°${issue.number}`,
-    "LA FABRIQUE",
-    "PARIS ↔ SHANGHAI",
-    `${issue.season.toUpperCase()} ${issue.year}`,
-  ];
-
   return (
     <div>
-      {/* CODE TICKER — the "+33 / décodage" terminal bar */}
-      <div className="bg-klein text-white overflow-hidden">
-        <div className="flex whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.3em] py-2">
-          {[0, 1].map((dup) => (
-            <div key={dup} className="flex shrink-0" aria-hidden={dup === 1}>
-              {ticker.concat(ticker).map((t, i) => (
-                <span key={`${dup}-${i}`} className="px-5">
-                  {t} ·
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* HERO — couture × code */}
+      {/* HERO — split: editorial title + image plate */}
       <section className="border-b border-line">
         <div className="grid grid-cols-1 md:grid-cols-12">
           {/* Left — metadata + title */}
@@ -46,14 +22,16 @@ export default function HomePage() {
               <span>
                 <span className="text-klein">●</span> Numéro courant
               </span>
-              <span>N°{issue.number} / {issue.season} {issue.year}</span>
+              <span>
+                N°{issue.number} / {issue.season} {issue.year}
+              </span>
             </div>
 
             <div className="my-12 md:my-0">
               <h1 className="font-display text-[52px] md:text-[84px] leading-[0.98] tracking-[-0.03em]">
                 {issue.title}
               </h1>
-              <p className="font-display italic text-[20px] md:text-[26px] leading-[1.3] mt-6 max-w-[440px] text-ink/90">
+              <p className="font-display italic text-[20px] md:text-[26px] leading-[1.3] mt-6 max-w-[440px]">
                 La fabrique des récits — derrière la mode, le métier qui les
                 tient.
               </p>
@@ -63,7 +41,7 @@ export default function HomePage() {
               href={`/issue/${issue.slug}`}
               className="font-mono text-[12px] uppercase tracking-[0.2em] text-klein hover:text-ink transition-colors w-fit"
             >
-              → Décoder le numéro
+              → Découvrir le numéro
             </Link>
           </div>
 

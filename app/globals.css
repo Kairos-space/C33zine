@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --paper: #0a0a0b;
-  --ink: #f3f1ea;
-  --line: #26262a;
+  --paper: #ffffff;
+  --ink: #111111;
+  --line: #e6e6e6;
   --klein: #1f2bff;
 }
 
@@ -81,7 +81,7 @@ body {
 .prose-c33 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.9em;
-  background: #161618;
+  background: #f4f4f4;
   padding: 0.1em 0.35em;
 }
 
@@ -89,7 +89,7 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 14px;
   line-height: 1.6;
-  background: #161618;
+  background: #f4f4f4;
   padding: 1em 1.25em;
   overflow-x: auto;
   margin: 2em 0;

@@ -31,11 +31,11 @@ const config: Config = {
         ],
       },
       colors: {
-        // Dark "couture × code" system
-        paper: "#0a0a0b",
-        ink: "#f3f1ea",
-        line: "#26262a",
-        muted: "#7d7c84",
+        // Clean white system with one electric accent
+        paper: "#ffffff",
+        ink: "#111111",
+        line: "#e6e6e6",
+        muted: "#8a8a8a",
         klein: "#1f2bff",
       },
       maxWidth: {
