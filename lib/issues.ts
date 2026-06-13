@@ -6,6 +6,8 @@ export type Issue = {
   season: string;
   year: string;
   status: "current" | "upcoming" | "archive";
+  cover?: string;
+  coverAlt?: string;
 };
 
 export const issues: Issue[] = [

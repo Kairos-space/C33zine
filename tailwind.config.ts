@@ -25,8 +25,10 @@ const config: Config = {
         ],
       },
       colors: {
-        ink: "#000000",
-        paper: "#FFFFFF",
+        ink: "#16130d",
+        paper: "#fbfaf7",
+        line: "#e4e0d6",
+        muted: "#8c887e",
       },
       maxWidth: {
         prose: "680px",

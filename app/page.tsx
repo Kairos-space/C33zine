@@ -2,139 +2,140 @@ import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import { categories } from "@/lib/categories";
-import ArticleCard from "@/components/ArticleCard";
+import ArticleTile from "@/components/ArticleTile";
+import EditorialImage from "@/components/EditorialImage";
 import Newsletter from "@/components/Newsletter";
 
 export default function HomePage() {
   const issue = getCurrentIssue();
   const articles = getArticlesByIssue(issue.slug);
+  const [lead, ...rest] = articles;
 
   return (
     <div>
-      {/* COVER — Vogue-style centered masthead over a full-bleed image plate */}
-      <section className="border-b border-black">
-        <div className="relative">
-          {/* Cover plate */}
-          <div
-            aria-hidden
-            className="aspect-[4/5] md:aspect-[16/10] w-full bg-black"
-          />
-          {/* Overlay copy */}
-          <div className="absolute inset-0 flex flex-col items-center justify-between text-white py-10 md:py-16 px-6 md:px-12 text-center">
-            {/* top metadata */}
-            <div className="w-full flex justify-between items-start font-sans text-[10px] uppercase tracking-[0.22em]">
-              <span>N° {issue.number}</span>
-              <span>
-                {issue.season} · {issue.year}
-              </span>
+      {/* HERO — the current issue, image-forward and spacious */}
+      <section className="px-5 md:px-10 pt-10 md:pt-16 pb-16 md:pb-24">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div className="md:col-span-7">
+              <EditorialImage
+                src={issue.cover}
+                alt={issue.coverAlt ?? issue.title}
+                ratio="aspect-[5/6] md:aspect-[4/5]"
+                sizes="(min-width: 768px) 58vw, 100vw"
+                priority
+                label={`Numéro ${issue.number}`}
+                sublabel={`${issue.season} ${issue.year}`}
+              />
             </div>
-
-            {/* center stack */}
-            <div className="flex flex-col items-center">
-              <div className="font-display italic text-[12px] md:text-[14px] tracking-[0.1em] mb-4 md:mb-6">
-                — Premier Numéro —
+            <div className="md:col-span-5">
+              <div className="text-[11px] uppercase tracking-[0.24em] text-muted mb-6">
+                Le numéro courant — N° {issue.number}
               </div>
-              <h2 className="font-display font-medium text-[36px] md:text-[80px] leading-[0.95] tracking-[-0.02em] mb-6 md:mb-10">
+              <h1 className="font-display text-[44px] md:text-[68px] leading-[1.02] tracking-[-0.02em]">
                 {issue.title}
-              </h2>
-              <p className="font-display italic text-[14px] md:text-[18px] leading-[1.4] max-w-[560px]">
+              </h1>
+              <p className="font-display italic text-[20px] md:text-[24px] leading-[1.35] mt-6 max-w-[420px]">
                 La fabrique des récits — derrière la mode, le métier qui les
                 tient.
               </p>
-            </div>
-
-            {/* bottom metadata */}
-            <div className="w-full flex justify-between items-end font-sans text-[10px] uppercase tracking-[0.22em]">
-              <span>France / Chine</span>
+              <p className="font-serif text-[15px] leading-[1.9] text-muted mt-6 max-w-[420px]">
+                {issue.season} {issue.year} · {String(articles.length).padStart(2, "0")}{" "}
+                pièces
+              </p>
               <Link
                 href={`/issue/${issue.slug}`}
-                className="hidden md:inline underline underline-offset-4 decoration-1"
+                className="inline-block mt-8 text-[12px] uppercase tracking-[0.2em] border-b border-ink pb-1 hover:text-muted hover:border-muted transition-colors"
               >
-                Lire le numéro →
+                Découvrir le numéro
               </Link>
-              <span>Printemps 2026</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* EDITOR'S DECK — large italic standfirst, classical fashion-magazine style */}
-      <section className="border-b border-black">
-        <div className="px-6 md:px-10 py-16 md:py-24 max-w-[920px] mx-auto text-center">
-          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-8">
-            — Édito —
+      {/* ÉDITO — a calm editorial statement */}
+      <section className="border-t border-line">
+        <div className="px-5 md:px-10 py-20 md:py-28 max-w-[860px] mx-auto text-center">
+          <div className="text-[11px] uppercase tracking-[0.24em] text-muted mb-10">
+            Édito
           </div>
-          <p className="font-display italic font-medium text-[24px] md:text-[36px] leading-[1.3] tracking-[-0.01em]">
-            C33 décode les logiques de l&apos;industrie de la mode et des
-            récits de marque,{" "}
-            <span className="not-italic font-display font-medium">
-              entre la France et la Chine
-            </span>{" "}
+          <p className="font-display text-[26px] md:text-[40px] leading-[1.32] tracking-[-0.01em]">
+            C33 décode les logiques de l&apos;industrie de la mode et des récits
+            de marque, <span className="italic">entre la France et la Chine</span>{" "}
             — entre les deux regards, les deux traductions, et leurs réalités
             respectives.
           </p>
-          <div className="mt-10 max-w-[640px] mx-auto font-serif text-[17px] md:text-[18px] leading-[1.85] text-neutral-700">
+          <div className="mt-12 max-w-[600px] mx-auto font-serif text-[16px] md:text-[17px] leading-[1.95] text-muted">
             解码时尚产业与品牌叙事的逻辑——在中国与法国的间距之中,在双重凝视、双向转译、以及各自面对的现实困局之间。
           </div>
-          <div className="mt-12 font-sans text-[10px] uppercase tracking-[0.22em]">
-            — Kairos Zhang, rédactrice en chef —
+          <div className="mt-12 text-[11px] uppercase tracking-[0.24em] text-muted">
+            Kairos Zhang · Rédactrice en chef
           </div>
         </div>
       </section>
 
-      {/* SOMMAIRE — Table of contents */}
-      <section className="border-b border-black">
-        <div className="px-6 md:px-10 py-14 md:py-20">
-          {/* Section header */}
-          <div className="text-center mb-10 md:mb-16">
-            <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-4">
-              — Sommaire / 目录 —
+      {/* LE SOMMAIRE — image-forward article grid */}
+      <section className="border-t border-line">
+        <div className="px-5 md:px-10 py-16 md:py-24">
+          <div className="max-w-[1280px] mx-auto">
+            <div className="flex items-baseline justify-between mb-12 md:mb-16">
+              <h2 className="font-display text-[28px] md:text-[40px] tracking-[-0.01em]">
+                Le sommaire
+              </h2>
+              <span className="text-[11px] uppercase tracking-[0.2em] text-muted">
+                目录 · N° {issue.number}
+              </span>
             </div>
-            <h2 className="font-display text-[42px] md:text-[64px] leading-[1] tracking-[-0.01em]">
-              Numéro 01
-            </h2>
-            <div className="font-display italic mt-4 text-[15px] md:text-[17px]">
-              {String(articles.length).padStart(2, "0")} pièces · Printemps 2026
+
+            {/* Lead piece — full width, larger */}
+            {lead && (
+              <div className="mb-16 md:mb-24">
+                <ArticleTile
+                  article={lead}
+                  ratio="aspect-[16/10] md:aspect-[21/9]"
+                  sizes="(min-width: 768px) 1280px, 100vw"
+                  priority
+                />
+              </div>
+            )}
+
+            {/* The rest — two-up grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16 md:gap-y-24">
+              {rest.map((a) => (
+                <ArticleTile key={a.slug} article={a} />
+              ))}
             </div>
-          </div>
 
-          {/* Articles list */}
-          <div className="max-w-[1100px] mx-auto">
-            {articles.map((a, i) => (
-              <ArticleCard key={a.slug} article={a} index={i} />
-            ))}
-            <div className="border-t border-black" />
-          </div>
-
-          {/* Editorial stance — a curated first issue, not an unfinished one */}
-          <div className="text-center mt-12 md:mt-16">
-            <p className="font-display italic text-[20px] md:text-[26px] leading-[1.4]">
-              Cinq pièces, cinq regards.
-            </p>
-            <p className="font-serif text-[15px] md:text-[16px] mt-2 text-neutral-600">
-              五篇文章,五种视角。
-            </p>
+            <div className="text-center mt-20 md:mt-28">
+              <p className="font-display italic text-[22px] md:text-[28px] leading-[1.4]">
+                Cinq pièces, cinq regards.
+              </p>
+              <p className="font-serif text-[15px] mt-3 text-muted">
+                五篇文章,五种视角。
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTIONS — like Vogue's "Features / Agenda" navigation */}
-      <section className="border-t border-black">
-        <div className="px-6 md:px-10 py-10 md:py-14 text-center">
-          <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-6">
-            — Rubriques —
+      {/* RUBRIQUES */}
+      <section className="border-t border-line">
+        <div className="px-5 md:px-10 py-14 md:py-20 text-center">
+          <div className="text-[11px] uppercase tracking-[0.24em] text-muted mb-8">
+            Les rubriques
           </div>
-          <ul className="flex flex-wrap justify-center items-baseline gap-x-8 md:gap-x-12 gap-y-3">
+          <ul className="flex flex-wrap justify-center items-baseline gap-x-10 md:gap-x-16 gap-y-4">
             {categories.map((c) => (
               <li key={c.slug}>
                 <Link
                   href={`/category/${c.slug}`}
-                  className="group inline-flex items-baseline gap-2 hover:underline underline-offset-4 decoration-1"
+                  className="group inline-flex items-baseline gap-2"
                 >
-                  <span className="font-display text-[20px] md:text-[24px] tracking-tight">
+                  <span className="font-display text-[24px] md:text-[30px] tracking-tight group-hover:italic">
                     {c.fr}
                   </span>
-                  <span className="font-serif text-[13px] text-neutral-600 group-hover:text-black">
+                  <span className="font-serif text-[13px] text-muted">
                     {c.cn}
                   </span>
                 </Link>

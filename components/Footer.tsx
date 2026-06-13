@@ -2,17 +2,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer lang="fr" className="border-t border-black mt-24">
+    <footer lang="fr" className="border-t border-line mt-8">
       {/* Colophon masthead */}
-      <div className="border-b border-black">
-        <div className="px-4 md:px-8 py-12 md:py-16 text-center">
-          <div className="font-sans text-[10px] uppercase tracking-[0.18em] mb-4">
-            — Colophon —
-          </div>
-          <div className="font-display text-[80px] md:text-[140px] leading-[0.85] tracking-[-0.04em]">
+      <div className="border-b border-line">
+        <div className="px-5 md:px-10 py-16 md:py-24 text-center">
+          <div className="font-display text-[88px] md:text-[160px] leading-[0.82] tracking-[-0.04em]">
             C33
           </div>
-          <div className="font-display italic text-[16px] md:text-[18px] mt-6 max-w-[520px] mx-auto leading-snug">
+          <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">
             Une revue trimestrielle franco-chinoise sur l&apos;industrie de la
             mode et les récits de marque.
           </div>
@@ -20,40 +17,40 @@ export default function Footer() {
       </div>
 
       {/* Sitemap links */}
-      <div className="border-b border-black px-4 md:px-8 py-8">
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-sans text-[10px] uppercase tracking-[0.16em]">
-          <Link href="/issues" className="hover:underline underline-offset-4">
+      <div className="border-b border-line px-5 md:px-10 py-8">
+        <nav className="flex flex-wrap justify-center gap-x-7 gap-y-2 text-[10px] uppercase tracking-[0.18em] text-muted">
+          <Link href="/issues" className="hover:text-ink transition-colors">
             Les numéros
           </Link>
-          <Link href="/manifeste" className="hover:underline underline-offset-4">
+          <Link href="/manifeste" className="hover:text-ink transition-colors">
             Manifeste
           </Link>
-          <Link href="/about" className="hover:underline underline-offset-4">
+          <Link href="/about" className="hover:text-ink transition-colors">
             About
           </Link>
           <Link
             href="/contributeurs"
-            className="hover:underline underline-offset-4"
+            className="hover:text-ink transition-colors"
           >
             Contributeurs
           </Link>
-          <Link href="/pitch" className="hover:underline underline-offset-4">
+          <Link href="/pitch" className="hover:text-ink transition-colors">
             Propositions
           </Link>
-          <Link href="/medias" className="hover:underline underline-offset-4">
+          <Link href="/medias" className="hover:text-ink transition-colors">
             Médias
           </Link>
-          <Link href="/contact" className="hover:underline underline-offset-4">
+          <Link href="/contact" className="hover:text-ink transition-colors">
             Contact
           </Link>
-          <a href="/feed.xml" className="hover:underline underline-offset-4">
+          <a href="/feed.xml" className="hover:text-ink transition-colors">
             RSS
           </a>
         </nav>
       </div>
 
       {/* Bottom strip */}
-      <div className="px-4 md:px-8 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-[10px] font-sans uppercase tracking-[0.16em]">
+      <div className="px-5 md:px-10 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-[10px] uppercase tracking-[0.16em] text-muted">
         <div className="space-y-1">
           <div>© C33 — Lumicome, 2026 · Tous droits réservés</div>
           <div>Rédactrice en chef : Kairos Zhang</div>
@@ -65,13 +62,13 @@ export default function Footer() {
         <div className="flex flex-col gap-1 md:items-end">
           <a
             href="mailto:contact@c33zine.com"
-            className="hover:underline underline-offset-4"
+            className="hover:text-ink transition-colors"
           >
             contact@c33zine.com
           </a>
           <Link
             href="/mentions-legales"
-            className="hover:underline underline-offset-4"
+            className="hover:text-ink transition-colors"
           >
             Mentions légales
           </Link>

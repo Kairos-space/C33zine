@@ -13,6 +13,8 @@ export type ArticleMeta = {
   excerpt?: string;
   order?: number;
   readingTime: number;
+  cover?: string;
+  coverAlt?: string;
 };
 
 export type Article = ArticleMeta & {
@@ -50,6 +52,8 @@ export function getAllArticles(): Article[] {
       excerpt: data.excerpt,
       order: typeof data.order === "number" ? data.order : undefined,
       readingTime: estimateReadingTime(content),
+      cover: data.cover,
+      coverAlt: data.coverAlt,
       content,
     };
   });
