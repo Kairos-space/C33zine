@@ -63,20 +63,17 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Right — image plate (fills column height on desktop) */}
-          <div className="md:col-span-7 relative md:min-h-[560px]">
-            <div className="md:absolute md:inset-0">
-              <EditorialImage
-                src={issueCover}
-                alt={issue.coverAlt ?? issue.title}
-                ratio="aspect-[3/2] md:aspect-auto"
-                sizes="(min-width: 768px) 58vw, 100vw"
-                priority
-                label={issue.title}
-                sublabel={`Numéro ${issue.number}`}
-                className="md:!h-full"
-              />
-            </div>
+          {/* Right — image plate */}
+          <div className="md:col-span-7">
+            <EditorialImage
+              src={issueCover}
+              alt={issue.coverAlt ?? issue.title}
+              ratio="aspect-[3/2]"
+              sizes="(min-width: 768px) 58vw, 100vw"
+              priority
+              label={issue.title}
+              sublabel={`Numéro ${issue.number}`}
+            />
           </div>
         </div>
       </section>
@@ -104,11 +101,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SOMMAIRE */}
+      {/* SOMMAIRE — vertical alternating image/text rows */}
       <section className="border-b border-line">
-        <div className="px-5 md:px-10 py-12 md:py-16">
-          <div className="max-w-[1280px] mx-auto">
-            <div className="flex items-baseline justify-between mb-10 md:mb-12">
+        <div className="px-5 md:px-10 py-12 md:py-20">
+          <div className="max-w-[1240px] mx-auto">
+            <div className="flex items-baseline justify-between mb-12 md:mb-20">
               <h2 className="font-display text-[30px] md:text-[44px] tracking-[-0.01em] relative pl-4 md:pl-6">
                 <span aria-hidden className="absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-9 w-[2px] bg-klein" />
                 Le sommaire
@@ -118,61 +115,100 @@ export default function HomePage() {
               </span>
             </div>
 
-            {lead && (
-              <div className="mb-12 md:mb-16 max-w-[1000px] mx-auto">
-                <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-klein mb-4 text-center">
-                  ● En tête / 头条
-                </div>
-                <Link
-                  href={`/article/${lead.slug}`}
-                  className="group block"
-                >
-                  <EditorialImage
-                    src={lead.cover}
-                    alt={lead.coverAlt ?? lead.title}
-                    ratio="aspect-[16/9]"
-                    sizes="(min-width: 768px) 1000px, 100vw"
-                    priority
-                    label={lead.title}
-                    sublabel={lead.category}
-                    className="mb-6"
-                  />
-                  <div className="text-center max-w-[720px] mx-auto">
-                    <div className="flex items-center justify-center gap-3 mb-3 font-mono text-[10px] uppercase tracking-[0.2em]">
+            <div className="space-y-16 md:space-y-24">
+              {articles.map((a, i) => {
+                const isLead = i === 0;
+                const reversed = i % 2 === 1; // alternate sides
+
+                const imgPart = (
+                  <div className="md:col-span-6">
+                    <Link href={`/article/${a.slug}`} className="group block">
+                      <EditorialImage
+                        src={a.cover}
+                        alt={a.coverAlt ?? a.title}
+                        ratio="aspect-[3/2]"
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        priority={isLead}
+                        label={a.title}
+                        sublabel={a.category}
+                      />
+                    </Link>
+                  </div>
+                );
+
+                const textPart = (
+                  <div className="md:col-span-5 md:col-start-auto">
+                    {isLead && (
+                      <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-klein mb-5">
+                        ● En tête / 头条
+                      </div>
+                    )}
+                    <div className="flex items-center gap-3 mb-4 font-mono text-[10px] uppercase tracking-[0.22em]">
                       <span className="inline-flex items-center gap-2 text-klein">
-                        <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
-                        {lead.category}
+                        <span
+                          aria-hidden
+                          className="inline-block h-1.5 w-1.5 rounded-full bg-klein"
+                        />
+                        {a.category}
                       </span>
-                      <span className="text-muted">N°{lead.issue}</span>
+                      <span className="text-muted">N°{a.issue}</span>
+                      <span className="text-muted">
+                        — {String(i + 1).padStart(2, "0")}
+                      </span>
                     </div>
-                    <h3 className="font-display text-[28px] md:text-[40px] leading-[1.1] tracking-[-0.015em] group-hover:text-klein transition-colors">
-                      {lead.title}
-                    </h3>
-                    {lead.excerpt && (
-                      <p className="font-display italic text-[17px] md:text-[19px] leading-[1.4] text-muted mt-4 max-w-[560px] mx-auto">
-                        {lead.excerpt}
+                    <Link href={`/article/${a.slug}`} className="group block">
+                      <h3 className="font-display text-[26px] md:text-[38px] leading-[1.1] tracking-[-0.015em] group-hover:text-klein transition-colors">
+                        {a.title}
+                      </h3>
+                    </Link>
+                    {a.excerpt && (
+                      <p className="font-display italic text-[17px] md:text-[19px] leading-[1.45] text-muted mt-5">
+                        {a.excerpt}
                       </p>
                     )}
-                    <div className="mt-5 flex items-center justify-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
-                      <span>{lead.author}</span>
+                    <div className="mt-6 flex items-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
+                      <span>{a.author}</span>
                       <span aria-hidden>/</span>
-                      <span>{lead.readingTime} MIN</span>
+                      <span>{a.readingTime} MIN</span>
+                      <span aria-hidden>/</span>
+                      <Link
+                        href={`/article/${a.slug}`}
+                        className="text-klein hover:text-ink transition-colors"
+                      >
+                        Lire →
+                      </Link>
                     </div>
                   </div>
-                </Link>
-              </div>
-            )}
+                );
 
-            <div className="border-t border-line pt-12 md:pt-16">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-10 gap-y-12 md:gap-y-16">
-                {rest.map((a) => (
-                  <ArticleTile key={a.slug} article={a} />
-                ))}
-              </div>
+                return (
+                  <article
+                    key={a.slug}
+                    className="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-16 items-center"
+                  >
+                    {reversed ? (
+                      <>
+                        {textPart}
+                        <div className="md:col-span-1 hidden md:block" />
+                        {imgPart}
+                      </>
+                    ) : (
+                      <>
+                        {imgPart}
+                        <div className="md:col-span-1 hidden md:block" />
+                        {textPart}
+                      </>
+                    )}
+                  </article>
+                );
+              })}
             </div>
 
             <div className="text-center mt-20 md:mt-28">
-              <span aria-hidden className="inline-block h-px w-10 bg-klein mb-5" />
+              <span
+                aria-hidden
+                className="inline-block h-px w-10 bg-klein mb-5"
+              />
               <p className="font-display italic text-[22px] md:text-[28px] leading-[1.4]">
                 Cinq pièces, cinq regards.
               </p>
