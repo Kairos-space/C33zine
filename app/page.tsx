@@ -2,12 +2,14 @@ import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import { categories } from "@/lib/categories";
+import { resolveCover } from "@/lib/cover";
 import ArticleTile from "@/components/ArticleTile";
 import EditorialImage from "@/components/EditorialImage";
 import Newsletter from "@/components/Newsletter";
 
 export default function HomePage() {
   const issue = getCurrentIssue();
+  const issueCover = resolveCover(issue.cover);
   const articles = getArticlesByIssue(issue.slug);
   const [lead, ...rest] = articles;
 
@@ -48,7 +50,7 @@ export default function HomePage() {
           {/* Right — image plate */}
           <div className="md:col-span-7">
             <EditorialImage
-              src={issue.cover}
+              src={issueCover}
               alt={issue.coverAlt ?? issue.title}
               ratio="aspect-[4/5] md:aspect-auto md:h-full"
               sizes="(min-width: 768px) 58vw, 100vw"
