@@ -107,7 +107,7 @@ body {
 
 /* Drop cap on the opening paragraph — print-magazine feel */
 .prose-c33 > p:first-of-type::first-letter {
-  font-family: var(--font-bodoni), "Didot", serif;
+  font-family: var(--font-display), "Didot", serif;
   font-weight: 600;
   float: left;
   font-size: 4.6em;
@@ -117,7 +117,7 @@ body {
 
 /* Pull quote — a line lifted out of the flow, set large in the display face */
 .pull-quote {
-  font-family: var(--font-bodoni), "Didot", serif;
+  font-family: var(--font-display), "Didot", serif;
   font-style: italic;
   font-weight: 500;
   font-size: 26px;

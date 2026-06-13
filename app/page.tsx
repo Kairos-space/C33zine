@@ -19,7 +19,7 @@ export default function HomePage() {
       <section className="border-b border-line">
         <div className="grid grid-cols-1 md:grid-cols-12">
           {/* Left — metadata + title */}
-          <div className="md:col-span-5 px-5 md:px-10 py-12 md:py-20 flex flex-col justify-between md:border-r border-line">
+          <div className="md:col-span-5 px-5 md:px-10 py-12 md:py-16 flex flex-col justify-between md:border-r border-line">
             <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted flex flex-col gap-2">
               <span className="flex items-center gap-2">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
@@ -71,22 +71,22 @@ export default function HomePage() {
 
       {/* ÉDITO */}
       <section className="border-b border-line">
-        <div className="px-5 md:px-10 py-20 md:py-32 max-w-[920px] mx-auto text-center">
-          <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
+        <div className="px-5 md:px-10 py-14 md:py-20 max-w-[860px] mx-auto text-center">
+          <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-7">
             <span aria-hidden className="h-px w-6 bg-klein" />
             Édito
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
-          <p className="font-display text-[28px] md:text-[44px] leading-[1.28] tracking-[-0.01em]">
+          <p className="font-display text-[26px] md:text-[38px] leading-[1.22] tracking-[-0.015em]">
             C33 décode les logiques de l&apos;industrie de la mode et des récits
             de marque, <span className="italic text-klein">entre la France et
             la Chine</span> — entre les deux regards, les deux traductions, et
             leurs réalités respectives.
           </p>
-          <div className="mt-12 max-w-[600px] mx-auto font-serif text-[16px] md:text-[17px] leading-[1.95] text-muted">
+          <div className="mt-7 max-w-[560px] mx-auto font-serif text-[15px] md:text-[16px] leading-[1.85] text-muted">
             解码时尚产业与品牌叙事的逻辑——在中国与法国的间距之中,在双重凝视、双向转译、以及各自面对的现实困局之间。
           </div>
-          <div className="mt-12 font-mono text-[11px] uppercase tracking-[0.22em] text-muted">
+          <div className="mt-8 font-mono text-[11px] uppercase tracking-[0.22em] text-muted">
             <span className="text-klein">●</span> Kairos Zhang — Rédactrice en chef
           </div>
         </div>
@@ -94,9 +94,9 @@ export default function HomePage() {
 
       {/* SOMMAIRE */}
       <section className="border-b border-line">
-        <div className="px-5 md:px-10 py-16 md:py-24">
+        <div className="px-5 md:px-10 py-12 md:py-16">
           <div className="max-w-[1280px] mx-auto">
-            <div className="flex items-baseline justify-between mb-12 md:mb-16">
+            <div className="flex items-baseline justify-between mb-10 md:mb-12">
               <h2 className="font-display text-[30px] md:text-[44px] tracking-[-0.01em] relative pl-4 md:pl-6">
                 <span aria-hidden className="absolute left-0 top-1/2 -translate-y-1/2 h-7 md:h-9 w-[2px] bg-klein" />
                 Le sommaire
@@ -107,10 +107,10 @@ export default function HomePage() {
             </div>
 
             {lead && (
-              <div className="mb-16 md:mb-24">
+              <div className="mb-14 md:mb-20">
                 <ArticleTile
                   article={lead}
-                  ratio="aspect-[16/10] md:aspect-[21/9]"
+                  ratio="aspect-[4/3] md:aspect-[16/9]"
                   sizes="(min-width: 768px) 1280px, 100vw"
                   priority
                 />

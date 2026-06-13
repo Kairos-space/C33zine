@@ -17,10 +17,10 @@ const config: Config = {
           "serif",
         ],
         display: [
-          "var(--font-bodoni)",
-          "Bodoni 72",
+          "var(--font-display)",
+          "Cormorant",
+          "EB Garamond",
           "Didot",
-          "Times New Roman",
           "serif",
         ],
         mono: [
