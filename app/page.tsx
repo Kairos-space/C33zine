@@ -54,16 +54,15 @@ export default function HomePage() {
           </div>
 
           {/* Right — image plate */}
-          <div className="md:col-span-7">
+          <div className="md:col-span-7 px-5 md:pl-10 md:pr-10 py-6 md:py-12">
             <EditorialImage
               src={issueCover}
               alt={issue.coverAlt ?? issue.title}
-              ratio="aspect-[4/5] md:aspect-auto md:h-full"
-              sizes="(min-width: 768px) 58vw, 100vw"
+              ratio="aspect-[3/2] md:aspect-[4/3]"
+              sizes="(min-width: 768px) 55vw, 100vw"
               priority
               label={issue.title}
               sublabel={`Numéro ${issue.number}`}
-              className="md:h-full"
             />
           </div>
         </div>
@@ -107,17 +106,27 @@ export default function HomePage() {
             </div>
 
             {lead && (
-              <div className="mb-14 md:mb-20">
-                <ArticleTile
-                  article={lead}
-                  ratio="aspect-[4/3] md:aspect-[16/9]"
-                  sizes="(min-width: 768px) 1280px, 100vw"
-                  priority
-                />
+              <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
+                <div className="md:col-span-8">
+                  <ArticleTile
+                    article={lead}
+                    ratio="aspect-[3/2]"
+                    sizes="(min-width: 768px) 66vw, 100vw"
+                    priority
+                  />
+                </div>
+                <div className="md:col-span-4 md:pb-4">
+                  <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-klein mb-3">
+                    ● En tête / 头条
+                  </div>
+                  <p className="font-display italic text-[18px] md:text-[20px] leading-[1.35] text-muted">
+                    {lead?.excerpt}
+                  </p>
+                </div>
               </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16 md:gap-y-24">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-10 gap-y-12 md:gap-y-16">
               {rest.map((a) => (
                 <ArticleTile key={a.slug} article={a} />
               ))}

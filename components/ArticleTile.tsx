@@ -4,7 +4,7 @@ import type { ArticleMeta } from "@/lib/articles";
 
 export default function ArticleTile({
   article,
-  ratio = "aspect-[4/5]",
+  ratio = "aspect-[3/2]",
   sizes = "(min-width: 768px) 50vw, 100vw",
   priority = false,
 }: {
@@ -23,19 +23,19 @@ export default function ArticleTile({
         priority={priority}
         label={article.title}
         sublabel={article.category}
-        className="mb-5"
+        className="mb-4"
       />
-      <div className="flex items-center gap-3 mb-3 font-mono text-[10px] uppercase tracking-[0.2em]">
+      <div className="flex items-center gap-3 mb-2 font-mono text-[10px] uppercase tracking-[0.2em]">
         <span className="inline-flex items-center gap-2 text-klein">
           <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
           {article.category}
         </span>
         <span className="text-muted">N°{article.issue}</span>
       </div>
-      <h3 className="font-display text-[26px] md:text-[32px] leading-[1.1] tracking-[-0.01em] group-hover:text-klein transition-colors">
+      <h3 className="font-display text-[22px] md:text-[26px] leading-[1.15] tracking-[-0.01em] group-hover:text-klein transition-colors">
         {article.title}
       </h3>
-      <div className="mt-4 flex items-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
+      <div className="mt-3 flex items-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
         <span>{article.author}</span>
         <span aria-hidden>/</span>
         <span>{article.readingTime} MIN</span>
