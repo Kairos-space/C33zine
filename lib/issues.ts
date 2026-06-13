@@ -19,7 +19,7 @@ export const issues: Issue[] = [
     season: "Printemps",
     year: "2026",
     status: "current",
-    cover: "/images/issue-01.jpg",
+    cover: "/images/issue-01.png",
     coverAlt: "巴黎工作室:高定人台与样片",
   },
 ];
