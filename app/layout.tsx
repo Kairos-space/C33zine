@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Serif_SC, Bodoni_Moda } from "next/font/google";
+import {
+  Inter,
+  Noto_Serif_SC,
+  Fraunces,
+  Space_Mono,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -18,14 +23,21 @@ const notoSerifSC = Noto_Serif_SC({
   variable: "--font-noto-serif-sc",
 });
 
-const bodoni = Bodoni_Moda({
+const fraunces = Fraunces({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-bodoni",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-display",
+  axes: ["opsz", "SOFT"],
   style: ["normal", "italic"],
   adjustFontFallback: false,
-  fallback: ["Bodoni 72", "Didot", "Times New Roman", "serif"],
+  fallback: ["Cormorant", "EB Garamond", "Didot", "serif"],
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -62,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`${inter.variable} ${notoSerifSC.variable} ${bodoni.variable}`}
+      className={`${inter.variable} ${notoSerifSC.variable} ${fraunces.variable} ${spaceMono.variable}`}
     >
       <body className="min-h-screen flex flex-col">
         <Nav />

@@ -4,7 +4,9 @@
 
 :root {
   --paper: #ffffff;
-  --ink: #000000;
+  --ink: #111111;
+  --line: #e6e6e6;
+  --klein: #1f2bff;
 }
 
 html,
@@ -20,8 +22,20 @@ body {
 }
 
 ::selection {
-  background: #000;
+  background: var(--accent, var(--klein));
   color: #fff;
+}
+
+/* Language toggle — hide the off-language when a single-language mode is on.
+   Scoped to <main> so Nav and Footer (which are mostly FR labels but are
+   chrome, not content) stay visible regardless of mode. */
+body[data-lang-mode="fr"] main [lang="zh-CN"],
+body[data-lang-mode="fr"] main [lang="zh"] {
+  display: none !important;
+}
+body[data-lang-mode="cn"] main [lang="fr"],
+body[data-lang-mode="cn"] main [lang="en"] {
+  display: none !important;
 }
 
 /* Article prose */
@@ -29,7 +43,7 @@ body {
   font-family: var(--font-noto-serif-sc), "Songti SC", "SimSun", serif;
   font-size: 18px;
   line-height: 1.8;
-  color: #000;
+  color: var(--ink);
 }
 
 .prose-c33 p {
@@ -50,22 +64,22 @@ body {
 }
 
 .prose-c33 blockquote {
-  border-left: 2px solid #000;
+  border-left: 2px solid var(--klein);
   padding-left: 1.25em;
   margin: 2em 0;
   font-style: italic;
-  color: #222;
+  color: var(--ink);
 }
 
 .prose-c33 a {
-  color: #000;
+  color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .prose-c33 hr {
   border: none;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--line);
   margin: 3em 0;
 }
 
@@ -105,7 +119,7 @@ body {
 
 /* Drop cap on the opening paragraph — print-magazine feel */
 .prose-c33 > p:first-of-type::first-letter {
-  font-family: var(--font-bodoni), "Didot", serif;
+  font-family: var(--font-display), "Didot", serif;
   font-weight: 600;
   float: left;
   font-size: 4.6em;
@@ -115,17 +129,18 @@ body {
 
 /* Pull quote — a line lifted out of the flow, set large in the display face */
 .pull-quote {
-  font-family: var(--font-bodoni), "Didot", serif;
+  font-family: var(--font-display), "Didot", serif;
   font-style: italic;
   font-weight: 500;
   font-size: 26px;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid var(--klein);
+  border-bottom: 1px solid var(--klein);
   padding: 1em 0;
   margin: 2.4em 0;
   text-align: center;
+  color: var(--ink);
 }
 
 @media (min-width: 768px) {

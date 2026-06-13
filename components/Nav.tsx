@@ -1,58 +1,64 @@
 import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
+import LangToggle from "@/components/LangToggle";
 
 export default function Nav() {
   const issue = getCurrentIssue();
   return (
-    <header lang="fr" className="border-b border-black">
+    <header lang="fr" className="border-b border-line">
       {/* Utility bar */}
-      <div className="border-b border-black">
-        <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
+      <div className="border-b border-line">
+        <div className="px-5 md:px-10 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span className="hidden md:inline">
-            France · Chine — Trimestriel
+            <span className="text-klein font-bold">+33</span> · France ↔ Chine
           </span>
-          <span className="md:hidden">FR · CN</span>
+          <span className="md:hidden text-klein font-bold">+33</span>
           <span>
-            Vol. 01 — N° {issue.number} · {issue.season} {issue.year}
+            Vol.01 — N°{issue.number} · {issue.season} {issue.year}
           </span>
-          <span className="hidden md:inline">Bilingue 中 / FR</span>
+          <span className="hidden md:inline-flex items-center">
+            <LangToggle />
+          </span>
         </div>
       </div>
 
       {/* Masthead */}
-      <div className="px-4 md:px-8 py-6 md:py-8 grid grid-cols-3 items-center">
-        <nav className="flex items-center gap-4 md:gap-7 text-[11px] font-sans uppercase tracking-[0.14em] justify-self-start">
-          <Link href="/issues" className="hover:underline underline-offset-4">
+      <div className="px-5 md:px-10 py-7 md:py-10 grid grid-cols-3 items-center">
+        <nav className="flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em] justify-self-start">
+          <Link href="/issues" className="hover:text-klein transition-colors">
             Issues
           </Link>
           <Link
-            href="/manifeste"
-            className="hover:underline underline-offset-4 hidden md:inline"
+            href="/journal"
+            className="hover:text-klein transition-colors hidden md:inline"
           >
-            Manifeste
+            Journal
           </Link>
-          <Link href="/about" className="hover:underline underline-offset-4">
+          <Link
+            href="/lexique"
+            className="hover:text-klein transition-colors hidden md:inline"
+          >
+            Lexique
+          </Link>
+          <Link href="/about" className="hover:text-klein transition-colors">
             About
           </Link>
         </nav>
         <Link
           href="/"
           aria-label="C33 — accueil"
-          className="font-display font-medium tracking-[-0.04em] text-[44px] md:text-[64px] leading-none justify-self-center"
+          className="font-display tracking-[-0.03em] text-[44px] md:text-[64px] leading-none justify-self-center"
         >
           C33
         </Link>
-        <nav className="flex items-center gap-4 md:gap-7 text-[11px] font-sans uppercase tracking-[0.14em] justify-self-end">
+        <nav className="flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em] justify-self-end">
           <Link
-            href="/mentions-legales"
-            className="hover:underline underline-offset-4 hidden md:inline"
+            href="/medias"
+            className="hover:text-klein transition-colors hidden md:inline"
           >
-            Légales
+            Médias
           </Link>
-          <Link
-            href="/contact"
-            className="hover:underline underline-offset-4"
-          >
+          <Link href="/contact" className="hover:text-klein transition-colors">
             Contact
           </Link>
         </nav>

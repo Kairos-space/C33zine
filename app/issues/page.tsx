@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { issues } from "@/lib/issues";
+import { issues, issueAccentStyle } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
+import { resolveCover } from "@/lib/cover";
+import EditorialImage from "@/components/EditorialImage";
 
 export const metadata: Metadata = {
   title: "Les numéros",
@@ -16,10 +18,10 @@ export default function IssuesPage() {
   return (
     <div>
       {/* Folio bar */}
-      <div className="border-b border-black">
-        <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
+      <div className="border-b border-line">
+        <div className="px-4 md:px-8 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span>C33 — Les numéros</span>
-          <span className="hidden md:inline font-display italic normal-case tracking-normal">
+          <span className="hidden md:inline italic normal-case tracking-normal text-ink">
             Issues / 期号
           </span>
           <span>2026</span>
@@ -27,67 +29,112 @@ export default function IssuesPage() {
       </div>
 
       {/* Header */}
-      <header className="border-b border-black px-6 md:px-10 py-16 md:py-24 text-center">
-        <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-6">
-          — Archive —
+      <header className="border-b border-line">
+        <div className="px-5 md:px-10 py-20 md:py-28 text-center">
+          <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
+            <span aria-hidden className="h-px w-6 bg-klein" />
+            Archive / 期号
+            <span aria-hidden className="h-px w-6 bg-klein" />
+          </div>
+          <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
+            Les numéros
+          </h1>
+          <p className="font-display italic text-[18px] md:text-[20px] mt-8 max-w-[560px] mx-auto text-muted">
+            Une revue trimestrielle. Un thème par numéro, quatre par an.
+          </p>
         </div>
-        <h1 className="font-display font-medium text-[44px] md:text-[88px] leading-[0.95] tracking-[-0.02em]">
-          Les numéros
-        </h1>
-        <p className="font-display italic text-[16px] md:text-[18px] mt-6 max-w-[520px] mx-auto">
-          Une revue trimestrielle. Un thème par numéro, quatre par an.
-        </p>
       </header>
 
       {/* Issue list */}
-      <section className="px-6 md:px-10 py-14 md:py-20">
-        <div className="max-w-[1100px] mx-auto">
-          {ordered.map((issue) => {
+      <section className="px-5 md:px-10 py-14 md:py-20">
+        <div className="max-w-[1240px] mx-auto space-y-16 md:space-y-24">
+          {ordered.map((issue, i) => {
             const count = getArticlesByIssue(issue.slug).length;
-            return (
-              <Link
-                key={issue.slug}
-                href={`/issue/${issue.slug}`}
-                className="group block border-t border-black"
-              >
-                <div className="grid grid-cols-12 gap-4 md:gap-6 py-10 md:py-14 items-center">
-                  {/* Cover thumbnail */}
-                  <div className="col-span-4 md:col-span-3">
-                    <div
+            const cover = resolveCover(issue.cover);
+            const reversed = i % 2 === 1;
+
+            const imgPart = (
+              <div className="md:col-span-6">
+                <Link
+                  href={`/issue/${issue.slug}`}
+                  className="group block"
+                >
+                  <EditorialImage
+                    src={cover}
+                    alt={issue.coverAlt ?? issue.title}
+                    ratio="aspect-[3/2]"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    label={issue.title}
+                    sublabel={`Numéro ${issue.number}`}
+                  />
+                </Link>
+              </div>
+            );
+
+            const textPart = (
+              <div className="md:col-span-5">
+                <div className="flex items-center gap-3 mb-4 font-mono text-[10px] uppercase tracking-[0.22em]">
+                  <span className="inline-flex items-center gap-2 text-klein">
+                    <span
                       aria-hidden
-                      className="aspect-[3/4] bg-black w-full flex flex-col items-center justify-center text-white text-center p-3"
-                    >
-                      <div className="font-sans text-[9px] uppercase tracking-[0.2em] mb-2">
-                        N° {issue.number}
-                      </div>
-                      <div className="font-display font-medium text-[18px] md:text-[26px] leading-[1.05] tracking-tight">
-                        {issue.title}
-                      </div>
-                    </div>
-                  </div>
-                  {/* Meta */}
-                  <div className="col-span-8 md:col-span-9">
-                    <div className="font-sans text-[10px] uppercase tracking-[0.18em] mb-3">
-                      {issue.status === "current"
-                        ? "Numéro courant"
-                        : "Archive"}{" "}
-                      · {issue.season} {issue.year}
-                    </div>
-                    <h2 className="font-display font-medium text-[30px] md:text-[52px] leading-[1.02] tracking-[-0.02em] group-hover:underline underline-offset-4 decoration-1">
-                      N° {issue.number} — {issue.title}
-                    </h2>
-                    <div className="mt-4 font-display italic text-[15px] md:text-[17px] text-neutral-600">
-                      {issue.subtitle} · {String(count).padStart(2, "0")} pièces
-                    </div>
-                    <div className="mt-6 font-sans text-[11px] uppercase tracking-[0.18em]">
-                      Lire le numéro →
-                    </div>
-                  </div>
+                      className="inline-block h-1.5 w-1.5 rounded-full bg-klein"
+                    />
+                    {issue.status === "current"
+                      ? "Numéro courant"
+                      : "Archive"}
+                  </span>
+                  <span className="text-muted">
+                    {issue.season} {issue.year}
+                  </span>
                 </div>
-              </Link>
+                <Link
+                  href={`/issue/${issue.slug}`}
+                  className="group block"
+                >
+                  <h2 className="font-display text-[34px] md:text-[56px] leading-[1.02] tracking-[-0.02em] group-hover:text-klein transition-colors">
+                    N° {issue.number}
+                    <br />
+                    <span className="italic">{issue.title}</span>
+                  </h2>
+                </Link>
+                <p className="font-display italic text-[17px] md:text-[19px] mt-5 text-muted">
+                  {issue.subtitle} · {String(count).padStart(2, "0")} pièces
+                </p>
+                <Link
+                  href={`/issue/${issue.slug}`}
+                  className="inline-flex items-center gap-3 mt-7 font-mono text-[12px] uppercase tracking-[0.2em] text-klein group"
+                >
+                  <span
+                    aria-hidden
+                    className="inline-block h-px w-8 bg-klein transition-all group-hover:w-12"
+                  />
+                  Lire le numéro
+                </Link>
+              </div>
+            );
+
+            return (
+              <article
+                key={issue.slug}
+                style={issueAccentStyle(issue)}
+                className="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-16 items-center"
+              >
+                {reversed ? (
+                  <>
+                    {textPart}
+                    <div className="md:col-span-1 hidden md:block" />
+                    {imgPart}
+                  </>
+                ) : (
+                  <>
+                    {imgPart}
+                    <div className="md:col-span-1 hidden md:block" />
+                    {textPart}
+                  </>
+                )}
+              </article>
             );
           })}
-          <div className="border-t border-black" />
         </div>
       </section>
     </div>

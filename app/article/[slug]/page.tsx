@@ -7,7 +7,7 @@ import {
   getArticleBySlug,
   getArticlesByIssue,
 } from "@/lib/articles";
-import { getIssueBySlug } from "@/lib/issues";
+import { getIssueBySlug, issueAccentStyle } from "@/lib/issues";
 import ArticleCard from "@/components/ArticleCard";
 
 const mdxComponents = {
@@ -94,7 +94,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <article>
+    <article style={issueAccentStyle(issue)}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllArticles } from "@/lib/articles";
 import { issues } from "@/lib/issues";
 import { categories } from "@/lib/categories";
+import { getAllJournalPosts } from "@/lib/journal";
 
 const BASE_URL = "https://c33zine.com";
 
@@ -11,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/issues`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/journal`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${BASE_URL}/lexique`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/manifeste`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/contributeurs`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
@@ -41,5 +44,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...issuePages, ...articlePages, ...categoryPages];
+  const journalPages: MetadataRoute.Sitemap = getAllJournalPosts().map((p) => ({
+    url: `${BASE_URL}/journal/${p.slug}`,
+    lastModified: p.date ? new Date(p.date) : now,
+    changeFrequency: "yearly",
+    priority: 0.6,
+  }));
+
+  return [
+    ...staticPages,
+    ...issuePages,
+    ...articlePages,
+    ...categoryPages,
+    ...journalPages,
+  ];
 }

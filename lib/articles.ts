@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { getCategoryBySlug } from "./categories";
+import { resolveCover } from "./cover";
 
 export type ArticleMeta = {
   slug: string;
@@ -13,6 +14,8 @@ export type ArticleMeta = {
   excerpt?: string;
   order?: number;
   readingTime: number;
+  cover?: string;
+  coverAlt?: string;
 };
 
 export type Article = ArticleMeta & {
@@ -50,6 +53,8 @@ export function getAllArticles(): Article[] {
       excerpt: data.excerpt,
       order: typeof data.order === "number" ? data.order : undefined,
       readingTime: estimateReadingTime(content),
+      cover: resolveCover(data.cover),
+      coverAlt: data.coverAlt,
       content,
     };
   });

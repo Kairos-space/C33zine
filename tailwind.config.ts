@@ -17,16 +17,27 @@ const config: Config = {
           "serif",
         ],
         display: [
-          "var(--font-bodoni)",
-          "Bodoni 72",
+          "var(--font-display)",
+          "Cormorant",
+          "EB Garamond",
           "Didot",
-          "Times New Roman",
           "serif",
+        ],
+        mono: [
+          "var(--font-mono)",
+          "ui-monospace",
+          "SFMono-Regular",
+          "monospace",
         ],
       },
       colors: {
-        ink: "#000000",
-        paper: "#FFFFFF",
+        // Clean white system with one electric accent (per-issue overridable)
+        paper: "#ffffff",
+        ink: "#0e0e10",
+        line: "#e6e6e6",
+        muted: "#7a7a7e",
+        klein: "var(--accent, #1f2bff)",
+        kleinSoft: "var(--accent-soft, #eef0ff)",
       },
       maxWidth: {
         prose: "680px",
