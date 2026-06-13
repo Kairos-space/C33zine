@@ -12,6 +12,9 @@ export default function HomePage() {
   const issueCover = resolveCover(issue.cover);
   const articles = getArticlesByIssue(issue.slug);
   const [lead, ...rest] = articles;
+  const [titleFR, titleCN] = issue.title.includes(" / ")
+    ? issue.title.split(" / ")
+    : [issue.title, ""];
 
   return (
     <div>
@@ -30,11 +33,18 @@ export default function HomePage() {
               </span>
             </div>
 
-            <div className="my-12 md:my-0">
-              <h1 className="font-display text-[52px] md:text-[84px] leading-[0.98] tracking-[-0.03em]">
-                {issue.title}
+            <div className="my-12 md:my-10">
+              <h1 className="font-display leading-[0.95] tracking-[-0.025em]">
+                <span className="block text-[44px] md:text-[64px]">
+                  {titleFR}
+                </span>
+                {titleCN && (
+                  <span className="block font-display italic text-[26px] md:text-[36px] text-muted mt-1">
+                    / {titleCN}
+                  </span>
+                )}
               </h1>
-              <p className="font-display italic text-[20px] md:text-[26px] leading-[1.3] mt-6 max-w-[440px]">
+              <p className="font-display italic text-[18px] md:text-[22px] leading-[1.35] mt-6 max-w-[420px]">
                 La fabrique des récits — derrière la mode, le métier qui les
                 tient.
               </p>
@@ -53,17 +63,20 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Right — image plate */}
-          <div className="md:col-span-7 px-5 md:pl-10 md:pr-10 py-6 md:py-12">
-            <EditorialImage
-              src={issueCover}
-              alt={issue.coverAlt ?? issue.title}
-              ratio="aspect-[3/2] md:aspect-[4/3]"
-              sizes="(min-width: 768px) 55vw, 100vw"
-              priority
-              label={issue.title}
-              sublabel={`Numéro ${issue.number}`}
-            />
+          {/* Right — image plate (fills column height on desktop) */}
+          <div className="md:col-span-7 relative md:min-h-[560px]">
+            <div className="md:absolute md:inset-0">
+              <EditorialImage
+                src={issueCover}
+                alt={issue.coverAlt ?? issue.title}
+                ratio="aspect-[3/2] md:aspect-auto"
+                sizes="(min-width: 768px) 58vw, 100vw"
+                priority
+                label={issue.title}
+                sublabel={`Numéro ${issue.number}`}
+                className="md:!h-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -106,30 +119,56 @@ export default function HomePage() {
             </div>
 
             {lead && (
-              <div className="mb-12 md:mb-16 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
-                <div className="md:col-span-8">
-                  <ArticleTile
-                    article={lead}
-                    ratio="aspect-[3/2]"
-                    sizes="(min-width: 768px) 66vw, 100vw"
+              <div className="mb-12 md:mb-16 max-w-[1000px] mx-auto">
+                <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-klein mb-4 text-center">
+                  ● En tête / 头条
+                </div>
+                <Link
+                  href={`/article/${lead.slug}`}
+                  className="group block"
+                >
+                  <EditorialImage
+                    src={lead.cover}
+                    alt={lead.coverAlt ?? lead.title}
+                    ratio="aspect-[16/9]"
+                    sizes="(min-width: 768px) 1000px, 100vw"
                     priority
+                    label={lead.title}
+                    sublabel={lead.category}
+                    className="mb-6"
                   />
-                </div>
-                <div className="md:col-span-4 md:pb-4">
-                  <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-klein mb-3">
-                    ● En tête / 头条
+                  <div className="text-center max-w-[720px] mx-auto">
+                    <div className="flex items-center justify-center gap-3 mb-3 font-mono text-[10px] uppercase tracking-[0.2em]">
+                      <span className="inline-flex items-center gap-2 text-klein">
+                        <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
+                        {lead.category}
+                      </span>
+                      <span className="text-muted">N°{lead.issue}</span>
+                    </div>
+                    <h3 className="font-display text-[28px] md:text-[40px] leading-[1.1] tracking-[-0.015em] group-hover:text-klein transition-colors">
+                      {lead.title}
+                    </h3>
+                    {lead.excerpt && (
+                      <p className="font-display italic text-[17px] md:text-[19px] leading-[1.4] text-muted mt-4 max-w-[560px] mx-auto">
+                        {lead.excerpt}
+                      </p>
+                    )}
+                    <div className="mt-5 flex items-center justify-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
+                      <span>{lead.author}</span>
+                      <span aria-hidden>/</span>
+                      <span>{lead.readingTime} MIN</span>
+                    </div>
                   </div>
-                  <p className="font-display italic text-[18px] md:text-[20px] leading-[1.35] text-muted">
-                    {lead?.excerpt}
-                  </p>
-                </div>
+                </Link>
               </div>
             )}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-10 gap-y-12 md:gap-y-16">
-              {rest.map((a) => (
-                <ArticleTile key={a.slug} article={a} />
-              ))}
+            <div className="border-t border-line pt-12 md:pt-16">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-10 gap-y-12 md:gap-y-16">
+                {rest.map((a) => (
+                  <ArticleTile key={a.slug} article={a} />
+                ))}
+              </div>
             </div>
 
             <div className="text-center mt-20 md:mt-28">

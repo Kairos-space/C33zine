@@ -32,7 +32,7 @@ export default function EditorialImage({
 }: Props) {
   return (
     <div
-      className={`relative ${ratio} w-full overflow-hidden bg-[#171719] ${className}`}
+      className={`relative ${ratio} w-full h-full overflow-hidden bg-[#171719] ${className}`}
     >
       {src ? (
         <Image
