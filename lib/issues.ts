@@ -25,8 +25,8 @@ export const issues: Issue[] = [
     status: "current",
     cover: "/images/issue-01.png",
     coverAlt: "巴黎工作室:高定人台与样片",
-    accent: "#1f2bff", // Klein blue
-    accentSoft: "#eef0ff",
+    accent: "#0ea5e9", // 天蓝 sky blue
+    accentSoft: "#e0f2fe",
   },
 ];
 

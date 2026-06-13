@@ -27,14 +27,14 @@ body {
 }
 
 /* Language toggle — hide the off-language when a single-language mode is on.
-   FR-only hides any element marked lang="zh-CN", and vice versa. lang attrs
-   are present on Nav, Footer, Manifeste, About and most page body chunks. */
-body[data-lang-mode="fr"] [lang="zh-CN"],
-body[data-lang-mode="fr"] [lang="zh"] {
+   Scoped to <main> so Nav and Footer (which are mostly FR labels but are
+   chrome, not content) stay visible regardless of mode. */
+body[data-lang-mode="fr"] main [lang="zh-CN"],
+body[data-lang-mode="fr"] main [lang="zh"] {
   display: none !important;
 }
-body[data-lang-mode="cn"] [lang="fr"],
-body[data-lang-mode="cn"] [lang="en"] {
+body[data-lang-mode="cn"] main [lang="fr"],
+body[data-lang-mode="cn"] main [lang="en"] {
   display: none !important;
 }
 
