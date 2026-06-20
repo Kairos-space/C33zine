@@ -13,12 +13,16 @@ import { useState } from "react";
  * or Substack (https://your-pub.substack.com/api/v1/free) or any custom
  * endpoint. If the env var is unset, the form falls back to opening the
  * user's mail client at contact@c33zine.com.
+ *
+ * `compact` renders a left-aligned, frameless variant for use inside a
+ * column (e.g. the homepage "About + Subscribe" band); the default renders
+ * a full centered section.
  */
 const ENDPOINT = process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT;
 
 type State = "idle" | "loading" | "ok" | "error";
 
-export default function Newsletter() {
+export default function Newsletter({ compact = false }: { compact?: boolean }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<State>("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -70,6 +74,69 @@ export default function Newsletter() {
     }
   }
 
+  const inner =
+    state === "ok" ? (
+      <p className="font-display italic text-[18px]" lang="fr">
+        Merci — votre abonnement est enregistré.{" "}
+        <span lang="zh-CN" className="not-italic font-serif text-muted">
+          感谢订阅。
+        </span>
+      </p>
+    ) : (
+      <>
+        <form
+          onSubmit={handleSubmit}
+          className={`flex flex-col sm:flex-row gap-3 max-w-[460px] ${
+            compact ? "" : "mx-auto"
+          }`}
+        >
+          <input
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="votre@email.com"
+            aria-label="E-mail"
+            disabled={state === "loading"}
+            className="flex-1 border border-line bg-transparent px-4 h-12 font-mono text-[12px] tracking-[0.04em] placeholder:text-muted focus:outline-none focus:border-klein disabled:opacity-50"
+          />
+          <button
+            type="submit"
+            disabled={state === "loading"}
+            className="border border-klein bg-klein text-white h-12 px-6 font-mono text-[11px] uppercase tracking-[0.18em] hover:bg-transparent hover:text-klein transition-colors disabled:opacity-50"
+          >
+            {state === "loading" ? "..." : "S'abonner"}
+          </button>
+        </form>
+        {state === "error" && errorMsg && (
+          <p className="mt-4 font-mono text-[11px] text-red-600">{errorMsg}</p>
+        )}
+      </>
+    );
+
+  if (compact) {
+    return (
+      <div className="no-print">
+        <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-6">
+          Newsletter / 订阅
+        </div>
+        <p
+          className="font-display italic text-[22px] md:text-[28px] leading-[1.3] mb-3"
+          lang="fr"
+        >
+          Une lettre entre Paris et Shanghai.
+        </p>
+        <p
+          className="font-serif text-[15px] md:text-[16px] text-muted mb-8 max-w-[420px]"
+          lang="zh-CN"
+        >
+          每季一封。新刊上线时,我们会通知你。
+        </p>
+        {inner}
+      </div>
+    );
+  }
+
   return (
     <section className="border-t border-line no-print">
       <div className="px-6 md:px-10 py-16 md:py-24 text-center max-w-[680px] mx-auto">
@@ -90,45 +157,7 @@ export default function Newsletter() {
         >
           留下邮箱,下一期上线时我们会通知你。
         </p>
-
-        {state === "ok" ? (
-          <p className="font-display italic text-[18px]" lang="fr">
-            Merci — votre abonnement est enregistré.{" "}
-            <span lang="zh-CN" className="not-italic font-serif text-muted">
-              感谢订阅。
-            </span>
-          </p>
-        ) : (
-          <>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row gap-3 max-w-[460px] mx-auto"
-            >
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="votre@email.com"
-                aria-label="E-mail"
-                disabled={state === "loading"}
-                className="flex-1 border border-line bg-transparent px-4 h-12 font-mono text-[12px] tracking-[0.04em] placeholder:text-muted focus:outline-none focus:border-klein disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={state === "loading"}
-                className="border border-klein bg-klein text-white h-12 px-6 font-mono text-[11px] uppercase tracking-[0.18em] hover:bg-transparent hover:text-klein transition-colors disabled:opacity-50"
-              >
-                {state === "loading" ? "..." : "S'abonner"}
-              </button>
-            </form>
-            {state === "error" && errorMsg && (
-              <p className="mt-4 font-mono text-[11px] text-red-600">
-                {errorMsg}
-              </p>
-            )}
-          </>
-        )}
+        {inner}
       </div>
     </section>
   );
