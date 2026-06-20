@@ -85,8 +85,7 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                 )}
               </h1>
               <p className="font-display italic text-[18px] md:text-[22px] leading-[1.35] mt-6 max-w-[420px]">
-                La fabrique des récits — derrière la mode, le métier qui les
-                tient.
+                {issue.tagline}
               </p>
             </div>
 
@@ -220,10 +219,10 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                 className="inline-block h-px w-10 bg-klein mb-5"
               />
               <p className="font-display italic text-[22px] md:text-[28px] leading-[1.4]">
-                Cinq pièces, cinq regards.
+                {issue.signoff}
               </p>
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] mt-4 text-muted">
-                五篇文章 / 五种视角
+                {issue.signoffCn}
               </p>
             </div>
           </div>

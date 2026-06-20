@@ -16,6 +16,11 @@ export type Issue = {
   accent?: string;
   /** Soft tint of the accent for backgrounds */
   accentSoft?: string;
+  /** Issue standfirst (FR) shown under the cover title */
+  tagline?: string;
+  /** Closing line of the sommaire (FR + 中文) */
+  signoff?: string;
+  signoffCn?: string;
 };
 
 export const issues: Issue[] = [
@@ -31,6 +36,26 @@ export const issues: Issue[] = [
     coverAlt: "巴黎工作室:高定人台与样片",
     accent: "#0ea5e9", // 天蓝 sky blue
     accentSoft: "#e0f2fe",
+    tagline:
+      "La fabrique des récits — derrière la mode, le métier qui les tient.",
+    signoff: "Cinq pièces, cinq regards.",
+    signoffCn: "五篇文章 / 五种视角",
+  },
+  {
+    slug: "02",
+    number: "02",
+    title: "Le déplacement / 位移",
+    subtitle: "Deuxième numéro",
+    season: "Été",
+    year: "2026",
+    status: "upcoming",
+    cover: "/images/issue-02.png",
+    coverAlt: "Paris sous la canicule — l'été où la mode se déplace",
+    accent: "#e2462a", // 盛夏朱砂橙 summer vermillion
+    accentSoft: "#fce7e0",
+    tagline: "Quand la mode change de lieu, de langue et de pouvoir.",
+    signoff: "Le déplacement, en cours.",
+    signoffCn: "位移 · 正在发生",
   },
 ];
 
