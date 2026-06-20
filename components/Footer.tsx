@@ -62,7 +62,7 @@ export default function Footer() {
           <div>Rédactrice en chef : Kairos Zhang</div>
         </div>
         <div className="space-y-1 md:text-center">
-          <div>ISSN — en cours d&apos;attribution</div>
+          <div>ISSN 2981-2844</div>
           <div>Paris, France</div>
         </div>
         <div className="flex flex-col gap-1 md:items-end">

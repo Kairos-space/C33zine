@@ -125,7 +125,7 @@ excerpt: "一句话摘要,会用于 SEO 和分享卡片。"
 
 ## TODO (后续)
 
-- [ ] 申请法国 ISSN(在 BnF 网站),拿到后更新 `mentions-legales`
+- [x] 申请法国 ISSN(在 BnF 网站)→ 已获 ISSN 2981-2844,已在 footer 与 `mentions-legales` 显示
 - [ ] Newsletter 订阅(独立加,暂不内嵌)
 - [ ] Cookie 同意横幅(走 Tarteaucitron 或类似,法国合规)
 - [ ] OG 图自动生成

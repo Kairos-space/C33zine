@@ -87,7 +87,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           isPartOf: {
             "@type": "Periodical",
             name: "C33",
-            issn: undefined,
+            issn: "2981-2844",
           },
         }
       : undefined,

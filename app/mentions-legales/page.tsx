@@ -86,8 +86,12 @@ export default function MentionsLegalesPage() {
               ISSN
             </h2>
             <p>
-              En cours d&apos;attribution auprès du Centre ISSN France
-              (Bibliothèque nationale de France).
+              <strong>ISSN 2981-2844</strong>
+              <br />
+              Périodique en ligne, trimestriel.
+              <br />
+              Attribué par le Centre ISSN France (Bibliothèque nationale de
+              France).
             </p>
           </section>
 
