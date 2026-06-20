@@ -1,78 +1,85 @@
 import Link from "next/link";
-import { getCurrentIssue, issueAccentStyle } from "@/lib/issues";
+import { getCurrentIssue, issueAccentStyle, C33_ISSN } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import { categories } from "@/lib/categories";
-import { resolveCover } from "@/lib/cover";
-import ArticleTile from "@/components/ArticleTile";
 import EditorialImage from "@/components/EditorialImage";
 import Newsletter from "@/components/Newsletter";
 
 export default function HomePage() {
   const issue = getCurrentIssue();
-  const issueCover = resolveCover(issue.cover);
   const articles = getArticlesByIssue(issue.slug);
-  const [lead, ...rest] = articles;
   const [titleFR, titleCN] = issue.title.includes(" / ")
     ? issue.title.split(" / ")
     : [issue.title, ""];
 
   return (
     <div style={issueAccentStyle(issue)}>
-      {/* HERO — split: editorial title + image plate */}
-      <section className="border-b border-line">
-        <div className="grid grid-cols-1 md:grid-cols-12">
-          {/* Left — metadata + title */}
-          <div className="md:col-span-5 px-5 md:px-10 py-12 md:py-16 flex flex-col justify-between md:border-r border-line">
-            <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted flex flex-col gap-2">
-              <span className="flex items-center gap-2">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
-                <span className="text-klein">Numéro courant</span>
-              </span>
-              <span>
-                N°{issue.number} / {issue.season} {issue.year}
-              </span>
-            </div>
-
-            <div className="my-12 md:my-10">
-              <h1 className="font-display leading-[0.95] tracking-[-0.025em]">
-                <span className="block text-[44px] md:text-[64px]">
-                  {titleFR}
-                </span>
-                {titleCN && (
-                  <span className="block font-display italic text-[26px] md:text-[36px] text-muted mt-1">
-                    / {titleCN}
-                  </span>
-                )}
-              </h1>
-              <p className="font-display italic text-[18px] md:text-[22px] leading-[1.35] mt-6 max-w-[420px]">
-                {issue.tagline}
-              </p>
-            </div>
-
-            <Link
-              href={`/issue/${issue.slug}`}
-              className="group inline-flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.2em] text-klein w-fit"
-            >
-              <span
-                aria-hidden
-                className="inline-block h-px w-8 bg-klein transition-all group-hover:w-12"
-              />
-              Découvrir le numéro
-              <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
-            </Link>
+      {/* COUVERTURE — typographic cover plate on the issue accent */}
+      <section className="bg-klein text-white border-b border-black">
+        <div className="px-5 md:px-10 pt-10 md:pt-14 pb-12 md:pb-16 min-h-[82vh] flex flex-col justify-between">
+          {/* top line */}
+          <div className="flex items-center justify-between font-mono text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-white/80">
+            <span>C33 — Revue franco-chinoise</span>
+            <span>
+              N°{issue.number} · {issue.season} {issue.year}
+            </span>
           </div>
 
-          {/* Right — image plate */}
-          <div className="md:col-span-7">
-            <EditorialImage
-              src={issueCover}
-              alt={issue.coverAlt ?? issue.title}
-              ratio="aspect-[3/2]"
-              sizes="(min-width: 768px) 58vw, 100vw"
-              priority
-              label={issue.title}
-              sublabel={`Numéro ${issue.number}`}
-            />
+          {/* center — issue title + standfirst */}
+          <div className="my-12 md:my-8">
+            <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-white/70 mb-6">
+              — Le numéro —
+            </div>
+            <h1 className="font-display leading-[0.88] tracking-[-0.03em]">
+              <span className="block text-[56px] md:text-[110px]">
+                {titleFR}
+              </span>
+              {titleCN && (
+                <span className="block font-display italic text-[40px] md:text-[84px] text-white/85 mt-1 md:mt-2">
+                  {titleCN}
+                </span>
+              )}
+            </h1>
+            <p className="font-display italic text-[22px] md:text-[30px] leading-[1.3] mt-8 max-w-[680px] text-white/90">
+              {issue.tagline}
+            </p>
+          </div>
+
+          {/* cover lines — the issue's headline pieces */}
+          <div>
+            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/60 mb-3">
+              À la une / 本期导读
+            </div>
+            <ul className="border-t border-white/30">
+              {articles.slice(0, 4).map((a, i) => (
+                <li key={a.slug} className="border-b border-white/30">
+                  <Link
+                    href={`/article/${a.slug}`}
+                    className="group flex items-baseline gap-4 md:gap-6 py-3 md:py-4"
+                  >
+                    <span className="font-mono text-[11px] tracking-[0.16em] text-white/60 w-6 shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-display text-[20px] md:text-[30px] leading-[1.15] tracking-[-0.01em] decoration-1 underline-offset-4 group-hover:underline">
+                      {a.title}
+                    </span>
+                    <span className="ml-auto hidden md:inline self-center font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">
+                      {a.category}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="flex items-center justify-between gap-4 mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-white/70">
+              <span>France · Chine</span>
+              <span className="hidden md:inline">ISSN {C33_ISSN}</span>
+              <Link
+                href={`/issue/${issue.slug}`}
+                className="underline underline-offset-4 decoration-1 hover:text-white"
+              >
+                Lire le numéro →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
