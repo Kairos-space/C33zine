@@ -31,7 +31,7 @@ export const issues: Issue[] = [
     subtitle: "Premier numéro",
     season: "Printemps",
     year: "2026",
-    status: "current",
+    status: "archive",
     cover: "/images/issue-01.png",
     coverAlt: "巴黎工作室:高定人台与样片",
     accent: "#0ea5e9", // 天蓝 sky blue
@@ -48,7 +48,7 @@ export const issues: Issue[] = [
     subtitle: "Deuxième numéro",
     season: "Été",
     year: "2026",
-    status: "upcoming",
+    status: "current",
     cover: "/images/issue-02.png",
     coverAlt: "Paris sous la canicule — l'été où la mode se déplace",
     accent: "#e2462a", // 盛夏朱砂橙 summer vermillion

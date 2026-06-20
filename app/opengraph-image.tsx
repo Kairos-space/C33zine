@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { getCurrentIssue } from "@/lib/issues";
 
 export const runtime = "nodejs";
 export const alt = "C33 — 中法时尚与品牌叙事季刊";
@@ -6,6 +7,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
+  const issue = getCurrentIssue();
   return new ImageResponse(
     (
       <div
@@ -31,7 +33,7 @@ export default async function Image() {
           }}
         >
           <span>France · Chine</span>
-          <span>Vol. 01 — N° 01</span>
+          <span>Vol. 01 — N° {issue.number}</span>
         </div>
 
         <div
@@ -61,7 +63,7 @@ export default async function Image() {
               lineHeight: 1.3,
             }}
           >
-            La fabrique des récits — derrière la mode, le métier qui les tient.
+            {issue.tagline}
           </div>
         </div>
 
@@ -74,7 +76,7 @@ export default async function Image() {
             textTransform: "uppercase",
           }}
         >
-          <span>Printemps 2026</span>
+          <span>{issue.season} {issue.year}</span>
           <span>c33zine.com</span>
         </div>
       </div>

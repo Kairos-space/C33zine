@@ -108,6 +108,77 @@ export const lexique: LexiqueEntry[] = [
     defCn:
       "在品牌主市场之外进行的拍摄、传播或活动——典型如巴黎与中国市场之间。链路长:总部代理、当地代理、艺人、执行团队多层叠合。",
   },
+  {
+    slug: "deplacement",
+    fr: "Déplacement",
+    cn: "位移",
+    pinyin: "wèi yí",
+    field: "Critique",
+    fieldCn: "评论",
+    defFr:
+      "Redistribution du pouvoir de la mode entre lieux, langues et marchés : un vêtement n'est plus défini au seul centre qui le produit, mais aux multiples endroits où il est lu, jugé et acheté. Thème du numéro 02.",
+    defCn:
+      "时尚权力在地点、语言与市场之间的重新分配:一件衣服不再只由生产它的中心定义,而是在被阅读、被审判、被购买的多个现场被共同定义。第二期主题。",
+    noteFr:
+      "Le déplacement ne supprime pas le centre ; il lui retire le monopole de la lecture.",
+    noteCn: "位移不取消中心,只是收回了中心对「读法」的垄断。",
+  },
+  {
+    slug: "traduction-culturelle",
+    fr: "Traduction culturelle",
+    cn: "文化转译",
+    pinyin: "wén huà zhuǎn yì",
+    field: "Critique",
+    fieldCn: "评论",
+    defFr:
+      "Travail par lequel une marque transpose un signe d'une culture vers une autre en assumant l'écart, plutôt qu'en le masquant. À distinguer de la simple citation décorative.",
+    defCn:
+      "品牌把一个文化符号从一种语境移入另一种语境时所做的工作——承认而非掩盖其中的落差。与单纯的装饰性引用不同。",
+    noteFr:
+      "Là où l'appropriation prélève, la traduction négocie : elle demande un consentement, une source, un interlocuteur.",
+    noteCn:
+      "挪用是「拿取」,转译是「协商」:它需要授权、来源,以及一个对话的对象。",
+  },
+  {
+    slug: "maison",
+    fr: "Maison",
+    cn: "时装屋",
+    pinyin: "shí zhuāng wū",
+    field: "Marque",
+    fieldCn: "品牌",
+    defFr:
+      "Marque de mode dont la valeur repose autant sur un héritage et un récit que sur ses produits. Le mot promet une continuité — un « chez-soi » esthétique que chaque directeur artistique est censé habiter sans le détruire.",
+    defCn:
+      "其价值既来自产品、也来自传承与叙事的时尚品牌。这个词承诺一种延续性——一处美学上的「家」,每一任创意总监理应入住而不拆毁。",
+    noteFr:
+      "Quand les directeurs artistiques se remplacent vite, la « maison » se révèle moins une demeure qu'un récit qu'on relit.",
+    noteCn:
+      "当创意总监快速更替,「时装屋」显出的与其说是一座宅邸,不如说是一段被反复重读的叙事。",
+  },
+  {
+    slug: "createur-systeme",
+    fr: "Créateur-système",
+    cn: "系统型设计师",
+    pinyin: "xì tǒng xíng shè jì shī",
+    field: "Production",
+    fieldCn: "生产",
+    defFr:
+      "Directeur artistique dont la force tient moins à un style signature qu'à sa capacité à faire fonctionner tout un système : image, produit, défilé, retail et commerce alignés. Profil recherché des grands groupes.",
+    defCn:
+      "其能力不在于某种签名式风格,而在于让整套系统协同运转——形象、产品、秀场、零售与商业彼此对齐。是各大集团当下最想要的那类人。",
+  },
+  {
+    slug: "soft-power-commercial",
+    fr: "Soft power commercial",
+    cn: "商业软实力",
+    pinyin: "shāng yè ruǎn shí lì",
+    field: "Marque",
+    fieldCn: "品牌",
+    defFr:
+      "Capacité d'une marque à imposer son goût et son récit au-delà de son marché d'origine, jusqu'à façonner ce qu'un autre pays juge désirable. Forme douce, mais bien réelle, d'influence.",
+    defCn:
+      "一个品牌让自己的品味与叙事越出原属市场、乃至塑造另一个国家「何为可欲」的能力。一种柔软却真实的影响力。",
+  },
 ];
 
 export function getLexiqueEntry(slug: string): LexiqueEntry | null {
