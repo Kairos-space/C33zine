@@ -15,6 +15,7 @@ export default function Nav() {
           <span className="md:hidden text-klein font-bold">+33</span>
           <span>
             Vol.01 — N°{issue.number} · {issue.season} {issue.year}
+            <span className="hidden md:inline"> · ISSN 2981-2844</span>
           </span>
           <span className="hidden md:inline-flex items-center">
             <LangToggle />
