@@ -5,6 +5,7 @@ import matter from "gray-matter";
 export type JournalPostMeta = {
   slug: string;
   title: string;
+  author: string;
   date: string;
   /** Single short tag, e.g. "Note de l'éditrice", "Carnet d'atelier" */
   kind: string;
@@ -32,6 +33,7 @@ export function getAllJournalPosts(): JournalPost[] {
       return {
         slug,
         title: data.title ?? slug,
+        author: data.author ?? "Kairos Zhang",
         date: data.date ?? "",
         kind: data.kind ?? "Note",
         excerpt: data.excerpt,

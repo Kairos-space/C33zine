@@ -69,6 +69,9 @@ export default function JournalPage() {
                     <div className="font-display italic text-[15px] mt-2">
                       {p.kind}
                     </div>
+                    <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted mt-2">
+                      {p.author}
+                    </div>
                   </div>
                   <div className="md:col-span-9">
                     <Link href={`/journal/${p.slug}`} className="group block">

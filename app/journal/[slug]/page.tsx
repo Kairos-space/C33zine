@@ -18,6 +18,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    authors: [{ name: post.author }],
     alternates: { canonical: `/journal/${post.slug}` },
     openGraph: {
       title: post.title,
@@ -25,6 +26,7 @@ export async function generateMetadata({
       url: `/journal/${post.slug}`,
       type: "article",
       publishedTime: post.date,
+      authors: [post.author],
     },
   };
 }
@@ -67,7 +69,7 @@ export default function JournalPostPage({
             </p>
           )}
           <div className="mt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-            {post.date}
+            Par {post.author} · {post.date}
           </div>
         </div>
       </header>
