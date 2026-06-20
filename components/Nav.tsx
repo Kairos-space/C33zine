@@ -41,9 +41,6 @@ export default function Nav() {
           >
             Lexique
           </Link>
-          <Link href="/about" className="hover:text-klein transition-colors">
-            About
-          </Link>
         </nav>
         <Link
           href="/"
@@ -58,6 +55,12 @@ export default function Nav() {
             className="hover:text-klein transition-colors hidden md:inline"
           >
             Médias
+          </Link>
+          <Link
+            href="/about"
+            className="hover:text-klein transition-colors hidden md:inline"
+          >
+            About
           </Link>
           <Link href="/contact" className="hover:text-klein transition-colors">
             Contact
