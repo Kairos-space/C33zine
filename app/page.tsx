@@ -16,7 +16,7 @@ export default function HomePage() {
     <div style={issueAccentStyle(issue)}>
       {/* COUVERTURE — restrained typographic cover: paper ground, accent as jewelry */}
       <section className="border-b border-black">
-        <div className="px-5 md:px-10 pt-10 md:pt-14 pb-12 md:pb-16 min-h-[76vh] flex flex-col justify-between">
+        <div className="px-6 md:px-14 pt-14 md:pt-20 pb-16 md:pb-24 min-h-[92vh] flex flex-col justify-between gap-16 md:gap-24">
           {/* top line */}
           <div className="flex items-center justify-between font-mono text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-muted">
             <span>C33 — Revue franco-chinoise</span>
@@ -27,28 +27,28 @@ export default function HomePage() {
           </div>
 
           {/* center — issue title + standfirst */}
-          <div className="my-12 md:my-8">
-            <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-klein mb-6">
+          <div>
+            <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-klein mb-8 md:mb-10">
               — Le numéro —
             </div>
-            <h1 className="font-display leading-[0.9] tracking-[-0.03em] text-ink">
-              <span className="block text-[52px] md:text-[96px]">
+            <h1 className="font-display leading-[0.98] tracking-[-0.03em] text-ink">
+              <span className="block text-[52px] md:text-[92px]">
                 {titleFR}
               </span>
               {titleCN && (
-                <span className="block font-display italic text-[38px] md:text-[72px] text-klein mt-1 md:mt-2">
+                <span className="block font-display italic text-[38px] md:text-[68px] text-klein mt-3 md:mt-4">
                   {titleCN}
                 </span>
               )}
             </h1>
-            <p className="font-display italic text-[20px] md:text-[28px] leading-[1.3] mt-7 max-w-[640px] text-muted">
+            <p className="font-display italic text-[20px] md:text-[27px] leading-[1.45] mt-10 md:mt-14 max-w-[600px] text-muted">
               {issue.tagline}
             </p>
           </div>
 
           {/* cover lines — the issue's headline pieces */}
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted mb-3">
+            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted mb-5 md:mb-7">
               À la une / 本期导读
             </div>
             <ul className="border-t border-black">
@@ -56,12 +56,12 @@ export default function HomePage() {
                 <li key={a.slug} className="border-b border-line">
                   <Link
                     href={`/article/${a.slug}`}
-                    className="group flex items-baseline gap-4 md:gap-6 py-3 md:py-4"
+                    className="group flex items-baseline gap-5 md:gap-8 py-6 md:py-8"
                   >
                     <span className="font-mono text-[11px] tracking-[0.16em] text-klein w-6 shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-display text-[19px] md:text-[28px] leading-[1.15] tracking-[-0.01em] text-ink group-hover:text-klein transition-colors">
+                    <span className="font-display text-[19px] md:text-[27px] leading-[1.2] tracking-[-0.01em] text-ink group-hover:text-klein transition-colors">
                       {a.title}
                     </span>
                     <span className="ml-auto hidden md:inline self-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
@@ -71,7 +71,7 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-between gap-4 mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-muted">
+            <div className="flex items-center justify-between gap-4 mt-8 md:mt-10 font-mono text-[10px] uppercase tracking-[0.22em] text-muted">
               <span>France · Chine</span>
               <span className="hidden md:inline">ISSN {C33_ISSN}</span>
               <Link
