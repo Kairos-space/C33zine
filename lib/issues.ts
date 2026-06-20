@@ -1,3 +1,7 @@
+/** Shared by every issue of C33 — the periodical's ISSN attributed by
+ *  Centre ISSN France (BnF), June 2026. */
+export const C33_ISSN = "2981-2844";
+
 export type Issue = {
   slug: string;
   number: string;
