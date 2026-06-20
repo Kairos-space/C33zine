@@ -14,68 +14,69 @@ export default function HomePage() {
 
   return (
     <div style={issueAccentStyle(issue)}>
-      {/* COUVERTURE — typographic cover plate on the issue accent */}
-      <section className="bg-klein text-white border-b border-black">
-        <div className="px-5 md:px-10 pt-10 md:pt-14 pb-12 md:pb-16 min-h-[82vh] flex flex-col justify-between">
+      {/* COUVERTURE — restrained typographic cover: paper ground, accent as jewelry */}
+      <section className="border-b border-black">
+        <div className="px-5 md:px-10 pt-10 md:pt-14 pb-12 md:pb-16 min-h-[76vh] flex flex-col justify-between">
           {/* top line */}
-          <div className="flex items-center justify-between font-mono text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-white/80">
+          <div className="flex items-center justify-between font-mono text-[10px] md:text-[11px] uppercase tracking-[0.24em] text-muted">
             <span>C33 — Revue franco-chinoise</span>
-            <span>
+            <span className="flex items-center gap-2">
+              <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-klein" />
               N°{issue.number} · {issue.season} {issue.year}
             </span>
           </div>
 
           {/* center — issue title + standfirst */}
           <div className="my-12 md:my-8">
-            <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-white/70 mb-6">
+            <div className="font-mono text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-klein mb-6">
               — Le numéro —
             </div>
-            <h1 className="font-display leading-[0.88] tracking-[-0.03em]">
-              <span className="block text-[56px] md:text-[110px]">
+            <h1 className="font-display leading-[0.9] tracking-[-0.03em] text-ink">
+              <span className="block text-[52px] md:text-[96px]">
                 {titleFR}
               </span>
               {titleCN && (
-                <span className="block font-display italic text-[40px] md:text-[84px] text-white/85 mt-1 md:mt-2">
+                <span className="block font-display italic text-[38px] md:text-[72px] text-klein mt-1 md:mt-2">
                   {titleCN}
                 </span>
               )}
             </h1>
-            <p className="font-display italic text-[22px] md:text-[30px] leading-[1.3] mt-8 max-w-[680px] text-white/90">
+            <p className="font-display italic text-[20px] md:text-[28px] leading-[1.3] mt-7 max-w-[640px] text-muted">
               {issue.tagline}
             </p>
           </div>
 
           {/* cover lines — the issue's headline pieces */}
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/60 mb-3">
+            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted mb-3">
               À la une / 本期导读
             </div>
-            <ul className="border-t border-white/30">
+            <ul className="border-t border-black">
               {articles.slice(0, 4).map((a, i) => (
-                <li key={a.slug} className="border-b border-white/30">
+                <li key={a.slug} className="border-b border-line">
                   <Link
                     href={`/article/${a.slug}`}
                     className="group flex items-baseline gap-4 md:gap-6 py-3 md:py-4"
                   >
-                    <span className="font-mono text-[11px] tracking-[0.16em] text-white/60 w-6 shrink-0">
+                    <span className="font-mono text-[11px] tracking-[0.16em] text-klein w-6 shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-display text-[20px] md:text-[30px] leading-[1.15] tracking-[-0.01em] decoration-1 underline-offset-4 group-hover:underline">
+                    <span className="font-display text-[19px] md:text-[28px] leading-[1.15] tracking-[-0.01em] text-ink group-hover:text-klein transition-colors">
                       {a.title}
                     </span>
-                    <span className="ml-auto hidden md:inline self-center font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">
+                    <span className="ml-auto hidden md:inline self-center font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
                       {a.category}
                     </span>
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="flex items-center justify-between gap-4 mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-white/70">
+            <div className="flex items-center justify-between gap-4 mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-muted">
               <span>France · Chine</span>
               <span className="hidden md:inline">ISSN {C33_ISSN}</span>
               <Link
                 href={`/issue/${issue.slug}`}
-                className="underline underline-offset-4 decoration-1 hover:text-white"
+                className="text-klein underline underline-offset-4 decoration-1 hover:text-ink"
               >
                 Lire le numéro →
               </Link>
