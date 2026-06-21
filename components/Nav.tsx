@@ -14,11 +14,12 @@ export default function Nav() {
             <span className="text-klein font-bold">+33</span> · France ↔ Chine
           </span>
           <span className="md:hidden text-klein font-bold">+33</span>
-          <span>
-            Vol.01 — N°{issue.number} · {issue.season} {issue.year}
+          <span className="truncate min-w-0 px-2 text-center">
+            <span className="hidden sm:inline">Vol.01 — </span>N°{issue.number} ·{" "}
+            {issue.season} {issue.year}
             <span className="hidden md:inline"> · ISSN 2981-2844</span>
           </span>
-          <span className="hidden md:inline-flex items-center">
+          <span className="inline-flex items-center shrink-0">
             <LangToggle />
           </span>
         </div>
