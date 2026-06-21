@@ -15,6 +15,15 @@ export const categories: Category[] = [
   { slug: "lexique", fr: "Lexique", cn: "词条" },
 ];
 
+/**
+ * Rubriques surfaced in section navigation (nav bar + footer).
+ * Excludes structural categories that aren't browse-rubriques on their own:
+ * Édito (an issue position) and Lexique (already a top-nav page).
+ */
+export const rubriques: Category[] = categories.filter(
+  (c) => !["edito", "lexique"].includes(c.slug),
+);
+
 export function getCategoryBySlug(slug: string): Category | null {
   return categories.find((c) => c.slug === slug) ?? null;
 }

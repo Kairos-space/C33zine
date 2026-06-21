@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
-import { categories } from "@/lib/categories";
+import { rubriques } from "@/lib/categories";
 import LangToggle from "@/components/LangToggle";
 
 export default function Nav() {
@@ -72,7 +72,7 @@ export default function Nav() {
       {/* Rubriques bar — all sections, visible right under the masthead */}
       <div className="border-t border-line">
         <nav className="px-4 md:px-8 h-9 flex items-center md:justify-center gap-x-5 md:gap-x-8 overflow-x-auto whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
-          {categories.map((c) => (
+          {rubriques.map((c) => (
             <Link
               key={c.slug}
               href={`/category/${c.slug}`}

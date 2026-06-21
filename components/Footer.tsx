@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories } from "@/lib/categories";
+import { rubriques } from "@/lib/categories";
 
 export default function Footer() {
   return (
@@ -60,7 +60,7 @@ export default function Footer() {
       <div className="border-b border-line px-5 md:px-10 py-8">
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
           <span className="text-klein">Rubriques</span>
-          {categories.map((c) => (
+          {rubriques.map((c) => (
             <Link
               key={c.slug}
               href={`/category/${c.slug}`}
