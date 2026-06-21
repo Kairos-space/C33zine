@@ -8,6 +8,7 @@ import {
   getArticlesByIssue,
 } from "@/lib/articles";
 import { getIssueBySlug, issueAccentStyle } from "@/lib/issues";
+import { getCategoryByCn } from "@/lib/categories";
 import ArticleCard from "@/components/ArticleCard";
 
 const mdxComponents = {
@@ -49,6 +50,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
   const issue = getIssueBySlug(article.issue);
+  const cat = getCategoryByCn(article.category);
   const issueArticles = getArticlesByIssue(article.issue);
   const folio = String(
     issueArticles.findIndex((a) => a.slug === article.slug) + 1,
@@ -102,17 +104,26 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       {/* Folio header — like a printed running header */}
       <div className="border-b border-black">
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
-          <Link
-            href={`/issue/${article.issue}`}
-            className="hover:underline underline-offset-4"
-          >
-            C33 — Issue N° {article.issue}
-          </Link>
+          {issue ? (
+            <Link
+              href={`/issue/${article.issue}`}
+              className="hover:underline underline-offset-4"
+            >
+              C33 — Issue N° {article.issue}
+            </Link>
+          ) : (
+            <Link
+              href={cat ? `/category/${cat.slug}` : "/"}
+              className="hover:underline underline-offset-4"
+            >
+              C33 — {cat ? cat.fr : "Rubrique"}
+            </Link>
+          )}
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
             {article.category}
           </span>
           <span>
-            {issue ? `${issue.season} ${issue.year}` : ""}
+            {issue ? `${issue.season} ${issue.year}` : "Rubrique permanente"}
           </span>
         </div>
       </div>

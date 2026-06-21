@@ -57,10 +57,11 @@ export default function MediasPage() {
               Partenariats
             </h2>
             <p lang="zh-CN">
-              我们与品牌、机构探讨自定义选题、专题号、栏目合作等多种可能。
+              我们与品牌、机构探讨定制选题、专题号、封面人物、栏目合作等多种形式,可一事一议。
             </p>
             <p className="mt-3 font-display italic" lang="fr">
-              C33 ne publie pas de contenu sponsorisé non identifié.
+              Contenus de marque et collaborations éditoriales — étudiés au cas
+              par cas.
             </p>
           </section>
 
