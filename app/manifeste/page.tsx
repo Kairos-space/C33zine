@@ -62,25 +62,25 @@ const sections: Section[] = [
   },
   {
     fr: [
-      "Nous nous intéressons à la mode,",
-      "mais aussi à ce qui la dépasse.",
+      "Nous nous intéressons au goût,",
+      "mais aussi à ce qui le dépasse.",
       "Les marques.",
       "Les industries culturelles.",
       "Les médias.",
       "Les récits.",
       "Les imaginaires collectifs.",
-      "Car la mode n'est jamais seulement une question de vêtements.",
+      "Car le goût n'est jamais une simple question d'esthétique.",
       "Elle est aussi une question de pouvoir, de représentation, de désir et de valeur.",
     ],
     cn: [
-      "我们关注时尚,",
+      "我们关注品味,",
       "但并不止于时尚。",
       "我们关注品牌,",
       "关注文化产业,",
       "关注媒体,",
       "关注叙事,",
       "关注不同社会如何塑造自己的想象。",
-      "因为时尚从来不仅关于服装。",
+      "因为品味从来不只关于衣着。",
       "它同样关乎权力、身份、价值与时代。",
     ],
   },
@@ -135,13 +135,13 @@ const sections: Section[] = [
   {
     fr: [
       "C33 est une revue trimestrielle bilingue franco-chinoise.",
-      "Une publication consacrée à l'industrie de la mode, aux récits de marque et aux échanges culturels entre l'Europe et la Chine.",
+      "Une publication consacrée au goût, aux récits de marque et à l'art de vivre, entre l'Europe et la Chine.",
       "Nous ne cherchons pas à répondre trop vite.",
       "Nous essayons d'abord de regarder avec précision.",
     ],
     cn: [
       "C33 是一本中法双语季刊。",
-      "关注时尚产业、品牌叙事与中欧文化交流。",
+      "关注品味、品牌叙事与生活方式,在中欧之间。",
       "我们不急于给出答案。",
       "我们首先尝试把问题看清。",
     ],
@@ -228,15 +228,15 @@ export default function ManifestePage() {
               className="md:col-span-6 font-display text-[28px] md:text-[40px] leading-[1.18] tracking-[-0.015em]"
               lang="fr"
             >
-              <p>C33 ne couvre pas la mode.</p>
-              <p className="italic text-klein mt-2">C33 la décrypte.</p>
+              <p>C33 ne décrit pas le goût.</p>
+              <p className="italic text-klein mt-2">C33 le décode.</p>
             </div>
             <div
               className="md:col-span-5 font-serif text-[22px] md:text-[26px] leading-[1.7]"
               lang="zh-CN"
             >
-              <p>C33 不报道时尚。</p>
-              <p className="mt-2">C33 解码时尚。</p>
+              <p>C33 不描述品味。</p>
+              <p className="mt-2">C33 解码品味。</p>
             </div>
           </div>
         </div>

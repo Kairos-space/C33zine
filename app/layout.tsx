@@ -42,11 +42,11 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "C33 — 中法时尚与品牌叙事季刊",
+    default: "C33 — 解码品味与生活方式的中法季刊",
     template: "%s — C33",
   },
   description:
-    "C33 décode les logiques de l'industrie de la mode et des récits de marque, à travers la distance et le lien entre la France et la Chine.",
+    "C33 décode le goût, les récits de marque et l'art de vivre, à travers la distance et le lien entre la France et la Chine.",
   metadataBase: new URL("https://c33zine.com"),
   alternates: {
     canonical: "/",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C33",
     description:
-      "C33 décode les logiques de l'industrie de la mode et des récits de marque, à travers la distance et le lien entre la France et la Chine.",
+      "C33 décode le goût, les récits de marque et l'art de vivre, à travers la distance et le lien entre la France et la Chine.",
     url: "https://c33zine.com",
     siteName: "C33",
     locale: "fr_FR",

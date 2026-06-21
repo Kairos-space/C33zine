@@ -8,7 +8,7 @@ import EditorialImage from "@/components/EditorialImage";
 export const metadata: Metadata = {
   title: "Les numéros",
   description:
-    "Tous les numéros de C33 — la revue trimestrielle franco-chinoise sur l'industrie de la mode et les récits de marque. 所有期号。",
+    "Tous les numéros de C33 — la revue trimestrielle franco-chinoise sur le goût, les marques et l'art de vivre. 所有期号。",
   alternates: { canonical: "/issues" },
 };
 

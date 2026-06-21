@@ -10,8 +10,8 @@ export default function Footer() {
             C33
           </div>
           <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">
-            Une revue trimestrielle franco-chinoise sur l&apos;industrie de la
-            mode et les récits de marque.
+            Une revue trimestrielle franco-chinoise sur le goût, les marques
+            et l&apos;art de vivre.
           </div>
         </div>
       </div>

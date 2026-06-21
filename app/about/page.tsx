@@ -17,11 +17,11 @@ const blocks: Block[] = [
   {
     fr: [
       "C33 est une revue indépendante, trimestrielle et bilingue, publiée entre Paris et Shanghai.",
-      "Elle observe l'industrie de la mode, les récits de marque et les circulations culturelles entre la Chine et la France.",
+      "Elle décode le goût, les récits de marque et l'art de vivre, et leurs circulations culturelles entre la Chine et la France.",
     ],
     cn: [
       "C33 是一本中法双语独立季刊,写作于巴黎与上海之间。",
-      "我们关注时尚产业的结构、品牌叙事的生成,以及在中国与法国之间流动的人、物、图像与符号。",
+      "我们关注品味与生活方式的形成、品牌叙事的生成,以及在中国与法国之间流动的人、物、图像与符号。",
     ],
   },
   {
@@ -38,14 +38,14 @@ const blocks: Block[] = [
   },
   {
     fr: [
-      "Nous nous intéressons à ce qui se tient derrière l'image visible de la mode :",
+      "Nous nous intéressons à ce qui se tient derrière l'image visible du goût :",
       "la manière dont une narration de marque se construit ;",
       "la façon dont un signe circule, se traduit ou se transforme ;",
       "les rapports entre production, désir, représentation et marché ;",
       "les différences de lecture entre les contextes chinois et français.",
     ],
     cn: [
-      "我们关心时尚表面图像背后的结构:",
+      "我们关心品味表面图像背后的结构:",
       "一个品牌叙事如何被搭建;",
       "一个符号如何被传播、翻译与重新解释;",
       "生产、欲望、身份与市场之间如何相互作用;",
@@ -193,8 +193,8 @@ export default function AboutPage() {
           C33
         </div>
         <div className="mt-6 font-display italic text-[18px] md:text-[22px] max-w-[640px] mx-auto leading-snug">
-          Une revue trimestrielle franco-chinoise sur l&apos;industrie de la
-          mode et les récits de marque.
+          Une revue trimestrielle franco-chinoise sur le goût, les marques
+          et l&apos;art de vivre.
         </div>
       </section>
     </article>

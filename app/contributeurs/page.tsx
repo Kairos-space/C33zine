@@ -21,7 +21,7 @@ const contributors: Contributor[] = [
     name: "Kairos Zhang",
     role: "Rédactrice en chef · Fondatrice",
     roleCn: "主编 · 创始人",
-    bio: "中法时尚与品牌叙事的观察者,C33 与 Modezine 的主理人。常驻巴黎,书写时尚产业表面之下的实际机制。",
+    bio: "中法品味与生活方式的观察者,C33 与 Modezine 的主理人。常驻巴黎,书写品味表面之下的实际机制。",
   },
 ];
 

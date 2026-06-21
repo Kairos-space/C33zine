@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getCurrentIssue } from "@/lib/issues";
 
 export const runtime = "nodejs";
-export const alt = "C33 — 中法时尚与品牌叙事季刊";
+export const alt = "C33 — 解码品味与生活方式的中法季刊";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

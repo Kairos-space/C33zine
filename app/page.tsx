@@ -30,14 +30,14 @@ export default function HomePage() {
                 className="font-display text-[28px] md:text-[40px] leading-[1.15] tracking-[-0.02em]"
                 lang="fr"
               >
-                Une revue indépendante, trimestrielle et bilingue, publiée
-                entre Paris et Shanghai.
+                Une revue indépendante qui décode le goût et l&apos;art de
+                vivre, entre Paris et Shanghai.
               </p>
               <p
                 className="font-serif text-[18px] md:text-[20px] leading-[1.7] text-muted mt-6"
                 lang="zh-CN"
               >
-                一本写作于巴黎与上海之间的中法双语独立季刊。
+                一本解码品味与生活方式的中法双语独立季刊——写作于巴黎与上海之间。
               </p>
             </div>
             <div>

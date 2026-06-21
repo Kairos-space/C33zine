@@ -40,7 +40,7 @@ export async function GET() {
     <title>C33</title>
     <link>${BASE_URL}</link>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Une revue trimestrielle franco-chinoise sur l'industrie de la mode et les récits de marque.</description>
+    <description>Une revue trimestrielle franco-chinoise sur le goût, les marques et l'art de vivre.</description>
     <language>zh-CN</language>
     <prism:issn>2981-2844</prism:issn>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
