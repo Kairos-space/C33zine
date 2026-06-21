@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getCurrentIssue } from "@/lib/issues";
+import { categories } from "@/lib/categories";
 import LangToggle from "@/components/LangToggle";
 
 export default function Nav() {
@@ -65,6 +66,24 @@ export default function Nav() {
           <Link href="/contact" className="hover:text-klein transition-colors">
             Contact
           </Link>
+        </nav>
+      </div>
+
+      {/* Rubriques bar — all sections, visible right under the masthead */}
+      <div className="border-t border-line">
+        <nav className="px-4 md:px-8 h-9 flex items-center md:justify-center gap-x-5 md:gap-x-8 overflow-x-auto whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
+          {categories.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/category/${c.slug}`}
+              className="shrink-0 hover:text-klein transition-colors"
+            >
+              {c.fr}
+              <span className="ml-1 normal-case tracking-normal text-muted/80">
+                {c.cn}
+              </span>
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
