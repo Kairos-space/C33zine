@@ -7,6 +7,8 @@ export type Category = {
 export const categories: Category[] = [
   { slug: "edito", fr: "Édito", cn: "卷首" },
   { slug: "observations", fr: "Observations", cn: "观察" },
+  { slug: "portraits", fr: "Portraits", cn: "人物" },
+  { slug: "interieurs", fr: "Intérieurs", cn: "居所" },
   { slug: "critiques", fr: "Critiques", cn: "评论" },
   { slug: "analyses", fr: "Analyses", cn: "产业" },
   { slug: "archives", fr: "Archives", cn: "档案" },
