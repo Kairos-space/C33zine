@@ -52,8 +52,11 @@ export default function ContactPage() {
                 Pitch / 投稿
               </div>
               <p className="font-serif text-[17px] leading-[1.8]">
-                本刊暂不接受自由投稿。如有特定的选题提案或内容合作,
-                请于邮件主题注明{" "}
+                选题提案与撰稿合作,请见{" "}
+                <a href="/pitch" className="underline underline-offset-4">
+                  投稿指南
+                </a>
+                ;或于邮件主题注明{" "}
                 <span className="font-mono text-[14px] bg-black text-white px-1.5">
                   [PITCH]
                 </span>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { categories } from "@/lib/categories";
 
 export default function Footer() {
   return (
@@ -52,6 +53,25 @@ export default function Footer() {
           <a href="/feed.xml" className="hover:text-klein transition-colors">
             RSS
           </a>
+        </nav>
+      </div>
+
+      {/* Rubriques */}
+      <div className="border-b border-line px-5 md:px-10 py-8">
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.18em] text-muted">
+          <span className="text-klein">Rubriques</span>
+          {categories.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/category/${c.slug}`}
+              className="hover:text-klein transition-colors"
+            >
+              {c.fr}
+              <span className="ml-1 normal-case tracking-normal text-[11px]">
+                {c.cn}
+              </span>
+            </Link>
+          ))}
         </nav>
       </div>
 
