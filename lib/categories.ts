@@ -5,24 +5,20 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-  { slug: "edito", fr: "Édito", cn: "卷首" },
-  { slug: "observations", fr: "Observations", cn: "观察" },
-  { slug: "portraits", fr: "Portraits", cn: "人物" },
-  { slug: "interieurs", fr: "Intérieurs", cn: "居所" },
-  { slug: "critiques", fr: "Critiques", cn: "评论" },
-  { slug: "analyses", fr: "Analyses", cn: "产业" },
-  { slug: "archives", fr: "Archives", cn: "档案" },
-  { slug: "lexique", fr: "Lexique", cn: "词条" },
+  { slug: "mode", fr: "Mode", cn: "时尚" },
+  { slug: "art-design", fr: "Art & Design", cn: "艺术·设计" },
+  { slug: "culture", fr: "Culture", cn: "文化" },
+  { slug: "villes", fr: "Villes", cn: "城市" },
+  { slug: "chroniques", fr: "Chroniques", cn: "专栏" },
 ];
 
 /**
  * Rubriques surfaced in section navigation (nav bar + footer).
- * Excludes structural categories that aren't browse-rubriques on their own:
- * Édito (an issue position) and Lexique (already a top-nav page).
+ * The five sections are subject-based (mode / art & design / culture /
+ * cities / columns); every one is a first-class browse rubrique.
+ * "Chroniques / 专栏" holds the recurring columns and the portrait pieces.
  */
-export const rubriques: Category[] = categories.filter(
-  (c) => !["edito", "lexique"].includes(c.slug),
-);
+export const rubriques: Category[] = categories;
 
 export function getCategoryBySlug(slug: string): Category | null {
   return categories.find((c) => c.slug === slug) ?? null;
