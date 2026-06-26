@@ -13,6 +13,7 @@ type Contributor = {
   name: string;
   role: string;
   roleCn: string;
+  bioFr: string;
   bio: string;
 };
 
@@ -21,6 +22,8 @@ const contributors: Contributor[] = [
     name: "Kairos Zhang",
     role: "Rédactrice en chef · Fondatrice",
     roleCn: "主编 · 创始人",
+    bioFr:
+      "Observatrice du goût et de l'art de vivre entre la Chine et la France, à la tête de C33 et de Modezine. Basée à Paris, elle écrit sur les mécanismes réels qui se jouent sous la surface du goût.",
     bio: "中法品味与生活方式的观察者,C33 与 Modezine 的主理人。常驻巴黎,书写品味表面之下的实际机制。",
   },
 ];
@@ -34,7 +37,7 @@ export default function ContributeursPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Contributeurs</span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            Contributeurs / 撰稿人
+            Contributeurs<span lang="zh-CN"> / 撰稿人</span>
           </span>
           <span>2026</span>
         </div>
@@ -67,12 +70,24 @@ export default function ContributeursPage() {
                     <div className="font-sans text-[10px] uppercase tracking-[0.18em] mt-3">
                       {c.role}
                     </div>
-                    <div className="font-serif text-[13px] text-neutral-600 mt-1">
+                    <div
+                      className="font-serif text-[13px] text-neutral-600 mt-1"
+                      lang="zh-CN"
+                    >
                       {c.roleCn}
                     </div>
                   </div>
                   <div className="md:col-span-8">
-                    <p className="font-serif text-[16px] md:text-[17px] leading-[1.85]">
+                    <p
+                      className="font-serif text-[16px] md:text-[17px] leading-[1.85]"
+                      lang="fr"
+                    >
+                      {c.bioFr}
+                    </p>
+                    <p
+                      className="font-serif text-[16px] md:text-[17px] leading-[1.85] mt-3"
+                      lang="zh-CN"
+                    >
                       {c.bio}
                     </p>
                     {pieces.length > 0 && (

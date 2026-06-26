@@ -42,7 +42,8 @@ export default function CategoryPage({
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Rubrique</span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            {cat.fr} / {cat.cn}
+            {cat.fr}
+            <span lang="zh-CN"> / {cat.cn}</span>
           </span>
           <span>2026</span>
         </div>
@@ -56,7 +57,10 @@ export default function CategoryPage({
         <h1 className="font-display font-medium text-[56px] md:text-[104px] leading-[0.95] tracking-[-0.02em]">
           {cat.fr}
         </h1>
-        <div className="font-serif mt-4 text-[18px] md:text-[22px] text-neutral-700">
+        <div
+          className="font-serif mt-4 text-[18px] md:text-[22px] text-neutral-700"
+          lang="zh-CN"
+        >
           {cat.cn}
         </div>
         <div className="font-display italic mt-8 text-[14px] md:text-[16px]">
@@ -73,7 +77,10 @@ export default function CategoryPage({
               <div className="font-display italic text-[22px] md:text-[26px] text-neutral-500">
                 À paraître.
               </div>
-              <div className="font-serif text-[15px] mt-2 text-neutral-500">
+              <div
+                className="font-serif text-[15px] mt-2 text-neutral-500"
+                lang="zh-CN"
+              >
                 待发布。
               </div>
             </div>

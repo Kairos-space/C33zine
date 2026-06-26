@@ -5,6 +5,7 @@ import { issues, getIssueBySlug, issueAccentStyle } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
 import { resolveCover } from "@/lib/cover";
 import EditorialImage from "@/components/EditorialImage";
+import BilingualTitle from "@/components/BilingualTitle";
 
 export async function generateStaticParams() {
   return issues.map((i) => ({ slug: i.slug }));
@@ -79,7 +80,10 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                   {titleFR}
                 </span>
                 {titleCN && (
-                  <span className="block font-display italic text-[26px] md:text-[36px] text-muted mt-1">
+                  <span
+                    className="block font-display italic text-[26px] md:text-[36px] text-muted mt-1"
+                    lang="zh-CN"
+                  >
                     / {titleCN}
                   </span>
                 )}
@@ -125,7 +129,7 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                 Le sommaire
               </h2>
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
-                目录 / N°{issue.number}
+                <span lang="zh-CN">目录 / </span>N°{issue.number}
               </span>
             </div>
 
@@ -168,7 +172,7 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                       className="group block"
                     >
                       <h3 className="font-display text-[26px] md:text-[38px] leading-[1.1] tracking-[-0.015em] group-hover:text-klein transition-colors">
-                        {a.title}
+                        <BilingualTitle article={a} />
                       </h3>
                     </Link>
                     {a.excerpt && (
@@ -221,7 +225,10 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
               <p className="font-display italic text-[22px] md:text-[28px] leading-[1.4]">
                 {issue.signoff}
               </p>
-              <p className="font-mono text-[11px] uppercase tracking-[0.2em] mt-4 text-muted">
+              <p
+                className="font-mono text-[11px] uppercase tracking-[0.2em] mt-4 text-muted"
+                lang="zh-CN"
+              >
                 {issue.signoffCn}
               </p>
             </div>
