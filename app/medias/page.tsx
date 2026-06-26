@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Médias & presse",
   description:
-    "Espace presse de C33 — identité, contacts et informations pour les médias et partenaires. 媒体与合作。",
+    "Espace presse de C33 — identité, contacts et informations pour les médias et partenaires.",
   alternates: { canonical: "/medias" },
 };
 
@@ -14,7 +14,7 @@ export default function MediasPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Presse</span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            Médias / 媒体
+            Médias<span lang="zh-CN"> / 媒体</span>
           </span>
           <span>2026</span>
         </div>
@@ -38,7 +38,14 @@ export default function MediasPage() {
             <h2 className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3 border-b border-black pb-2">
               La revue
             </h2>
-            <p lang="zh-CN">
+            <p lang="fr">
+              C33 est une revue indépendante bilingue franco-chinoise qui décode
+              le goût, les récits de marque et l&apos;art de vivre. Quatre
+              numéros par an, un thème par numéro, portés par de longs textes en
+              chinois et éclairés d&apos;un regard français. Éditée par Lumicome,
+              basée à Paris.
+            </p>
+            <p lang="zh-CN" className="mt-3">
               C33 是一本中法双语的独立季刊,解码品味、品牌叙事与生活方式。一年四期,每期一个主题,以中文长文为主,辅以法语视角。由 Lumicome 出版,常驻巴黎。
             </p>
           </section>
@@ -47,7 +54,13 @@ export default function MediasPage() {
             <h2 className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3 border-b border-black pb-2">
               Identité visuelle
             </h2>
-            <p lang="zh-CN">
+            <p lang="fr">
+              Pour obtenir le logo C33, la couverture du numéro en cours ou
+              d&apos;autres éléments visuels destinés à une citation dans la
+              presse, écrivez à la rédaction à l&apos;adresse ci-dessous : nous
+              vous transmettrons les fichiers aux formats requis.
+            </p>
+            <p lang="zh-CN" className="mt-3">
               如需 C33 标识、当期封面或其他视觉素材用于媒体引用,请通过下方邮箱联系编辑部,我们会提供相应规格的文件。
             </p>
           </section>
@@ -56,12 +69,14 @@ export default function MediasPage() {
             <h2 className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3 border-b border-black pb-2">
               Partenariats
             </h2>
-            <p lang="zh-CN">
-              我们与品牌、机构探讨定制选题、专题号、封面人物、栏目合作等多种形式,可一事一议。
-            </p>
-            <p className="mt-3 font-display italic" lang="fr">
-              Contenus de marque et collaborations éditoriales — étudiés au cas
+            <p lang="fr">
+              Nous explorons avec les marques et les institutions des formes
+              variées de collaboration — sujets sur mesure, numéros thématiques,
+              portraits de couverture, partenariats de rubrique — étudiées au cas
               par cas.
+            </p>
+            <p lang="zh-CN" className="mt-3">
+              我们与品牌、机构探讨定制选题、专题号、封面人物、栏目合作等多种形式,可一事一议。
             </p>
           </section>
 
@@ -76,6 +91,11 @@ export default function MediasPage() {
               >
                 contact@c33zine.com
               </a>
+              <br />
+              <span lang="fr" className="text-neutral-600 text-[14px]">
+                Demandes presse et collaborations de marque : merci
+                d&apos;indiquer [PARTNERSHIP] en objet du courriel.
+              </span>
               <br />
               <span lang="zh-CN" className="text-neutral-600 text-[14px]">
                 媒体咨询与品牌合作,邮件主题请注明 [PARTNERSHIP]。

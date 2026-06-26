@@ -8,7 +8,7 @@ import EditorialImage from "@/components/EditorialImage";
 export const metadata: Metadata = {
   title: "Les numéros",
   description:
-    "Tous les numéros de C33 — la revue trimestrielle franco-chinoise sur le goût, les marques et l'art de vivre. 所有期号。",
+    "Tous les numéros de C33 — la revue trimestrielle franco-chinoise sur le goût, les marques et l'art de vivre.",
   alternates: { canonical: "/issues" },
 };
 
@@ -22,7 +22,8 @@ export default function IssuesPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span>C33 — Les numéros</span>
           <span className="hidden md:inline italic normal-case tracking-normal text-ink">
-            Issues / 期号
+            <span lang="fr">Issues</span>
+            <span lang="zh-CN"> / 期号</span>
           </span>
           <span>2026</span>
         </div>
@@ -33,7 +34,8 @@ export default function IssuesPage() {
         <div className="px-5 md:px-10 py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
             <span aria-hidden className="h-px w-6 bg-klein" />
-            Archive / 期号
+            <span lang="fr">Archive</span>
+            <span lang="zh-CN"> / 期号</span>
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
@@ -94,7 +96,19 @@ export default function IssuesPage() {
                   <h2 className="font-display text-[34px] md:text-[56px] leading-[1.02] tracking-[-0.02em] group-hover:text-klein transition-colors">
                     N° {issue.number}
                     <br />
-                    <span className="italic">{issue.title}</span>
+                    <span className="italic">
+                      {issue.title.includes(" / ") ? (
+                        <>
+                          <span lang="fr">{issue.title.split(" / ")[0]}</span>
+                          <span lang="zh-CN">
+                            {" "}
+                            / {issue.title.split(" / ").slice(1).join(" / ")}
+                          </span>
+                        </>
+                      ) : (
+                        issue.title
+                      )}
+                    </span>
                   </h2>
                 </Link>
                 <p className="font-display italic text-[17px] md:text-[19px] mt-5 text-muted">

@@ -1,5 +1,20 @@
 import Image from "next/image";
 
+/** Render a "Français / 中文" string as two lang-tagged spans so the language
+ *  toggle can hide one half; a plain string renders as-is. */
+function BiText({ value }: { value: string }) {
+  if (value.includes(" / ")) {
+    const [fr, ...rest] = value.split(" / ");
+    return (
+      <>
+        <span lang="fr">{fr}</span>
+        <span lang="zh-CN"> / {rest.join(" / ")}</span>
+      </>
+    );
+  }
+  return <>{value}</>;
+}
+
 type Props = {
   src?: string;
   alt?: string;
@@ -46,10 +61,10 @@ export default function EditorialImage({
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8 text-white/85">
           <div className="font-mono text-[10px] uppercase tracking-[0.32em] text-klein mb-4">
-            ● {sublabel ?? "C33"}
+            ● {sublabel ? <BiText value={sublabel} /> : "C33"}
           </div>
           <div className="font-display italic text-[18px] md:text-[22px] leading-snug text-white/70">
-            {label ?? "Image à venir"}
+            {label ? <BiText value={label} /> : "Image à venir"}
           </div>
         </div>
       )}

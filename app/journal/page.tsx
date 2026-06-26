@@ -5,7 +5,7 @@ import { getAllJournalPosts } from "@/lib/journal";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Le carnet de C33 — notes courtes entre deux numéros. C33 编辑部的间期笔记。",
+    "Le carnet de C33 — notes courtes entre deux numéros.",
   alternates: { canonical: "/journal" },
 };
 
@@ -19,7 +19,7 @@ export default function JournalPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span>C33 — Journal</span>
           <span className="hidden md:inline italic normal-case tracking-normal text-ink">
-            Journal / 编辑部日志
+            Journal<span lang="zh-CN"> / 编辑部日志</span>
           </span>
           <span>2026</span>
         </div>
@@ -30,13 +30,16 @@ export default function JournalPage() {
         <div className="px-5 md:px-10 py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
             <span aria-hidden className="h-px w-6 bg-klein" />
-            Journal / 编辑部日志
+            Journal<span lang="zh-CN"> / 编辑部日志</span>
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
             Entre les numéros.
           </h1>
-          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted">
+          <p
+            className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted"
+            lang="zh-CN"
+          >
             两期之间的短笔记 —— 工作室的现场、编辑过程的反思、读到的好东西、想推荐的人。
           </p>
         </div>

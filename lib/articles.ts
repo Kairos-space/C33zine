@@ -7,11 +7,13 @@ import { resolveCover } from "./cover";
 export type ArticleMeta = {
   slug: string;
   title: string;
+  titleFr?: string;
   author: string;
   issue: string;
   category: string;
   date?: string;
   excerpt?: string;
+  excerptFr?: string;
   order?: number;
   readingTime: number;
   cover?: string;
@@ -46,11 +48,13 @@ export function getAllArticles(): Article[] {
     return {
       slug,
       title: data.title ?? slug,
+      titleFr: data.title_fr,
       author: data.author ?? "—",
       issue: data.issue ?? "01",
       category: data.category ?? "",
       date: data.date,
       excerpt: data.excerpt,
+      excerptFr: data.excerpt_fr,
       order: typeof data.order === "number" ? data.order : undefined,
       readingTime: estimateReadingTime(content),
       cover: resolveCover(data.cover),

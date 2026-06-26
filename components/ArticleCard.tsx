@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { ArticleMeta } from "@/lib/articles";
+import BilingualTitle from "@/components/BilingualTitle";
+import { getCategoryByCn } from "@/lib/categories";
 
 export default function ArticleCard({
   article,
@@ -23,12 +25,13 @@ export default function ArticleCard({
 
         {/* category */}
         <span className="col-span-10 md:col-span-2 font-sans text-[10px] uppercase tracking-[0.18em]">
-          {article.category}
+          <span lang="fr">{getCategoryByCn(article.category)?.fr ?? article.category}</span>
+          <span lang="zh-CN">{article.category}</span>
         </span>
 
         {/* title */}
         <h3 className="col-span-12 md:col-span-6 font-display italic font-medium text-[24px] md:text-[32px] leading-[1.15] tracking-tight group-hover:underline underline-offset-4 decoration-1">
-          {article.title}
+          <BilingualTitle article={article} />
         </h3>
 
         {/* author */}

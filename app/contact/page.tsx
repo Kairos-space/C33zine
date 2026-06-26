@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Écrire à C33 — contact, pitch et partenariats. 联系 C33。",
+    "Écrire à C33 — contact, pitch et partenariats.",
   alternates: { canonical: "/contact" },
 };
 
@@ -14,7 +14,8 @@ export default function ContactPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Correspondance</span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            Contact / 联系
+            <span lang="fr">Contact</span>
+            <span lang="zh-CN"> / 联系</span>
           </span>
           <span>2026</span>
         </div>
@@ -49,9 +50,22 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-10 border-b border-black pb-10">
             <div>
               <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3">
-                Pitch / 投稿
+                <span lang="fr">Pitch</span>
+                <span lang="zh-CN"> / 投稿</span>
               </div>
-              <p className="font-serif text-[17px] leading-[1.8]">
+              <p lang="fr" className="font-serif text-[17px] leading-[1.8]">
+                Pour une proposition de sujet ou une collaboration éditoriale,
+                consultez nos{" "}
+                <a href="/pitch" className="underline underline-offset-4">
+                  modalités de proposition
+                </a>
+                {" "}ou indiquez la mention{" "}
+                <span className="font-mono text-[14px] bg-black text-white px-1.5">
+                  [PITCH]
+                </span>
+                {" "}en objet de votre message.
+              </p>
+              <p lang="zh-CN" className="font-serif text-[17px] leading-[1.8]">
                 选题提案与撰稿合作,请见{" "}
                 <a href="/pitch" className="underline underline-offset-4">
                   投稿指南
@@ -67,7 +81,15 @@ export default function ContactPage() {
               <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3">
                 Presse & partenariats
               </div>
-              <p className="font-serif text-[17px] leading-[1.8]">
+              <p lang="fr" className="font-serif text-[17px] leading-[1.8]">
+                Pour toute demande presse ou partenariat de marque, indiquez la
+                mention{" "}
+                <span className="font-mono text-[14px] bg-black text-white px-1.5">
+                  [PARTNERSHIP]
+                </span>
+                {" "}en objet de votre message.
+              </p>
+              <p lang="zh-CN" className="font-serif text-[17px] leading-[1.8]">
                 媒体咨询与品牌合作,请于邮件主题注明{" "}
                 <span className="font-mono text-[14px] bg-black text-white px-1.5">
                   [PARTNERSHIP]

@@ -27,23 +27,36 @@ body {
 }
 
 /* Language toggle — hide the off-language when a single-language mode is on.
-   Scoped to <main> so Nav and Footer (which are mostly FR labels but are
-   chrome, not content) stay visible regardless of mode. */
-body[data-lang-mode="fr"] main [lang="zh-CN"],
-body[data-lang-mode="fr"] main [lang="zh"] {
+   Applied site-wide (chrome included) so the French-first default reads as a
+   genuinely French publication: in FR mode no Chinese shows anywhere, in CN
+   mode no French. Every toggled fragment must carry a counterpart in the
+   other language so nothing leaves an empty gap. */
+body[data-lang-mode="fr"] [lang="zh-CN"],
+body[data-lang-mode="fr"] [lang="zh"] {
   display: none !important;
 }
-body[data-lang-mode="cn"] main [lang="fr"],
-body[data-lang-mode="cn"] main [lang="en"] {
+body[data-lang-mode="cn"] [lang="fr"],
+body[data-lang-mode="cn"] [lang="en"] {
   display: none !important;
 }
 
-/* Article prose */
+/* Article prose — French is primary, set in a Latin reading serif; Chinese
+   blocks fall back to the CJK serif. This is what makes the French text read
+   as French rather than as Latin glyphs borrowed from a Chinese face. */
 .prose-c33 {
-  font-family: var(--font-noto-serif-sc), "Songti SC", "SimSun", serif;
+  font-family: var(--font-serif), "EB Garamond", Georgia, serif;
   font-size: 18px;
   line-height: 1.8;
   color: var(--ink);
+}
+
+.prose-c33 [lang="fr"] {
+  line-height: 1.7;
+}
+
+.prose-c33 [lang="zh-CN"],
+.prose-c33 [lang="zh"] {
+  font-family: var(--font-noto-serif-sc), "Songti SC", "SimSun", serif;
 }
 
 .prose-c33 p {
@@ -117,8 +130,11 @@ body[data-lang-mode="cn"] main [lang="en"] {
   margin: 0.4em 0;
 }
 
-/* Drop cap on the opening paragraph — print-magazine feel */
-.prose-c33 > p:first-of-type::first-letter {
+/* Drop cap on the opening paragraph — print-magazine feel. Targets the first
+   paragraph of each language block (the body is now <div lang="fr"> then
+   <div lang="zh-CN">), and is suppressed on CJK where a drop cap reads oddly. */
+.prose-c33 > p:first-of-type::first-letter,
+.prose-c33 [lang="fr"] > p:first-of-type::first-letter {
   font-family: var(--font-display), "Didot", serif;
   font-weight: 600;
   float: left;

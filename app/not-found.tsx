@@ -9,7 +9,10 @@ export default function NotFound() {
       <p className="font-display italic text-[22px] md:text-[28px] mt-8">
         Page introuvable.
       </p>
-      <p className="font-serif text-[15px] md:text-[16px] text-neutral-600 mt-3">
+      <p className="font-serif text-[15px] md:text-[16px] text-neutral-600 mt-3" lang="fr">
+        Cette page ne figure plus dans nos archives.
+      </p>
+      <p className="font-serif text-[15px] md:text-[16px] text-neutral-600 mt-3" lang="zh-CN">
         此页面已不在编辑部档案中。
       </p>
       <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-3 font-sans text-[11px] uppercase tracking-[0.18em]">

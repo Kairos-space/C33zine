@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getCurrentIssue } from "@/lib/issues";
 import { rubriques } from "@/lib/categories";
 import LangToggle from "@/components/LangToggle";
@@ -45,9 +46,16 @@ export default function Nav() {
         <Link
           href="/"
           aria-label="C33 — accueil"
-          className="font-display tracking-[-0.03em] text-[44px] md:text-[64px] leading-none justify-self-center"
+          className="justify-self-center"
         >
-          C33
+          <Image
+            src="/logo-c33.png"
+            alt="C33"
+            width={779}
+            height={436}
+            priority
+            className="h-9 md:h-14 w-auto"
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em] justify-self-end">
           <Link href="/medias" className="hover:text-klein transition-colors">
@@ -71,8 +79,11 @@ export default function Nav() {
               href={`/category/${c.slug}`}
               className="shrink-0 hover:text-klein transition-colors"
             >
-              {c.fr}
-              <span className="ml-1 normal-case tracking-normal text-muted/80">
+              <span lang="fr">{c.fr}</span>
+              <span
+                lang="zh-CN"
+                className="ml-1 normal-case tracking-normal text-muted/80"
+              >
                 {c.cn}
               </span>
             </Link>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { rubriques } from "@/lib/categories";
 
 export default function Footer() {
@@ -7,9 +8,13 @@ export default function Footer() {
       {/* Colophon masthead */}
       <div className="border-b border-line">
         <div className="px-5 md:px-10 py-16 md:py-24 text-center">
-          <div className="font-display text-[88px] md:text-[160px] leading-[0.82] tracking-[-0.04em]">
-            C33
-          </div>
+          <Image
+            src="/logo-c33-tagline.png"
+            alt="C33 — A bilingual independent revue · Paris ⇄ Shanghai"
+            width={891}
+            height={660}
+            className="w-[240px] md:w-[380px] h-auto mx-auto"
+          />
           <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">
             Une revue trimestrielle franco-chinoise sur le goût, les marques
             et l&apos;art de vivre.
@@ -66,8 +71,11 @@ export default function Footer() {
               href={`/category/${c.slug}`}
               className="hover:text-klein transition-colors"
             >
-              {c.fr}
-              <span className="ml-1 normal-case tracking-normal text-[11px]">
+              <span lang="fr">{c.fr}</span>
+              <span
+                lang="zh-CN"
+                className="ml-1 normal-case tracking-normal text-[11px]"
+              >
                 {c.cn}
               </span>
             </Link>

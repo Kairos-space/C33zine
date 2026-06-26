@@ -5,7 +5,7 @@ import { lexique } from "@/lib/lexique";
 export const metadata: Metadata = {
   title: "Lexique",
   description:
-    "Lexique bilingue C33 — petits termes pour lire le goût et l'art de vivre entre la France et la Chine. C33 双语词条。",
+    "Lexique bilingue C33 — petits termes pour lire le goût et l'art de vivre entre la France et la Chine.",
   alternates: { canonical: "/lexique" },
 };
 
@@ -33,7 +33,8 @@ export default function LexiquePage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span>C33 — Lexique</span>
           <span className="hidden md:inline italic normal-case tracking-normal text-ink">
-            Lexique / 词条
+            <span lang="fr">Lexique</span>
+            <span lang="zh-CN"> / 词条</span>
           </span>
           <span>2026</span>
         </div>
@@ -44,13 +45,19 @@ export default function LexiquePage() {
         <div className="px-5 md:px-10 py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
             <span aria-hidden className="h-px w-6 bg-klein" />
-            Lexique / 词条
+            <span lang="fr">Lexique</span>
+            <span lang="zh-CN"> / 词条</span>
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
             Lire entre deux langues.
           </h1>
-          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted">
+          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted" lang="fr">
+            De petits termes pour lire le goût et l&apos;art de vivre entre deux
+            langues. Chaque entrée donne deux explications — car un même mot ne
+            désigne pas toujours la même chose.
+          </p>
+          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted" lang="zh-CN">
             一些用于在中法两种语境之间阅读品味与生活方式的小词条。每个词条同时给出两种解释——因为同一个词,常常并不指向同一件事。
           </p>
         </div>
@@ -70,7 +77,9 @@ export default function LexiquePage() {
                   {group.field}
                 </h2>
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
-                  {group.fieldCn} · {String(group.items.length).padStart(2, "0")}
+                  <span lang="fr">{group.field}</span>
+                  <span lang="zh-CN">{group.fieldCn}</span> ·{" "}
+                  {String(group.items.length).padStart(2, "0")}
                 </span>
               </div>
 

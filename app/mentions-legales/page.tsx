@@ -12,7 +12,7 @@ export default function MentionsLegalesPage() {
     <article lang="fr">
       <div className="border-b border-black">
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
-          <span>C33 — Ours / 版权页</span>
+          <span>C33 — <span lang="fr">Ours</span><span lang="zh-CN"> / 版权页</span></span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
             Mentions légales
           </span>

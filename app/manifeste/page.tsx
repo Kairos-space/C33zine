@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Manifeste",
   description:
-    "Le manifeste de C33 — pourquoi cette revue existe, ce qu'elle refuse, sa position éditoriale. C33 的编辑宣言。",
+    "Le manifeste de C33 — pourquoi cette revue existe, ce qu'elle refuse, sa position éditoriale.",
   alternates: { canonical: "/manifeste" },
 };
 
@@ -190,7 +190,7 @@ export default function ManifestePage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span>C33 — Position</span>
           <span className="hidden md:inline italic normal-case tracking-normal text-ink">
-            Manifeste / 宣言
+            Manifeste<span lang="zh-CN"> / 宣言</span>
           </span>
           <span>2026</span>
         </div>
@@ -201,7 +201,7 @@ export default function ManifestePage() {
         <div className="px-5 md:px-10 py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
             <span aria-hidden className="h-px w-6 bg-klein" />
-            Manifeste / 宣言
+            Manifeste<span lang="zh-CN"> / 宣言</span>
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <h1 className="font-display leading-[0.95] tracking-[-0.025em]">
@@ -211,7 +211,10 @@ export default function ManifestePage() {
               <span className="italic">pas commenter.</span>
             </span>
           </h1>
-          <div className="font-serif text-[22px] md:text-[32px] mt-10 text-muted">
+          <div
+            className="font-serif text-[22px] md:text-[32px] mt-10 text-muted"
+            lang="zh-CN"
+          >
             解码,而非评论。
           </div>
         </div>
@@ -255,7 +258,10 @@ export default function ManifestePage() {
         <div className="mt-8 font-display italic text-[22px] md:text-[32px]">
           Décoder, pas commenter.
         </div>
-        <div className="mt-3 font-serif text-[18px] md:text-[22px] text-muted">
+        <div
+          className="mt-3 font-serif text-[18px] md:text-[22px] text-muted"
+          lang="zh-CN"
+        >
           解码,而非评论。
         </div>
       </section>

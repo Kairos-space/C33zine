@@ -11,10 +11,10 @@ function apply(mode: Mode) {
 }
 
 export default function LangToggle() {
-  const [mode, setMode] = useState<Mode>("both");
+  const [mode, setMode] = useState<Mode>("fr");
 
   useEffect(() => {
-    const saved = (localStorage.getItem(KEY) as Mode | null) ?? "both";
+    const saved = (localStorage.getItem(KEY) as Mode | null) ?? "fr";
     setMode(saved);
     apply(saved);
   }, []);
@@ -33,8 +33,8 @@ export default function LangToggle() {
     >
       {(
         [
-          ["both", "Bilingue"],
           ["fr", "FR"],
+          ["both", "Bilingue"],
           ["cn", "中"],
         ] as [Mode, string][]
       ).map(([k, label]) => {

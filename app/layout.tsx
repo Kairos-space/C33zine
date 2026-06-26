@@ -3,6 +3,7 @@ import {
   Inter,
   Noto_Serif_SC,
   Fraunces,
+  Bodoni_Moda,
   Space_Mono,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
@@ -23,14 +24,27 @@ const notoSerifSC = Noto_Serif_SC({
   variable: "--font-noto-serif-sc",
 });
 
-const fraunces = Fraunces({
+// Didone display face — high-contrast serif that matches the C33 wordmark and
+// gives the masthead, headlines and drop caps the look of a French revue.
+const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
+  adjustFontFallback: false,
+  fallback: ["Didot", "Bodoni MT", "Times New Roman", "serif"],
+});
+
+// Text serif for French reading prose (Latin, not a CJK serif).
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-serif",
   axes: ["opsz", "SOFT"],
   style: ["normal", "italic"],
   adjustFontFallback: false,
-  fallback: ["Cormorant", "EB Garamond", "Didot", "serif"],
+  fallback: ["EB Garamond", "Georgia", "serif"],
 });
 
 const spaceMono = Space_Mono({
@@ -42,7 +56,8 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "C33 — 解码品味与生活方式的中法季刊",
+    default:
+      "C33 — Revue indépendante du goût et de l'art de vivre, entre Paris et Shanghai",
     template: "%s — C33",
   },
   description:
@@ -64,6 +79,16 @@ export const metadata: Metadata = {
     alternateLocale: ["zh_CN"],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "C33",
+    description:
+      "Revue indépendante bilingue franco-chinoise sur le goût, les récits de marque et l'art de vivre.",
+  },
+};
+
+export const viewport = {
+  themeColor: "#faf9f4",
 };
 
 export default function RootLayout({
@@ -73,10 +98,14 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="zh-CN"
-      className={`${inter.variable} ${notoSerifSC.variable} ${fraunces.variable} ${spaceMono.variable}`}
+      lang="fr"
+      className={`${inter.variable} ${notoSerifSC.variable} ${bodoni.variable} ${fraunces.variable} ${spaceMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body
+        className="min-h-screen flex flex-col"
+        data-lang-mode="fr"
+        suppressHydrationWarning
+      >
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

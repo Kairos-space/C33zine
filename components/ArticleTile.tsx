@@ -1,6 +1,8 @@
 import Link from "next/link";
 import EditorialImage from "@/components/EditorialImage";
 import type { ArticleMeta } from "@/lib/articles";
+import BilingualTitle from "@/components/BilingualTitle";
+import { getCategoryByCn } from "@/lib/categories";
 
 export default function ArticleTile({
   article,
@@ -21,8 +23,8 @@ export default function ArticleTile({
         ratio={ratio}
         sizes={sizes}
         priority={priority}
-        label={article.title}
-        sublabel={article.category}
+        label={article.titleFr ?? article.title}
+        sublabel={getCategoryByCn(article.category)?.fr ?? article.category}
         className="mb-4"
       />
       <div className="flex items-center gap-3 mb-2 font-mono text-[10px] uppercase tracking-[0.2em]">
@@ -33,7 +35,7 @@ export default function ArticleTile({
         <span className="text-muted">N°{article.issue}</span>
       </div>
       <h3 className="font-display text-[22px] md:text-[26px] leading-[1.15] tracking-[-0.01em] group-hover:text-klein transition-colors">
-        {article.title}
+        <BilingualTitle article={article} />
       </h3>
       <div className="mt-3 flex items-center gap-3 font-mono text-[11px] tracking-[0.02em] text-muted">
         <span>{article.author}</span>

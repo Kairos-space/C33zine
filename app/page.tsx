@@ -86,7 +86,10 @@ export default function HomePage() {
                     {curFR}
                   </span>
                   {curCN && (
-                    <span className="block font-display italic text-[30px] md:text-[46px] text-white/90 mt-1">
+                    <span
+                      className="block font-display italic text-[30px] md:text-[46px] text-white/90 mt-1"
+                      lang="zh-CN"
+                    >
                       {curCN}
                     </span>
                   )}
@@ -116,7 +119,10 @@ export default function HomePage() {
           <div className="flex items-baseline justify-between mb-10 md:mb-14">
             <h2 className="font-display text-[28px] md:text-[42px] tracking-[-0.01em]">
               Les numéros
-              <span className="font-mono text-[11px] align-top tracking-[0.2em] text-muted ml-3">
+              <span
+                className="font-mono text-[11px] align-top tracking-[0.2em] text-muted ml-3"
+                lang="zh-CN"
+              >
                 / 期号
               </span>
             </h2>
@@ -129,7 +135,11 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
-            {[current, ...others].map((i) => (
+            {[current, ...others].map((i) => {
+              const [iFR, iCN] = i.title.includes(" / ")
+                ? i.title.split(" / ")
+                : [i.title, ""];
+              return (
               <Link
                 key={i.slug}
                 href={`/issue/${i.slug}`}
@@ -152,14 +162,16 @@ export default function HomePage() {
                     {i.status === "current" ? " · Numéro courant" : " · Archive"}
                   </div>
                   <h3 className="font-display text-[24px] md:text-[32px] leading-[1.05] tracking-[-0.015em] group-hover:text-klein transition-colors">
-                    {i.title}
+                    {iFR}
+                    {iCN && <span lang="zh-CN"> / {iCN}</span>}
                   </h3>
                   <p className="font-display italic text-[16px] md:text-[18px] leading-[1.4] text-muted mt-3 max-w-[360px]">
                     {i.tagline}
                   </p>
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
