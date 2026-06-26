@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Écrire à C33 — contact, pitch et partenariats. 联系 C33。",
+    "Écrire à C33 — contact, pitch et partenariats.",
   alternates: { canonical: "/contact" },
 };
 

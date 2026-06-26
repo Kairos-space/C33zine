@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Médias & presse",
   description:
-    "Espace presse de C33 — identité, contacts et informations pour les médias et partenaires. 媒体与合作。",
+    "Espace presse de C33 — identité, contacts et informations pour les médias et partenaires.",
   alternates: { canonical: "/medias" },
 };
 

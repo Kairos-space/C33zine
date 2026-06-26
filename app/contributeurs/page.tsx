@@ -5,7 +5,7 @@ import { getAllArticles } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Contributeurs",
   description:
-    "Les contributeurs de C33 — la revue trimestrielle franco-chinoise. 撰稿人。",
+    "Les contributeurs de C33 — la revue trimestrielle franco-chinoise.",
   alternates: { canonical: "/contributeurs" },
 };
 

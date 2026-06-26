@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Propositions",
   description:
-    "Proposer un sujet à C33 — modalités, format et délais. 投稿与选题提案指南。",
+    "Proposer un sujet à C33 — modalités, format et délais.",
   alternates: { canonical: "/pitch" },
 };
 

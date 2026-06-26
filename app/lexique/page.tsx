@@ -5,7 +5,7 @@ import { lexique } from "@/lib/lexique";
 export const metadata: Metadata = {
   title: "Lexique",
   description:
-    "Lexique bilingue C33 — petits termes pour lire le goût et l'art de vivre entre la France et la Chine. C33 双语词条。",
+    "Lexique bilingue C33 — petits termes pour lire le goût et l'art de vivre entre la France et la Chine.",
   alternates: { canonical: "/lexique" },
 };
 
@@ -50,7 +50,12 @@ export default function LexiquePage() {
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
             Lire entre deux langues.
           </h1>
-          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted">
+          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted" lang="fr">
+            De petits termes pour lire le goût et l&apos;art de vivre entre deux
+            langues. Chaque entrée donne deux explications — car un même mot ne
+            désigne pas toujours la même chose.
+          </p>
+          <p className="font-serif text-[18px] md:text-[20px] mt-8 max-w-[640px] mx-auto text-muted" lang="zh-CN">
             一些用于在中法两种语境之间阅读品味与生活方式的小词条。每个词条同时给出两种解释——因为同一个词,常常并不指向同一件事。
           </p>
         </div>

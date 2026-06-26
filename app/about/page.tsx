@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "À propos de C33 — une revue indépendante, trimestrielle, bilingue, écrite entre Paris et Shanghai. 关于 C33。",
+    "À propos de C33 — une revue indépendante, trimestrielle, bilingue, écrite entre Paris et Shanghai.",
   alternates: { canonical: "/about" },
 };
 
@@ -173,7 +173,10 @@ export default function AboutPage() {
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
             À propos de C33
           </h1>
-          <div className="font-serif text-[22px] md:text-[30px] mt-6 text-muted">
+          <div className="font-serif text-[22px] md:text-[30px] mt-6 text-muted" lang="fr">
+            À propos de C33
+          </div>
+          <div className="font-serif text-[22px] md:text-[30px] mt-6 text-muted" lang="zh-CN">
             关于 C33
           </div>
         </div>
@@ -186,7 +189,10 @@ export default function AboutPage() {
 
       {/* Outro — Modezine credit + signoff */}
       <section className="px-5 md:px-10 py-20 md:py-28 text-center">
-        <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
+        <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted" lang="fr">
+          Modezine · WeChat
+        </div>
+        <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted" lang="zh-CN">
           Modezine · WeChat 公众号
         </div>
         <div className="mt-16 font-display text-[64px] md:text-[120px] leading-[0.88] tracking-[-0.03em]">

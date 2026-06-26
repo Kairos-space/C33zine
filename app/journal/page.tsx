@@ -5,7 +5,7 @@ import { getAllJournalPosts } from "@/lib/journal";
 export const metadata: Metadata = {
   title: "Journal",
   description:
-    "Le carnet de C33 — notes courtes entre deux numéros. C33 编辑部的间期笔记。",
+    "Le carnet de C33 — notes courtes entre deux numéros.",
   alternates: { canonical: "/journal" },
 };
 

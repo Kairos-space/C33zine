@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Manifeste",
   description:
-    "Le manifeste de C33 — pourquoi cette revue existe, ce qu'elle refuse, sa position éditoriale. C33 的编辑宣言。",
+    "Le manifeste de C33 — pourquoi cette revue existe, ce qu'elle refuse, sa position éditoriale.",
   alternates: { canonical: "/manifeste" },
 };
 
