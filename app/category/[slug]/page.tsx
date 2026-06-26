@@ -15,8 +15,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const cat = getCategoryBySlug(params.slug);
   if (!cat) return {};
-  const title = `${cat.fr} / ${cat.cn}`;
-  const description = `Tous les articles de C33 dans la rubrique ${cat.fr} (${cat.cn}).`;
+  const title = cat.fr;
+  const description = `Tous les articles de C33 dans la rubrique ${cat.fr}.`;
   const url = `/category/${cat.slug}`;
   return {
     title,

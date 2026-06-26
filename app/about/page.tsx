@@ -120,11 +120,17 @@ function Block({
             {String(index + 1).padStart(2, "0")}
           </div>
           <div className="md:col-span-6" lang="fr">
-            {label && (
-              <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted mb-4">
-                {label}
-              </div>
-            )}
+            {label &&
+              (label.includes(" / ") ? (
+                <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted mb-4">
+                  <span lang="fr">{label.split(" / ")[0]}</span>
+                  <span lang="zh-CN"> / {label.split(" / ").slice(1).join(" / ")}</span>
+                </div>
+              ) : (
+                <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted mb-4">
+                  {label}
+                </div>
+              ))}
             <div className="font-display text-[18px] md:text-[20px] leading-[1.55] tracking-[-0.005em]">
               {fr.map((line, i) => (
                 <p key={i} className={i > 0 ? "mt-3" : ""}>
@@ -156,7 +162,8 @@ export default function AboutPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span>C33 — Manifeste</span>
           <span className="hidden md:inline italic normal-case tracking-normal text-ink">
-            About / 关于
+            <span lang="fr">About</span>
+            <span lang="zh-CN"> / 关于</span>
           </span>
           <span>2026</span>
         </div>
@@ -167,7 +174,8 @@ export default function AboutPage() {
         <div className="px-5 md:px-10 py-20 md:py-28 text-center">
           <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-10">
             <span aria-hidden className="h-px w-6 bg-klein" />
-            About / 关于
+            <span lang="fr">About</span>
+            <span lang="zh-CN"> / 关于</span>
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">

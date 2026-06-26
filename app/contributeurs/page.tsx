@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/articles";
+import BilingualTitle from "@/components/BilingualTitle";
 
 export const metadata: Metadata = {
   title: "Contributeurs",
@@ -98,7 +99,7 @@ export default function ContributeursPage() {
                               href={`/article/${p.slug}`}
                               className="font-display italic text-[17px] md:text-[19px] hover:underline underline-offset-4 decoration-1"
                             >
-                              {p.title}
+                              <BilingualTitle article={p} />
                             </Link>
                           </li>
                         ))}

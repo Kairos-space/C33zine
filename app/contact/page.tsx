@@ -14,7 +14,8 @@ export default function ContactPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Correspondance</span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            Contact / 联系
+            <span lang="fr">Contact</span>
+            <span lang="zh-CN"> / 联系</span>
           </span>
           <span>2026</span>
         </div>
@@ -49,7 +50,8 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-10 border-b border-black pb-10">
             <div>
               <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3">
-                Pitch / 投稿
+                <span lang="fr">Pitch</span>
+                <span lang="zh-CN"> / 投稿</span>
               </div>
               <p lang="fr" className="font-serif text-[17px] leading-[1.8]">
                 Pour une proposition de sujet ou une collaboration éditoriale,

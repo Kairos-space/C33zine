@@ -118,7 +118,8 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
     return (
       <div className="no-print">
         <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-6">
-          Newsletter / 订阅
+          <span lang="fr">Newsletter</span>
+          <span lang="zh-CN"> / 订阅</span>
         </div>
         <p
           className="font-display italic text-[22px] md:text-[28px] leading-[1.3] mb-3"

@@ -19,7 +19,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const issue = getIssueBySlug(params.slug);
   if (!issue) return {};
-  const title = `Issue N° ${issue.number} — ${issue.title}`;
+  const titleFr = issue.title.includes(" / ")
+    ? issue.title.split(" / ")[0]
+    : issue.title;
+  const title = `Issue N° ${issue.number} — ${titleFr}`;
   const description = `${issue.subtitle} · ${issue.season} ${issue.year} · Le sommaire complet du numéro ${issue.number} de C33.`;
   const url = `/issue/${issue.slug}`;
   return {
@@ -148,8 +151,8 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                         alt={a.coverAlt ?? a.title}
                         ratio="aspect-[3/2]"
                         sizes="(min-width: 768px) 50vw, 100vw"
-                        label={a.title}
-                        sublabel={a.category}
+                        label={a.titleFr ?? a.title}
+                        sublabel={getCategoryByCn(a.category)?.fr ?? a.category}
                       />
                     </Link>
                   </div>

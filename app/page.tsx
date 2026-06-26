@@ -86,7 +86,10 @@ export default function HomePage() {
                     {curFR}
                   </span>
                   {curCN && (
-                    <span className="block font-display italic text-[30px] md:text-[46px] text-white/90 mt-1">
+                    <span
+                      className="block font-display italic text-[30px] md:text-[46px] text-white/90 mt-1"
+                      lang="zh-CN"
+                    >
                       {curCN}
                     </span>
                   )}

@@ -14,7 +14,8 @@ export default function PitchPage() {
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Propositions</span>
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            Pitch / 投稿
+            <span lang="fr">Pitch</span>
+            <span lang="zh-CN"> / 投稿</span>
           </span>
           <span>2026</span>
         </div>
