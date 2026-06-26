@@ -24,7 +24,9 @@ export default function BilingualTitle({
           {fr}
         </span>
       )}
-      <span lang="zh-CN" className={fr ? "block" : undefined}>
+      {/* Only tag the Chinese with lang= when a French counterpart exists, so a
+         title without title_fr never vanishes in FR mode (it stays as fallback). */}
+      <span lang={fr ? "zh-CN" : undefined} className={fr ? "block" : undefined}>
         {article.title}
       </span>
     </span>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import EditorialImage from "@/components/EditorialImage";
 import type { ArticleMeta } from "@/lib/articles";
 import BilingualTitle from "@/components/BilingualTitle";
+import { getCategoryByCn } from "@/lib/categories";
 
 export default function ArticleTile({
   article,
@@ -23,7 +24,7 @@ export default function ArticleTile({
         sizes={sizes}
         priority={priority}
         label={article.titleFr ?? article.title}
-        sublabel={article.category}
+        sublabel={getCategoryByCn(article.category)?.fr ?? article.category}
         className="mb-4"
       />
       <div className="flex items-center gap-3 mb-2 font-mono text-[10px] uppercase tracking-[0.2em]">

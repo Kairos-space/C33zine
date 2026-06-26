@@ -195,7 +195,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center mb-8 md:mb-10">
               <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-2">
-                — Continuer la lecture / 继续阅读 —
+                <span lang="fr">— Continuer la lecture —</span>
+                <span lang="zh-CN">— 继续阅读 —</span>
               </div>
               {issue && (
                 <div className="font-display italic text-[15px] text-neutral-600">
@@ -216,11 +217,14 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <div className="max-w-prose mx-auto flex justify-between items-baseline">
           <Link
             href={`/issue/${article.issue}`}
+            lang="fr"
             className="font-sans text-[11px] uppercase tracking-[0.18em] hover:underline underline-offset-4"
           >
             ← Retour au sommaire
           </Link>
-          <span className="font-display italic text-[14px]">返回当期目录</span>
+          <span lang="zh-CN" className="font-display italic text-[14px]">
+            返回当期目录
+          </span>
         </div>
       </div>
     </article>

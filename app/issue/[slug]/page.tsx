@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { issues, getIssueBySlug, issueAccentStyle } from "@/lib/issues";
 import { getArticlesByIssue } from "@/lib/articles";
+import { getCategoryByCn } from "@/lib/categories";
 import { resolveCover } from "@/lib/cover";
 import EditorialImage from "@/components/EditorialImage";
 import BilingualTitle from "@/components/BilingualTitle";
@@ -161,7 +162,8 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                           aria-hidden
                           className="inline-block h-1.5 w-1.5 rounded-full bg-klein"
                         />
-                        {a.category}
+                        <span lang="fr">{getCategoryByCn(a.category)?.fr ?? a.category}</span>
+                        <span lang="zh-CN">{a.category}</span>
                       </span>
                       <span className="text-muted">
                         — {String(i + 1).padStart(2, "0")}
@@ -175,8 +177,19 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
                         <BilingualTitle article={a} />
                       </h3>
                     </Link>
+                    {a.excerptFr && (
+                      <p
+                        lang="fr"
+                        className="font-display italic text-[17px] md:text-[19px] leading-[1.45] text-muted mt-5"
+                      >
+                        {a.excerptFr}
+                      </p>
+                    )}
                     {a.excerpt && (
-                      <p className="font-display italic text-[17px] md:text-[19px] leading-[1.45] text-muted mt-5">
+                      <p
+                        lang="zh-CN"
+                        className="font-display italic text-[17px] md:text-[19px] leading-[1.45] text-muted mt-5"
+                      >
                         {a.excerpt}
                       </p>
                     )}

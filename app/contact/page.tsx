@@ -51,7 +51,19 @@ export default function ContactPage() {
               <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3">
                 Pitch / 投稿
               </div>
-              <p className="font-serif text-[17px] leading-[1.8]">
+              <p lang="fr" className="font-serif text-[17px] leading-[1.8]">
+                Pour une proposition de sujet ou une collaboration éditoriale,
+                consultez nos{" "}
+                <a href="/pitch" className="underline underline-offset-4">
+                  modalités de proposition
+                </a>
+                {" "}ou indiquez la mention{" "}
+                <span className="font-mono text-[14px] bg-black text-white px-1.5">
+                  [PITCH]
+                </span>
+                {" "}en objet de votre message.
+              </p>
+              <p lang="zh-CN" className="font-serif text-[17px] leading-[1.8]">
                 选题提案与撰稿合作,请见{" "}
                 <a href="/pitch" className="underline underline-offset-4">
                   投稿指南
@@ -67,7 +79,15 @@ export default function ContactPage() {
               <div className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3">
                 Presse & partenariats
               </div>
-              <p className="font-serif text-[17px] leading-[1.8]">
+              <p lang="fr" className="font-serif text-[17px] leading-[1.8]">
+                Pour toute demande presse ou partenariat de marque, indiquez la
+                mention{" "}
+                <span className="font-mono text-[14px] bg-black text-white px-1.5">
+                  [PARTNERSHIP]
+                </span>
+                {" "}en objet de votre message.
+              </p>
+              <p lang="zh-CN" className="font-serif text-[17px] leading-[1.8]">
                 媒体咨询与品牌合作,请于邮件主题注明{" "}
                 <span className="font-mono text-[14px] bg-black text-white px-1.5">
                   [PARTNERSHIP]

@@ -23,13 +23,13 @@ export async function GET() {
         ? new Date(a.date).toUTCString()
         : new Date().toUTCString();
       return `    <item>
-      <title>${escapeXml(a.title)}</title>
+      <title>${escapeXml(a.titleFr ?? a.title)}</title>
       <link>${url}</link>
       <guid isPermaLink="true">${url}</guid>
       <dc:creator>${escapeXml(a.author)}</dc:creator>
       <category>${escapeXml(a.category)}</category>
       <pubDate>${pubDate}</pubDate>
-      <description>${escapeXml(a.excerpt ?? "")}</description>
+      <description>${escapeXml(a.excerptFr ?? a.excerpt ?? "")}</description>
     </item>`;
     })
     .join("\n");
@@ -41,7 +41,7 @@ export async function GET() {
     <link>${BASE_URL}</link>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
     <description>Une revue trimestrielle franco-chinoise sur le goût, les marques et l'art de vivre.</description>
-    <language>zh-CN</language>
+    <language>fr</language>
     <prism:issn>2981-2844</prism:issn>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}

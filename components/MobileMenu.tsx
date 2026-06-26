@@ -67,7 +67,8 @@ export default function MobileMenu() {
             ))}
 
             <div className="mt-9 mb-3 font-mono text-[10px] uppercase tracking-[0.28em] text-klein">
-              Rubriques / 栏目
+              <span lang="fr">Rubriques</span>
+              <span lang="zh-CN"> / 栏目</span>
             </div>
             <div className="flex flex-col gap-1.5">
               {rubriques.map((c) => (
@@ -77,8 +78,8 @@ export default function MobileMenu() {
                   onClick={() => setOpen(false)}
                   className="font-mono text-[12px] uppercase tracking-[0.16em] text-muted hover:text-ink transition-colors"
                 >
-                  {c.fr}
-                  <span className="ml-1.5 normal-case tracking-normal">
+                  <span lang="fr">{c.fr}</span>
+                  <span lang="zh-CN" className="ml-1.5 normal-case tracking-normal">
                     {c.cn}
                   </span>
                 </Link>

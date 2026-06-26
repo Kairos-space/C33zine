@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { getArticleBySlug, getAllArticles } from "@/lib/articles";
+import { getCategoryByCn } from "@/lib/categories";
 
 export const runtime = "nodejs";
 export const alt = "C33";
@@ -16,8 +17,10 @@ export default async function Image({
   params: { slug: string };
 }) {
   const article = getArticleBySlug(params.slug);
-  const title = article?.title ?? "C33";
-  const category = article?.category ?? "";
+  const title = article?.titleFr ?? article?.title ?? "C33";
+  const category = article
+    ? getCategoryByCn(article.category)?.fr ?? article.category
+    : "";
   const issue = article?.issue ?? "01";
   const author = article?.author ?? "C33";
 

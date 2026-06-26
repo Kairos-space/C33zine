@@ -94,7 +94,19 @@ export default function IssuesPage() {
                   <h2 className="font-display text-[34px] md:text-[56px] leading-[1.02] tracking-[-0.02em] group-hover:text-klein transition-colors">
                     N° {issue.number}
                     <br />
-                    <span className="italic">{issue.title}</span>
+                    <span className="italic">
+                      {issue.title.includes(" / ") ? (
+                        <>
+                          <span lang="fr">{issue.title.split(" / ")[0]}</span>
+                          <span lang="zh-CN">
+                            {" "}
+                            / {issue.title.split(" / ").slice(1).join(" / ")}
+                          </span>
+                        </>
+                      ) : (
+                        issue.title
+                      )}
+                    </span>
                   </h2>
                 </Link>
                 <p className="font-display italic text-[17px] md:text-[19px] mt-5 text-muted">
