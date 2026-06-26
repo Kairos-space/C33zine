@@ -10,6 +10,12 @@ export default function Footer() {
           <div className="font-display text-[88px] md:text-[160px] leading-[0.82] tracking-[-0.04em]">
             C33
           </div>
+          <div className="font-mono text-[10px] md:text-[12px] uppercase tracking-[0.28em] text-muted mt-6">
+            A bilingual independent revue
+          </div>
+          <div className="font-mono text-[10px] md:text-[12px] uppercase tracking-[0.4em] text-muted mt-2">
+            Paris&nbsp;&#8652;&nbsp;Shanghai
+          </div>
           <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">
             Une revue trimestrielle franco-chinoise sur le goût, les marques
             et l&apos;art de vivre.
