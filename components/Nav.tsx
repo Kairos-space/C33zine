@@ -8,7 +8,7 @@ import MobileMenu from "@/components/MobileMenu";
 export default function Nav() {
   const issue = getCurrentIssue();
   return (
-    <header lang="fr" className="border-b border-line">
+    <header className="border-b border-line">
       {/* Utility bar */}
       <div className="border-b border-line">
         <div className="px-5 md:px-10 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">

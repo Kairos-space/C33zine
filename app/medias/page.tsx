@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function MediasPage() {
   return (
-    <article lang="fr">
+    <article>
       <div className="border-b border-black">
         <div className="px-4 md:px-8 h-9 flex items-center justify-between font-sans text-[10px] uppercase tracking-[0.18em]">
           <span>C33 — Presse</span>

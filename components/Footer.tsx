@@ -4,7 +4,7 @@ import { rubriques } from "@/lib/categories";
 
 export default function Footer() {
   return (
-    <footer lang="fr" className="border-t border-line mt-8">
+    <footer className="border-t border-line mt-8">
       {/* Colophon masthead */}
       <div className="border-b border-line">
         <div className="px-5 md:px-10 py-16 md:py-24 text-center">
