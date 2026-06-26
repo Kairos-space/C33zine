@@ -79,6 +79,16 @@ export const metadata: Metadata = {
     alternateLocale: ["zh_CN"],
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "C33",
+    description:
+      "Revue indépendante bilingue franco-chinoise sur le goût, les récits de marque et l'art de vivre.",
+  },
+};
+
+export const viewport = {
+  themeColor: "#faf9f4",
 };
 
 export default function RootLayout({
