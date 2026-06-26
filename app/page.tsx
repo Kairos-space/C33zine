@@ -22,8 +22,15 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* left — what C33 is */}
           <div className="px-6 md:px-12 py-14 md:py-20 md:border-r border-line flex flex-col justify-between gap-14">
-            <h1 className="font-display text-[64px] md:text-[112px] leading-none tracking-[-0.04em]">
-              C33
+            <h1 className="leading-none">
+              <Image
+                src="/logo-c33.png"
+                alt="C33"
+                width={779}
+                height={436}
+                priority
+                className="h-16 md:h-28 w-auto"
+              />
             </h1>
             <div>
               <p
