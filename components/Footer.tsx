@@ -66,8 +66,11 @@ export default function Footer() {
               href={`/category/${c.slug}`}
               className="hover:text-klein transition-colors"
             >
-              {c.fr}
-              <span className="ml-1 normal-case tracking-normal text-[11px]">
+              <span lang="fr">{c.fr}</span>
+              <span
+                lang="zh-CN"
+                className="ml-1 normal-case tracking-normal text-[11px]"
+              >
                 {c.cn}
               </span>
             </Link>
