@@ -10,6 +10,7 @@ import {
 import { getIssueBySlug, issueAccentStyle } from "@/lib/issues";
 import { getCategoryByCn } from "@/lib/categories";
 import ArticleCard from "@/components/ArticleCard";
+import BilingualTitle from "@/components/BilingualTitle";
 
 const mdxComponents = {
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
@@ -29,14 +30,16 @@ export async function generateMetadata({
   const article = getArticleBySlug(params.slug);
   if (!article) return {};
   const url = `/article/${article.slug}`;
+  const metaTitle = article.titleFr ?? article.title;
+  const metaDescription = article.excerptFr ?? article.excerpt;
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: metaTitle,
+    description: metaDescription,
     authors: [{ name: article.author }],
     alternates: { canonical: url },
     openGraph: {
-      title: article.title,
-      description: article.excerpt,
+      title: metaTitle,
+      description: metaDescription,
       url,
       type: "article",
       publishedTime: article.date,
@@ -62,9 +65,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.title,
-    description: article.excerpt,
-    inLanguage: "zh-CN",
+    headline: article.titleFr ?? article.title,
+    description: article.excerptFr ?? article.excerpt,
+    inLanguage: article.titleFr ? "fr" : "zh-CN",
     datePublished: article.date,
     dateModified: article.date,
     author: {
@@ -120,7 +123,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </Link>
           )}
           <span className="hidden md:inline font-display italic normal-case tracking-normal">
-            {article.category}
+            {cat && <span lang="fr">{cat.fr}</span>}
+            <span lang="zh-CN">{article.category}</span>
           </span>
           <span>
             {issue ? `${issue.season} ${issue.year}` : "Rubrique permanente"}
@@ -139,10 +143,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
             <div className="font-sans text-[10px] uppercase tracking-[0.28em] mb-4">
-              {article.category}
+              {cat && <span lang="fr">{cat.fr}</span>}
+              <span lang="zh-CN">{article.category}</span>
             </div>
             <h1 className="font-display font-medium text-[36px] md:text-[68px] leading-[1.02] tracking-[-0.02em] max-w-[900px]">
-              {article.title}
+              <BilingualTitle article={article} />
             </h1>
           </div>
         </div>
@@ -151,8 +156,19 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       {/* Deck + byline */}
       <header className="px-6 md:px-10 pt-12 md:pt-16 pb-10 md:pb-14 text-center border-b border-black">
         <div className="max-w-[820px] mx-auto">
+          {article.excerptFr && (
+            <p
+              lang="fr"
+              className="font-display italic text-[20px] md:text-[24px] leading-[1.4] max-w-[640px] mx-auto mb-10"
+            >
+              {article.excerptFr}
+            </p>
+          )}
           {article.excerpt && (
-            <p className="font-display italic text-[20px] md:text-[24px] leading-[1.4] max-w-[640px] mx-auto mb-10">
+            <p
+              lang="zh-CN"
+              className="font-display italic text-[20px] md:text-[24px] leading-[1.4] max-w-[640px] mx-auto mb-10"
+            >
               {article.excerpt}
             </p>
           )}

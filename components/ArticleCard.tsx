@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ArticleMeta } from "@/lib/articles";
+import BilingualTitle from "@/components/BilingualTitle";
 
 export default function ArticleCard({
   article,
@@ -28,7 +29,7 @@ export default function ArticleCard({
 
         {/* title */}
         <h3 className="col-span-12 md:col-span-6 font-display italic font-medium text-[24px] md:text-[32px] leading-[1.15] tracking-tight group-hover:underline underline-offset-4 decoration-1">
-          {article.title}
+          <BilingualTitle article={article} />
         </h3>
 
         {/* author */}

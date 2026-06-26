@@ -42,7 +42,8 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "C33 — 解码品味与生活方式的中法季刊",
+    default:
+      "C33 — Revue indépendante du goût et de l'art de vivre, entre Paris et Shanghai",
     template: "%s — C33",
   },
   description:
@@ -73,10 +74,14 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="zh-CN"
+      lang="fr"
       className={`${inter.variable} ${notoSerifSC.variable} ${fraunces.variable} ${spaceMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body
+        className="min-h-screen flex flex-col"
+        data-lang-mode="fr"
+        suppressHydrationWarning
+      >
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
