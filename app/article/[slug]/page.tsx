@@ -146,7 +146,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               {cat && <span lang="fr">{cat.fr}</span>}
               <span lang="zh-CN">{article.category}</span>
             </div>
-            <h1 className="font-display font-medium text-[36px] md:text-[68px] leading-[1.02] tracking-[-0.02em] max-w-[900px]">
+            <h1 className="font-display font-medium text-[24px] sm:text-[30px] md:text-[42px] leading-[1.12] tracking-[-0.015em] max-w-[760px] text-balance">
               <BilingualTitle article={article} />
             </h1>
           </div>
