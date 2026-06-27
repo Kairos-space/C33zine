@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="relative z-10 px-6 md:px-12 pb-10 md:pb-14">
               <Link href={`/issue/${current.slug}`} className="group block">
                 <h2 className="font-display leading-[0.98] tracking-[-0.03em]">
-                  <span className="block text-[42px] md:text-[64px]">
+                  <span className="block text-[42px] md:text-[64px]" lang="fr">
                     {curFR}
                   </span>
                   {curCN && (
