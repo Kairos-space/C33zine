@@ -180,14 +180,9 @@ export default function AboutPage() {
             <span aria-hidden className="h-px w-6 bg-klein" />
           </div>
           <h1 className="font-display text-[48px] md:text-[88px] leading-[0.95] tracking-[-0.025em]">
-            À propos de C33
+            <span lang="fr">À propos de C33</span>
+            <span lang="zh-CN">关于 C33</span>
           </h1>
-          <div className="font-serif text-[22px] md:text-[30px] mt-6 text-muted" lang="fr">
-            À propos de C33
-          </div>
-          <div className="font-serif text-[22px] md:text-[30px] mt-6 text-muted" lang="zh-CN">
-            关于 C33
-          </div>
         </div>
       </header>
 
