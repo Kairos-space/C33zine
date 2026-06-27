@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Manifeste",
@@ -252,9 +253,13 @@ export default function ManifestePage() {
 
       {/* Closing signoff */}
       <section className="px-5 md:px-10 py-24 md:py-32 text-center">
-        <div className="font-display text-[80px] md:text-[140px] leading-[0.88] tracking-[-0.03em]">
-          C33
-        </div>
+        <Image
+          src="/logo-c33.png"
+          alt="C33"
+          width={779}
+          height={436}
+          className="h-16 md:h-28 w-auto mx-auto"
+        />
         <div className="mt-8 font-display italic text-[22px] md:text-[32px]">
           Décoder, pas commenter.
         </div>
