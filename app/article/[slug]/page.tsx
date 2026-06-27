@@ -134,10 +134,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
       {/* Ouverture — a black opener plate that gives each article a visual anchor */}
       <div className="relative bg-black text-white overflow-hidden">
-        <div className="px-6 md:px-10 py-12 md:py-20 flex items-center justify-between gap-6">
+        <div className="px-6 md:px-10 py-10 md:py-14 flex items-center justify-between gap-6">
           <div
             aria-hidden
-            className="font-display font-medium leading-[0.8] tracking-[-0.04em] text-[34vw] md:text-[22vw] opacity-[0.16] select-none -ml-2"
+            className="font-display font-medium leading-[0.8] tracking-[-0.04em] text-[24vw] md:text-[13vw] opacity-[0.14] select-none -ml-2"
           >
             {folio}
           </div>
@@ -146,7 +146,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
               {cat && <span lang="fr">{cat.fr}</span>}
               <span lang="zh-CN">{article.category}</span>
             </div>
-            <h1 className="font-display font-medium text-[24px] sm:text-[30px] md:text-[42px] leading-[1.12] tracking-[-0.015em] max-w-[760px] text-balance">
+            <h1 className="font-display font-medium text-[26px] sm:text-[34px] md:text-[46px] leading-[1.1] tracking-[-0.015em] max-w-[1100px] text-pretty">
               <BilingualTitle article={article} />
             </h1>
           </div>

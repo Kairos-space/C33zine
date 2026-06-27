@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -203,9 +204,13 @@ export default function AboutPage() {
         <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted" lang="zh-CN">
           Modezine · WeChat 公众号
         </div>
-        <div className="mt-16 font-display text-[64px] md:text-[120px] leading-[0.88] tracking-[-0.03em]">
-          C33
-        </div>
+        <Image
+          src="/logo-c33.png"
+          alt="C33"
+          width={779}
+          height={436}
+          className="mt-16 h-16 md:h-24 w-auto mx-auto"
+        />
         <div className="mt-6 font-display italic text-[18px] md:text-[22px] max-w-[640px] mx-auto leading-snug">
           Une revue trimestrielle franco-chinoise sur le goût, les marques
           et l&apos;art de vivre.
