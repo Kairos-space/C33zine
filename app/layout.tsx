@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "C33",
+    title: "C33 — Revue indépendante, Paris ⇄ Shanghai",
     description:
       "C33 décode le goût, les récits de marque et l'art de vivre, à travers la distance et le lien entre la France et la Chine.",
     url: "https://c33zine.com",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "C33",
+    title: "C33 — Revue indépendante, Paris ⇄ Shanghai",
     description:
       "Revue indépendante bilingue franco-chinoise sur le goût, les récits de marque et l'art de vivre.",
   },
