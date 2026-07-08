@@ -8,9 +8,6 @@ import Newsletter from "@/components/Newsletter";
 export default function HomePage() {
   const current = getCurrentIssue();
   const currentCover = resolveCover(current.cover);
-  const [curFR, curCN] = current.title.includes(" / ")
-    ? current.title.split(" / ")
-    : [current.title, ""];
   const others = issues
     .filter((i) => i.slug !== current.slug)
     .sort((a, b) => b.number.localeCompare(a.number));
@@ -48,71 +45,45 @@ export default function HomePage() {
               </p>
             </div>
             <div>
-              <span
-                aria-hidden
-                className="block h-px w-12 bg-klein mb-5"
-              />
+              <span aria-hidden className="block h-px w-12 bg-klein mb-5" />
               <p className="font-display italic text-[18px] md:text-[22px]">
-                <span lang="fr">Décoder, pas commenter.</span>{" "}
-                <span lang="zh-CN" className="not-italic font-serif text-muted">
-                  / 解码,而非评论。
-                </span>
+                Entre Paris et Shanghai, quatre fois l&apos;an.
               </p>
             </div>
           </div>
 
-          {/* right — current issue card, accent-bounded */}
-          <div className="relative bg-klein text-white overflow-hidden flex flex-col justify-between min-h-[440px] md:min-h-[600px]">
+          {/* right — the current issue cover, shown whole on the accent */}
+          <div className="relative bg-klein text-white overflow-hidden min-h-[440px] md:min-h-[600px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 px-6 md:px-12 py-12 md:py-0">
             {currentCover && (
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-3/5 hidden md:block">
+              <Link
+                href={`/issue/${current.slug}`}
+                aria-label={`Lire le numéro ${current.number}`}
+                className="relative z-10 order-1 md:order-2 block w-[60%] max-w-[240px] md:max-w-[290px] shrink-0 shadow-[0_28px_70px_-24px_rgba(0,0,0,0.55)]"
+              >
                 <Image
                   src={currentCover}
                   alt={current.coverAlt ?? current.title}
-                  fill
-                  sizes="40vw"
+                  width={1054}
+                  height={1492}
+                  sizes="(min-width: 768px) 290px, 60vw"
                   priority
-                  className="object-cover"
+                  className="w-full h-auto"
                 />
-                <div
-                  aria-hidden
-                  className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-klein to-transparent"
-                />
-              </div>
+              </Link>
             )}
 
-            <div className="relative z-10 px-6 md:px-12 pt-10 md:pt-14">
-              <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/80">
-                N°{current.number} · {current.season} {current.year}
+            <div className="relative z-10 order-2 md:order-1 md:max-w-[300px]">
+              <div className="font-mono text-[11px] uppercase tracking-[0.24em] text-white/80 mb-5">
+                N°{current.number} · {current.season} {current.year} · Numéro courant
               </div>
-            </div>
-
-            <div className="relative z-10 px-6 md:px-12 pb-10 md:pb-14">
-              <Link href={`/issue/${current.slug}`} className="group block">
-                <h2 className="font-display leading-[0.98] tracking-[-0.03em]">
-                  <span className="block text-[42px] md:text-[64px]" lang="fr">
-                    {curFR}
-                  </span>
-                  {curCN && (
-                    <span
-                      className="block font-display italic text-[30px] md:text-[46px] text-white/90 mt-1"
-                      lang="zh-CN"
-                    >
-                      {curCN}
-                    </span>
-                  )}
-                </h2>
-              </Link>
-              <p className="font-display italic text-[18px] md:text-[21px] leading-[1.4] text-white/85 mt-6 max-w-[360px]">
+              <p className="font-display italic text-[22px] md:text-[28px] leading-[1.3] text-white">
                 {current.tagline}
               </p>
               <Link
                 href={`/issue/${current.slug}`}
-                className="group inline-flex items-center gap-3 mt-9 font-mono text-[12px] uppercase tracking-[0.2em] text-white"
+                className="group inline-flex items-center gap-3 mt-8 font-mono text-[12px] uppercase tracking-[0.2em] text-white"
               >
-                <span
-                  aria-hidden
-                  className="inline-block h-px w-8 bg-white transition-all group-hover:w-12"
-                />
+                <span aria-hidden className="inline-block h-px w-8 bg-white transition-all group-hover:w-12" />
                 Lire le numéro →
               </Link>
             </div>
