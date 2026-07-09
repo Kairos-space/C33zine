@@ -63,8 +63,8 @@ export default function HomePage() {
                 <Image
                   src={currentCover}
                   alt={current.coverAlt ?? current.title}
-                  width={1054}
-                  height={1492}
+                  width={1086}
+                  height={1448}
                   sizes="(min-width: 768px) 290px, 60vw"
                   priority
                   className="w-full h-auto"
