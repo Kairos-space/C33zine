@@ -32,8 +32,8 @@ export const issues: Issue[] = [
     season: "Printemps",
     year: "2026",
     status: "archive",
-    cover: "/images/issue-01.png",
-    coverAlt: "巴黎工作室:高定人台与样片",
+    cover: "/images/issue-01-v2.jpg",
+    coverAlt: "C33 N°01 « La fabrique » — l'atelier, buste Stockman et croquis",
     accent: "#0ea5e9", // 天蓝 sky blue
     accentSoft: "#e0f2fe",
     tagline:
@@ -49,8 +49,8 @@ export const issues: Issue[] = [
     season: "Été",
     year: "2026",
     status: "current",
-    cover: "/images/issue-02.png",
-    coverAlt: "Paris sous la canicule — l'été où la mode se déplace",
+    cover: "/images/issue-02-v2.jpg",
+    coverAlt: "C33 N°02 « Le déplacement » — carnet de voyage Shanghai-Paris",
     accent: "#e2462a", // 盛夏朱砂橙 summer vermillion
     accentSoft: "#fce7e0",
     tagline: "Quand la mode change de lieu, de langue et de pouvoir.",
