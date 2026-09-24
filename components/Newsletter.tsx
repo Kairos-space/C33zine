@@ -20,7 +20,7 @@ import { useState } from "react";
  */
 const ENDPOINT = process.env.NEXT_PUBLIC_NEWSLETTER_ENDPOINT;
 
-type State = "idle" | "loading" | "ok" | "error";
+type State = "idle" | "loading" | "ok" | "email" | "pending" | "error";
 
 export default function Newsletter({ compact = false }: { compact?: boolean }) {
   const [email, setEmail] = useState("");
@@ -38,7 +38,7 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
         `Je souhaite être prévenu(e) de la parution du prochain numéro.\n\nE-mail : ${email}`,
       );
       window.location.href = `mailto:contact@c33zine.com?subject=${subject}&body=${body}`;
-      setState("ok");
+      setState("email");
       return;
     }
 
@@ -56,7 +56,7 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
           mode: "no-cors",
           body,
         });
-        setState("ok");
+        setState("pending");
         setEmail("");
       } else {
         const res = await fetch(ENDPOINT, {
@@ -75,7 +75,12 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
   }
 
   const inner =
-    state === "ok" ? (
+    state === "email" || state === "pending" ? (
+      <p role="status" className="font-display text-[18px] leading-relaxed">
+        <span lang="fr">{state === "email" ? "Envoyez le message dans votre messagerie pour demander votre abonnement." : "Demande envoyée. Vérifiez votre messagerie pour la confirmation."}</span>
+        <span lang="zh-CN" className="font-serif">{state === "email" ? "请在邮箱应用中发送这封邮件，以申请订阅。" : "请求已发送，请查看邮箱中的确认信息。"}</span>
+      </p>
+    ) : state === "ok" ? (
       <p className="font-display italic text-[18px]" lang="fr">
         Merci — votre abonnement est enregistré.{" "}
         <span lang="zh-CN" className="not-italic font-serif text-muted">
@@ -98,7 +103,7 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
             placeholder="votre@email.com"
             aria-label="E-mail"
             disabled={state === "loading"}
-            className="flex-1 border border-line bg-transparent px-4 h-12 font-mono text-[12px] tracking-[0.04em] placeholder:text-muted focus:outline-none focus:border-klein disabled:opacity-50"
+            className="min-w-0 w-full flex-1 border border-line bg-transparent px-4 h-12 font-mono text-[12px] tracking-[0.04em] placeholder:text-muted focus:outline-none focus:border-klein disabled:opacity-50"
           />
           <button
             type="submit"

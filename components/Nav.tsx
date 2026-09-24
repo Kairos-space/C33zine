@@ -31,7 +31,7 @@ export default function Nav() {
       <div className="px-5 md:px-10 py-7 md:py-10 grid grid-cols-3 items-center">
         <div className="justify-self-start flex items-center">
           <MobileMenu />
-          <nav className="hidden md:flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em]">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8 font-mono text-[11px] uppercase tracking-[0.16em]">
             <Link href="/issues" className="hover:text-klein transition-colors">
               Issues
             </Link>
@@ -57,17 +57,22 @@ export default function Nav() {
             className="h-9 md:h-14 w-auto"
           />
         </Link>
-        <nav className="hidden md:flex items-center gap-4 md:gap-8 font-mono text-[11px] uppercase tracking-[0.16em] justify-self-end">
-          <Link href="/medias" className="hover:text-klein transition-colors">
-            Médias
+        <div className="justify-self-end flex items-center gap-5 xl:gap-8">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8 font-mono text-[11px] uppercase tracking-[0.16em]">
+            <Link href="/medias" className="hover:text-klein transition-colors">
+              Médias
+            </Link>
+            <Link href="/about" className="hover:text-klein transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-klein transition-colors">
+              Contact
+            </Link>
+          </nav>
+          <Link href="/#newsletter" className="inline-flex min-h-11 items-center bg-klein px-3 md:px-4 text-white font-mono text-[10px] uppercase tracking-[0.08em] hover:bg-ink transition-colors">
+            <span lang="fr">S’abonner</span><span lang="zh-CN">订阅</span>
           </Link>
-          <Link href="/about" className="hover:text-klein transition-colors">
-            About
-          </Link>
-          <Link href="/contact" className="hover:text-klein transition-colors">
-            Contact
-          </Link>
-        </nav>
+        </div>
       </div>
 
       {/* Rubriques bar — all sections, visible right under the masthead */}
