@@ -12,6 +12,7 @@ const pages: [string, string][] = [
   ["/about", "About"],
   ["/medias", "Médias"],
   ["/contact", "Contact"],
+  ["/#newsletter", "S’abonner / 订阅"],
 ];
 
 /**
@@ -23,7 +24,7 @@ export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-label="Ouvrir le menu"
