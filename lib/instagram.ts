@@ -1,10 +1,21 @@
-/** Editorial selection verified on @c33zine, 2026-09-24.
+/** Editorial selection verified on @c33zine, 2026-09-25.
  * Local covers preserve the original artwork and credits; links open the full
  * Instagram carousels. This is a curated selection, not an automatic feed.
  */
 export const instagramProfile = "https://www.instagram.com/c33zine/";
 
 export const instagramPosts = [
+  {
+    id: "DdtRAJ8CCz7",
+    url: "https://www.instagram.com/c33zine/p/DdtRAJ8CCz7/",
+    image: "/images/instagram/song-weilong-gucci.jpg",
+    category: "C33 People",
+    title: "Song Weilong, en route pour Milan avec Gucci",
+    titleCn: "宋威龙身着 Gucci 出发米兰",
+    excerpt: "Une veste sombre ouverte sur un T-shirt blanc, des bandes rouge et vert sur le pantalon et le sac : les détails de son look de départ.",
+    excerptCn: "夹克在领口扣合，白色内搭带来明暗层次；裤侧与包上的红绿织带互相呼应。C33 细看大秀前的出发造型。",
+    credit: "Images : Megastar_S / Weibo, publiées le 23 septembre 2026. Sélection et textes : C33.",
+  },
   {
     id: "DdrluWuiEIy",
     url: "https://www.instagram.com/c33zine/p/DdrluWuiEIy/",

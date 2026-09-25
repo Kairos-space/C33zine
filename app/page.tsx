@@ -110,7 +110,7 @@ export default function HomePage() {
           </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-7 lg:gap-10">
-          {instagramPosts.map((post) => (
+          {instagramPosts.slice(0, 3).map((post) => (
             <article key={post.id} className="min-w-0 flex flex-col">
               <a href={post.url} target="_blank" rel="noopener noreferrer" className="group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-klein focus-visible:outline-offset-4">
                 <Image src={post.image} alt={`${post.category} — ${post.title} / ${post.titleCn}`} width={1080} height={1350} sizes="(min-width: 768px) 33vw, 100vw" className="w-full h-auto border border-line" />
