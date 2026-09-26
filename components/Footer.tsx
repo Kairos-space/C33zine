@@ -87,12 +87,12 @@ export default function Footer() {
       {/* Bottom strip */}
       <div className="px-5 md:px-10 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
         <div className="space-y-1">
-          <div>© C33 — Lumicome, 2026 · Tous droits réservés</div>
+          <div>© C33 — LUMEN ADVANCE, 2026 · Tous droits réservés</div>
           <div>Rédactrice en chef : Kairos Zhang</div>
         </div>
         <div className="space-y-1 md:text-center">
           <div>ISSN 2981-2844</div>
-          <div>Paris, France</div>
+          <div>RCS Meaux 130 086 770</div>
         </div>
         <div className="flex flex-col gap-1 md:items-end">
           <a

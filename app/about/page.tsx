@@ -41,11 +41,11 @@ const blocks: Block[] = [
   {
     label: "Édition / 出版",
     fr: [
-      "C33 est éditée par Lumicome, maison d'édition indépendante en cours de constitution à Paris, France.",
+      "C33 est éditée par LUMEN ADVANCE, société par actions simplifiée immatriculée au RCS de Meaux sous le numéro 130 086 770.",
       "La revue est dirigée par Kairos Zhang, rédactrice en chef.",
     ],
     cn: [
-      "C33 由 Lumicome 策划与出版。Lumicome 是一家正在巴黎筹建中的独立出版机构。",
+      "C33 由 LUMEN ADVANCE 出版。该公司为法国简易股份公司（SAS），在 Meaux 商业与公司注册处登记，注册号为 130 086 770。",
       "刊物由 Kairos Zhang 担任主编。",
     ],
   },
