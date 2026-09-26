@@ -130,13 +130,13 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
           className="font-display italic text-[22px] md:text-[28px] leading-[1.3] mb-3"
           lang="fr"
         >
-          Une lettre entre Paris et Shanghai.
+          Les nouvelles de C33, dans votre boîte mail.
         </p>
         <p
           className="font-serif text-[15px] md:text-[16px] text-muted mb-8 max-w-[420px]"
           lang="zh-CN"
         >
-          每季一封。新刊上线时,我们会通知你。
+          订阅邮件，接收 C33 的新内容与刊物消息。
         </p>
         {inner}
       </div>
@@ -155,13 +155,13 @@ export default function Newsletter({ compact = false }: { compact?: boolean }) {
           className="font-display italic text-[24px] md:text-[34px] leading-[1.3] mb-3"
           lang="fr"
         >
-          Le prochain numéro paraît à l&apos;été 2026.
+          Les nouvelles de C33, dans votre boîte mail.
         </p>
         <p
           className="font-serif text-[15px] md:text-[16px] text-muted mb-9"
           lang="zh-CN"
         >
-          留下邮箱,下一期上线时我们会通知你。
+          订阅邮件，接收 C33 的新内容与刊物消息。
         </p>
         {inner}
       </div>

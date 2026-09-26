@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import Link from "next/link";
 import Image from "next/image";
 import { getCurrentIssue, issues, issueAccentStyle } from "@/lib/issues";
@@ -33,22 +34,22 @@ export default function HomePage() {
             <div>
               <p
                 className="font-display text-[28px] md:text-[40px] leading-[1.15] tracking-[-0.02em]"
-                lang="fr"
+                lang="en"
               >
-                Une revue indépendante qui décode le goût et l&apos;art de
-                vivre, entre Paris et Shanghai.
+                {brand.description}
               </p>
               <p
                 className="font-serif text-[18px] md:text-[20px] leading-[1.7] text-muted mt-6"
                 lang="zh-CN"
               >
-                一本解码品味与生活方式的中法双语独立季刊——写作于巴黎与上海之间。
+                {brand.descriptionCn}
               </p>
             </div>
             <div>
               <span aria-hidden className="block h-px w-12 bg-klein mb-5" />
               <p className="font-display italic text-[18px] md:text-[22px]">
-                Entre Paris et Shanghai, quatre fois l&apos;an.
+                <span lang="en">Fashion, art and culture.</span>
+                <span lang="zh-CN">时尚、艺术与文化。</span>
               </p>
             </div>
           </div>
@@ -201,15 +202,14 @@ export default function HomePage() {
             <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-klein mb-6">
               À propos
             </div>
-            <p className="font-display text-[22px] md:text-[30px] leading-[1.3] tracking-[-0.01em]">
-              Indépendante, trimestrielle, bilingue — éditée à Paris, écrite
-              entre deux villes.
+            <p lang="en" className="font-display text-[22px] md:text-[30px] leading-[1.3] tracking-[-0.01em]">
+              {brand.about}
             </p>
             <p
               className="font-serif text-[15px] md:text-[16px] leading-[1.85] text-muted mt-5 max-w-[420px]"
               lang="zh-CN"
             >
-              独立、季度、双语——编辑部设于巴黎,写作往返于巴黎与上海之间。
+              {brand.aboutCn}
             </p>
             <Link
               href="/about"

@@ -98,7 +98,7 @@ export default function IssuePage({ params }: { params: { slug: string } }) {
             </div>
 
             <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted flex items-center gap-3">
-              <span>France / Chine</span>
+              <span>C33</span>
               <span aria-hidden>·</span>
               <span>
                 {String(articles.length).padStart(2, "0")} pièces

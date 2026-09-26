@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Manifeste",
   description:
-    "Le manifeste de C33 — pourquoi cette revue existe, ce qu'elle refuse, sa position éditoriale.",
+    "Le regard éditorial de C33 sur la mode, l’art et la culture.",
   alternates: { canonical: "/manifeste" },
 };
 
@@ -15,137 +15,16 @@ type Section = {
 
 const sections: Section[] = [
   {
-    fr: [
-      "À l'heure où les informations circulent plus vite que jamais, les récits se construisent, se diffusent et disparaissent parfois avant même d'avoir été compris.",
-      "Une marque devient un symbole.",
-      "Une campagne devient un sujet.",
-      "Une tendance devient une certitude.",
-      "Pourtant, les mécanismes qui façonnent réellement l'industrie — les systèmes de production, les contextes culturels, les stratégies de marque, les structures médiatiques et les logiques économiques — demeurent souvent invisibles.",
-      "C33 choisit un autre rythme.",
-      "Celui de l'observation, de l'analyse et de la compréhension.",
-    ],
-    cn: [
-      "当信息传播的速度越来越快,",
-      "一个品牌的形象、一场传播活动、一种市场趋势,",
-      "往往在被理解之前就已经被消费。",
-      "品牌成为符号,",
-      "话题成为观点,",
-      "趋势成为共识。",
-      "而那些真正塑造行业的力量——",
-      "供应链、文化语境、品牌战略、媒体机制与商业逻辑,",
-      "却常常被忽略。",
-      "C33 选择另一种节奏。",
-      "一种观察、分析与理解的节奏。",
-    ],
+    fr: ["La mode, l’art et la culture sont nos points de départ. Le cinéma, la musique, le design et la vie quotidienne peuvent aussi trouver leur place dans nos pages."],
+    cn: ["时尚、艺术与文化是我们的出发点。电影、音乐、设计与日常生活，也可以成为刊物中的选题。"],
   },
   {
-    fr: [
-      "C33 est né entre la Chine et la France.",
-      "Nous n'appartenons entièrement à aucun de ces deux mondes.",
-      "C'est précisément cette position qui nous permet d'observer ce que chacun perçoit difficilement de l'autre.",
-      "Un même événement ne raconte jamais la même histoire à Paris et à Shanghai.",
-      "Une même marque ne signifie jamais exactement la même chose en français et en chinois.",
-      "Nous ne cherchons pas à traduire.",
-      "Nous cherchons à interpréter.",
-    ],
-    cn: [
-      "C33 诞生于中国与法国之间。",
-      "我们并不完全属于任何一边。",
-      "也正因此,",
-      "我们得以观察两种文化、两种市场与两种叙事体系之间的距离。",
-      "同一件事,",
-      "在巴黎与上海拥有不同的意义;",
-      "同一个品牌,",
-      "在中文与法语中也拥有不同的解释。",
-      "我们不满足于翻译。",
-      "我们更关注理解。",
-    ],
+    fr: ["Un entretien peut partir d’une question, une critique d’un détail, un récit d’une rencontre. Nous cherchons ce qui mérite d’être regardé et raconté de plus près."],
+    cn: ["一次访谈可以从一个问题开始，一篇评论可以从一个细节展开，一个故事可以源于一次相遇。我们寻找值得仔细观察、认真讲述的内容。"],
   },
   {
-    fr: [
-      "Nous nous intéressons au goût,",
-      "mais aussi à ce qui le dépasse.",
-      "Les marques.",
-      "Les industries culturelles.",
-      "Les médias.",
-      "Les récits.",
-      "Les imaginaires collectifs.",
-      "Car le goût n'est jamais une simple question d'esthétique.",
-      "Elle est aussi une question de pouvoir, de représentation, de désir et de valeur.",
-    ],
-    cn: [
-      "我们关注品味,",
-      "但并不止于时尚。",
-      "我们关注品牌,",
-      "关注文化产业,",
-      "关注媒体,",
-      "关注叙事,",
-      "关注不同社会如何塑造自己的想象。",
-      "因为品味从来不只关于衣着。",
-      "它同样关乎权力、身份、价值与时代。",
-    ],
-  },
-  {
-    fr: [
-      "C33 est une revue indépendante.",
-      "Nous refusons toute confusion entre contenu éditorial et contenu commercial.",
-      "Toute collaboration rémunérée sera clairement identifiée.",
-      "L'indépendance éditoriale n'est pas une posture.",
-      "Elle est la condition même de notre existence.",
-    ],
-    cn: [
-      "C33 是一本独立刊物。",
-      "我们拒绝编辑内容与商业内容之间的界限被模糊。",
-      "所有合作内容都将被明确标识。",
-      "独立性不是一种姿态。",
-      "而是一份刊物存在的前提。",
-    ],
-  },
-  {
-    fr: [
-      "Nous ne confondons pas visibilité et importance.",
-      "Les chiffres mesurent l'attention.",
-      "Ils ne mesurent pas nécessairement la valeur.",
-      "Nous préférons les questions qui demeurent aux sujets qui passent.",
-    ],
-    cn: [
-      "我们不将热度等同于重要性。",
-      "流量可以衡量关注,",
-      "却无法定义价值。",
-      "相比追逐每一个热点,",
-      "我们更关心那些多年以后仍值得被重新阅读的问题。",
-    ],
-  },
-  {
-    fr: [
-      "Nous croyons au temps long.",
-      "Nous croyons à la recherche.",
-      "Nous croyons au travail éditorial.",
-      "Nous croyons qu'une revue peut encore être un lieu de réflexion.",
-      "Un lieu où l'on ralentit suffisamment pour comprendre.",
-    ],
-    cn: [
-      "我们相信长期主义。",
-      "相信研究。",
-      "相信编辑工作本身的价值。",
-      "相信一本刊物仍然可以成为思考发生的地方。",
-      "一个让人放慢速度、",
-      "重新理解世界的地方。",
-    ],
-  },
-  {
-    fr: [
-      "C33 est une revue trimestrielle bilingue franco-chinoise.",
-      "Une publication consacrée au goût, aux récits de marque et à l'art de vivre, entre l'Europe et la Chine.",
-      "Nous ne cherchons pas à répondre trop vite.",
-      "Nous essayons d'abord de regarder avec précision.",
-    ],
-    cn: [
-      "C33 是一本中法双语季刊。",
-      "关注品味、品牌叙事与生活方式,在中欧之间。",
-      "我们不急于给出答案。",
-      "我们首先尝试把问题看清。",
-    ],
+    fr: ["C33 est une revue indépendante. Toute collaboration rémunérée sera clairement identifiée."],
+    cn: ["C33 是一本独立刊物。付费合作内容会明确标识。"],
   },
 ];
 
@@ -207,16 +86,16 @@ export default function ManifestePage() {
           </div>
           <h1 className="font-display leading-[0.95] tracking-[-0.025em]">
             <span className="block text-[56px] md:text-[110px]">
-              Décoder,
+              Regarder,
               <br />
-              <span className="italic">pas commenter.</span>
+              <span className="italic">raconter.</span>
             </span>
           </h1>
           <div
             className="font-serif text-[22px] md:text-[32px] mt-10 text-muted"
             lang="zh-CN"
           >
-            解码,而非评论。
+            观察与讲述。
           </div>
         </div>
       </header>
@@ -232,15 +111,15 @@ export default function ManifestePage() {
               className="md:col-span-6 font-display text-[28px] md:text-[40px] leading-[1.18] tracking-[-0.015em]"
               lang="fr"
             >
-              <p>C33 ne décrit pas le goût.</p>
-              <p className="italic text-klein mt-2">C33 le décode.</p>
+              <p>Des personnes, des œuvres, des idées.</p>
+              <p className="italic text-klein mt-2">Des histoires à lire.</p>
             </div>
             <div
               className="md:col-span-5 font-serif text-[22px] md:text-[26px] leading-[1.7]"
               lang="zh-CN"
             >
-              <p>C33 不描述品味。</p>
-              <p className="mt-2">C33 解码品味。</p>
+              <p>人、作品与想法。</p>
+              <p className="mt-2">值得读的故事。</p>
             </div>
           </div>
         </div>
@@ -261,13 +140,13 @@ export default function ManifestePage() {
           className="h-16 md:h-28 w-auto mx-auto"
         />
         <div className="mt-8 font-display italic text-[22px] md:text-[32px]">
-          Décoder, pas commenter.
+          Regarder, raconter.
         </div>
         <div
           className="mt-3 font-serif text-[18px] md:text-[22px] text-muted"
           lang="zh-CN"
         >
-          解码,而非评论。
+          观察与讲述。
         </div>
       </section>
     </article>

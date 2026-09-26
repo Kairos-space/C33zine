@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -39,14 +40,10 @@ export default function MediasPage() {
               La revue
             </h2>
             <p lang="fr">
-              C33 est une revue indépendante bilingue franco-chinoise qui décode
-              le goût, les récits de marque et l&apos;art de vivre. Quatre
-              numéros par an, un thème par numéro, portés par de longs textes en
-              chinois et éclairés d&apos;un regard français. Éditée par Lumicome,
-              basée à Paris.
+              {brand.descriptionFr} {brand.aboutFr}
             </p>
             <p lang="zh-CN" className="mt-3">
-              C33 是一本中法双语的独立季刊,解码品味、品牌叙事与生活方式。一年四期,每期一个主题,以中文长文为主,辅以法语视角。由 Lumicome 出版,常驻巴黎。
+              {brand.descriptionCn} {brand.aboutCn}
             </p>
           </section>
 

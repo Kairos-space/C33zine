@@ -6,7 +6,7 @@ import BilingualTitle from "@/components/BilingualTitle";
 export const metadata: Metadata = {
   title: "Contributeurs",
   description:
-    "Les contributeurs de C33 — la revue trimestrielle franco-chinoise.",
+    "Les contributeurs de C33 — revue indépendante consacrée à la mode, à l’art et à la culture.",
   alternates: { canonical: "/contributeurs" },
 };
 

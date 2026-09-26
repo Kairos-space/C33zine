@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mentions légales",
   description:
-    "Mentions légales de C33 — éditeur, directrice de la publication, SIRET, ISSN, hébergement, RGPD.",
+    "Mentions légales de C33 — éditeur, contact, RCS, ISSN, hébergement, RGPD.",
   alternates: { canonical: "/mentions-legales" },
 };
 
@@ -40,26 +40,25 @@ export default function MentionsLegalesPage() {
               Éditeur
             </h2>
             <p>
-              Édité par <strong>Yifei ZHANG</strong>
+              Édité par <strong>LUMEN ADVANCE</strong>
               <br />
-              Micro-entrepreneur enregistré en France
+              Société par actions simplifiée (SAS)
               <br />
-              SIRET : 851 054 254 00020
+              Capital social : 10 000 €
               <br />
-              13 Avenue Haroun Tazieff
+              RCS Meaux : 130 086 770
               <br />
-              77600 Bussy-Saint-Georges
+              Siège social : 30 boulevard Mendès France
+              <br />
+              77600 Bussy-Saint-Georges, France
             </p>
           </section>
 
           <section>
             <h2 className="font-sans text-[10px] uppercase tracking-[0.22em] mb-3 border-b border-black pb-2">
-              Direction de la publication
+              Contact
             </h2>
             <p>
-              Directrice de la publication :{" "}
-              <strong>Yifei ZHANG</strong>
-              <br />
               Contact :{" "}
               <a
                 href="mailto:contact@c33zine.com"
@@ -75,9 +74,9 @@ export default function MentionsLegalesPage() {
               Publication
             </h2>
             <p>
-              Une publication <strong>Lumicome</strong>
+              Une publication <strong>LUMEN ADVANCE</strong>
               <br />
-              Société d&apos;édition en cours de constitution
+              Rédactrice en chef : Kairos Zhang
             </p>
           </section>
 

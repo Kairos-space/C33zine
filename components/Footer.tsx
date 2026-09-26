@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import Link from "next/link";
 import Image from "next/image";
 import { rubriques } from "@/lib/categories";
@@ -9,15 +10,15 @@ export default function Footer() {
       <div className="border-b border-line">
         <div className="px-5 md:px-10 py-16 md:py-24 text-center">
           <Image
-            src="/logo-c33-tagline.png"
-            alt="C33 — A bilingual independent revue · Paris ⇄ Shanghai"
-            width={891}
-            height={660}
+            src="/logo-c33.png"
+            alt="C33"
+            width={779}
+            height={436}
             className="w-[240px] md:w-[380px] h-auto mx-auto"
           />
           <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">
-            Une revue trimestrielle franco-chinoise sur le goût, les marques
-            et l&apos;art de vivre.
+            <span lang="en">{brand.description}</span>
+            <span lang="zh-CN" className="font-serif not-italic">{brand.descriptionCn}</span>
           </div>
         </div>
       </div>
@@ -86,12 +87,12 @@ export default function Footer() {
       {/* Bottom strip */}
       <div className="px-5 md:px-10 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
         <div className="space-y-1">
-          <div>© C33 — Lumicome, 2026 · Tous droits réservés</div>
+          <div>© C33 — LUMEN ADVANCE, 2026 · Tous droits réservés</div>
           <div>Rédactrice en chef : Kairos Zhang</div>
         </div>
         <div className="space-y-1 md:text-center">
           <div>ISSN 2981-2844</div>
-          <div>Paris, France</div>
+          <div>RCS Meaux 130 086 770</div>
         </div>
         <div className="flex flex-col gap-1 md:items-end">
           <a

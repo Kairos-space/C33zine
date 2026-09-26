@@ -8,7 +8,7 @@ import EditorialImage from "@/components/EditorialImage";
 export const metadata: Metadata = {
   title: "Les numéros",
   description:
-    "Tous les numéros de C33 — la revue trimestrielle franco-chinoise sur le goût, les marques et l'art de vivre.",
+    "Les numéros de C33, revue indépendante consacrée à la mode, à l’art et à la culture.",
   alternates: { canonical: "/issues" },
 };
 
@@ -42,7 +42,7 @@ export default function IssuesPage() {
             Les numéros
           </h1>
           <p className="font-display italic text-[18px] md:text-[20px] mt-8 max-w-[560px] mx-auto text-muted">
-            Une revue trimestrielle. Un thème par numéro, quatre par an.
+            Les numéros de C33. Un thème à explorer dans chacun.
           </p>
         </div>
       </header>
