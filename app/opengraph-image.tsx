@@ -1,8 +1,9 @@
+import { brand } from "@/lib/brand";
 import { ImageResponse } from "next/og";
 import { getCurrentIssue } from "@/lib/issues";
 
 export const runtime = "nodejs";
-export const alt = "C33 — revue indépendante, Paris ⇄ Shanghai";
+export const alt = brand.description;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -32,7 +33,7 @@ export default async function Image() {
             textTransform: "uppercase",
           }}
         >
-          <span>France · Chine</span>
+          <span>Independent magazine</span>
           <span>Vol. 01 — N° {issue.number}</span>
         </div>
 
@@ -63,7 +64,7 @@ export default async function Image() {
               lineHeight: 1.3,
             }}
           >
-            {issue.tagline}
+            {brand.description}
           </div>
         </div>
 

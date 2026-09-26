@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import Link from "next/link";
 import Image from "next/image";
 import { rubriques } from "@/lib/categories";
@@ -9,15 +10,15 @@ export default function Footer() {
       <div className="border-b border-line">
         <div className="px-5 md:px-10 py-16 md:py-24 text-center">
           <Image
-            src="/logo-c33-tagline.png"
-            alt="C33 — A bilingual independent revue · Paris ⇄ Shanghai"
-            width={891}
-            height={660}
+            src="/logo-c33.png"
+            alt="C33"
+            width={779}
+            height={436}
             className="w-[240px] md:w-[380px] h-auto mx-auto"
           />
           <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">
-            Une revue trimestrielle franco-chinoise sur le goût, les marques
-            et l&apos;art de vivre.
+            <span lang="en">{brand.description}</span>
+            <span lang="zh-CN" className="font-serif not-italic">{brand.descriptionCn}</span>
           </div>
         </div>
       </div>

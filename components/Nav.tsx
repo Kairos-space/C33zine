@@ -13,9 +13,9 @@ export default function Nav() {
       <div className="border-b border-line">
         <div className="px-5 md:px-10 h-9 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           <span className="hidden md:inline">
-            <span className="text-klein font-bold">+33</span> · France ↔ Chine
+            <span className="text-klein font-bold">C33</span> · Independent magazine
           </span>
-          <span className="md:hidden text-klein font-bold">+33</span>
+          <span className="md:hidden text-klein font-bold">C33</span>
           <span className="truncate min-w-0 px-2 text-center">
             <span className="hidden sm:inline">Vol.01 — </span>N°{issue.number} ·{" "}
             {issue.season} {issue.year}

@@ -1,3 +1,4 @@
+import { brand } from "@/lib/brand";
 import type { Metadata } from "next";
 import {
   Inter,
@@ -56,12 +57,10 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "C33 — Revue indépendante du goût et de l'art de vivre, entre Paris et Shanghai",
+    default: brand.title,
     template: "%s — C33",
   },
-  description:
-    "C33 décode le goût, les récits de marque et l'art de vivre, à travers la distance et le lien entre la France et la Chine.",
+  description: brand.description,
   metadataBase: new URL("https://c33zine.com"),
   alternates: {
     canonical: "/",
@@ -70,9 +69,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "C33 — Revue indépendante, Paris ⇄ Shanghai",
-    description:
-      "C33 décode le goût, les récits de marque et l'art de vivre, à travers la distance et le lien entre la France et la Chine.",
+    title: brand.title,
+    description: brand.description,
     url: "https://c33zine.com",
     siteName: "C33",
     locale: "fr_FR",
@@ -81,9 +79,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "C33 — Revue indépendante, Paris ⇄ Shanghai",
-    description:
-      "Revue indépendante bilingue franco-chinoise sur le goût, les récits de marque et l'art de vivre.",
+    title: brand.title,
+    description: brand.description,
   },
 };
 
