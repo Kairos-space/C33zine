@@ -8,6 +8,7 @@ import {
   Space_Mono,
 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import RootChrome from "@/components/edition/RootChrome";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -103,9 +104,7 @@ export default function RootLayout({
         data-lang-mode="fr"
         suppressHydrationWarning
       >
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <RootChrome nav={<Nav />} footer={<Footer />}>{children}</RootChrome>
         <Analytics />
       </body>
     </html>
