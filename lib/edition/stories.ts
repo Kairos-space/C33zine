@@ -28,6 +28,83 @@ export const stories:Story[]=[
  sources:[{label:'Vogue Runway · Marni Spring 2027',url:'https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/marni'},{label:'C33 · Instagram',url:'https://www.instagram.com/c33zine/p/Ddrh01hiO1A/'}]
 },
 {
+ slug:'bottega-veneta-summer-2027-red-dress',category:'fashion',tag:'VIEW',date:'2026-09-27',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
+ title:{en:'Bottega Veneta: from loose tailoring to a red dress',zh:'Bottega Veneta：从宽松西装到红色褶皱裙'},
+ summary:{en:'Louise Trotter’s Summer 2027 collection moves from generous tailoring to a gathered red dress. Three looks show how the clothes hold their shape.',zh:'从宽松的西装与长裤，到褶皱层叠的红裙。细看 Louise Trotter 2027 春夏系列的三套造型。'},
+ image:'/images/edition/bottega-veneta-55.jpg',alt:{en:'Red gathered dress from Bottega Veneta Spring 2027, look 55',zh:'Bottega Veneta 2027 春夏第 55 套红色褶皱连衣裙'},
+ credit:{en:'Filippo Fior / Gorunway.com, via Vogue Runway.',zh:'摄影：Filippo Fior / Gorunway.com，来源：Vogue Runway。'},
+ original:'https://www.instagram.com/c33zine/p/Ddw3jLjCN3T/',
+ body:{en:[
+ 'Bottega Veneta showed Louise Trotter’s Spring 2027 collection in Milan on 26 September 2026. The runway offers many directions; these three looks make a concise way into its range of volume and colour.',
+ '## Room in the tailoring',
+ 'Look 3 puts a long dark jacket over loose white trousers. The jacket is shaped at the waist, while the trousers fall freely beneath it. A broad, textured hat changes the outline again. There is plenty of fabric, but each piece still has a clear edge.',
+ 'Look 17 is softer: a pink shirt drapes around the neck and sits above pale yellow trousers. The sleeves gather at the forearm, and the trousers keep their volume through the leg. Colour gives the outfit its immediate appeal; the fit keeps it from feeling slight.',
+ '## One colour, several surfaces',
+ 'Look 55 pares the palette back to red. Its upper half is gathered close to the body; below, pleats and an uneven hem give the skirt room to move. The red shoes and earrings stay within the same colour family, leaving the shifts in texture to do the work.',
+ 'Across the three looks, volume moves from the jacket to the trousers and finally to the skirt. Look 55 lets the red fabric carry it without another strong colour competing for attention.'
+ ],zh:[
+ 'Bottega Veneta 于 2026 年 9 月 26 日在米兰发布 Louise Trotter 设计的 2027 春夏系列。我们从中选了三套，细看衣服的体积与颜色怎样变化。',
+ '## 宽松，也有明确的轮廓',
+ '第 3 套是深色长西装配宽松白裤。西装腰部收出形状，裤腿则自然垂下；宽檐帽又把上半身的轮廓扩大一圈。布料不少，但每件衣服的边界都很清楚。',
+ '第 17 套轻了一些：粉色衬衫绕过颈部，搭配浅黄色长裤。袖子堆在小臂处，裤腿仍然宽松。颜色先吸引注意，衣服的松量让这组浅色搭配有了分量。',
+ '## 一种红色，几种质地',
+ '第 55 套把颜色收在红色里。上半身以褶皱贴合身体，下半身的细褶和不规则裙摆随步伐展开。鞋和耳饰也在同一色系，视线便留给面料表面的变化。',
+ '三套衣服的体积先落在西装上，再移到裤腿，最后由裙摆带出动态。第 55 套几乎只用一种红色，让褶皱的变化更醒目。'
+ ]},
+ gallery:[{src:'/images/edition/bottega-veneta-03.jpg',alt:{en:'Dark jacket and loose white trousers, Bottega Veneta look 3',zh:'Bottega Veneta 第 3 套：深色西装与宽松白裤'}},{src:'/images/edition/bottega-veneta-17.jpg',alt:{en:'Pink shirt and pale yellow trousers, Bottega Veneta look 17',zh:'Bottega Veneta 第 17 套：粉色衬衫与浅黄色长裤'}}],
+ sources:[{label:'Vogue Runway · Bottega Veneta Spring 2027',url:'https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/bottega-veneta/slideshow/collection'},{label:'C33 · Instagram',url:'https://www.instagram.com/c33zine/p/Ddw3jLjCN3T/'}]
+},
+{
+ slug:'gucci-the-store-show-proportion',category:'fashion',tag:'VIEW',date:'2026-09-27',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
+ title:{en:'Gucci’s The Store Show: collars, hems and proportion',zh:'Gucci：领口、下摆与比例'},
+ summary:{en:'Three looks from Gucci’s Spring 2027 show reveal how a jacket, a skirt and a visible shirt hem change the line of an outfit.',zh:'从收腰夹克到宽大外套，再到露在格纹裙外的衬衫下摆，细看 Gucci 2027 春夏系列的穿搭层次。'},
+ image:'/images/edition/gucci-store-31.jpg',alt:{en:'Green jacket, dark skirt and white socks from Gucci The Store Show, look 31',zh:'Gucci The Store Show 第 31 套：绿色夹克、深色裙装与白袜'},
+ credit:{en:'Alessandro Lucioni / Gorunway.com, via Vogue Runway.',zh:'摄影：Alessandro Lucioni / Gorunway.com，来源：Vogue Runway。'},
+ original:'https://www.instagram.com/c33zine/p/Ddt509-CEli/',
+ body:{en:[
+ 'Gucci called its Spring 2027 presentation in Milan “The Store Show”. Rather than retell the entire collection, we returned to three looks from the C33 Instagram selection to see what happens at the points where one garment meets another.',
+ '## A fitted opening',
+ 'The opening look pairs a shaped dark jacket with a white shirt, white trousers and high black boots. The jacket closes at the waist and finishes just above the trousers. The raised shirt collar makes the line sharper still; the boots give the otherwise light lower half a firm end.',
+ 'Look 31 reverses that balance. A broad green jacket sits over a dark skirt, with white socks and pointed shoes below. Its sleeves and shoulders take up space, while the exposed socks draw attention to a much smaller area at the ankle.',
+ '## Leave the shirt out',
+ 'In look 32, a pale shirt extends below a dark jacket and above a red tartan skirt. The visible hem interrupts what might otherwise read as a neat jacket-and-skirt pairing. The skirt, shirt and jacket each keep their own length.',
+ 'These outfits do not rely on a single repeated silhouette. The common thread is the way collars, hems and footwear decide where the eye pauses.'
+ ],zh:[
+ 'Gucci 将这场在米兰发布的 2027 春夏秀命名为“The Store Show”。回看 C33 Instagram 选出的造型，我们挑了三套，重点看衣服相接的地方：领口、下摆，以及鞋袜。',
+ '## 开场的合身线条',
+ '开场造型以深色收腰夹克搭配白衬衫、白裤和黑色长靴。夹克在腰间扣合，衣摆止于裤腰上方；竖起的衬衫领口让线条更利落，长靴则把浅色的下半身稳稳收住。',
+ '第 31 套换了比例。宽大的绿色夹克罩在深色裙装上，脚下露出白袜和尖头鞋。袖子与肩部占了较大空间，白袜却把目光引到脚踝处的小片区域。',
+ '## 把衬衫下摆留在外面',
+ '第 32 套的浅色衬衫从深色外套下露出，停在红色格纹裙上方。这截下摆打断了原本整齐的外套配裙装结构，也让外套、衬衫和裙子各自的长度都能被看见。',
+ '三套造型的廓形并不相同。让人反复回看的，是领口、衣摆与鞋袜这些交接处的处理。'
+ ]},
+ gallery:[{src:'/images/edition/gucci-store-01.jpg',alt:{en:'Shaped dark jacket, white trousers and black boots, Gucci look 1',zh:'Gucci 第 1 套：收腰深色夹克、白裤与黑色长靴'}},{src:'/images/edition/gucci-store-32.jpg',alt:{en:'Pale shirt hem above a red tartan skirt, Gucci look 32',zh:'Gucci 第 32 套：浅色衬衫下摆与红色格纹裙'}}],
+ sources:[{label:'Gucci · The Store Show',url:'https://www.gucci.com/us/en/nst/fashion-show/the-store-show'},{label:'Vogue Runway · Gucci Spring 2027',url:'https://www.vogue.com/fashion-shows/spring-2027-ready-to-wear/gucci/slideshow/collection'},{label:'C33 · Instagram',url:'https://www.instagram.com/c33zine/p/Ddt509-CEli/'}]
+},
+{
+ slug:'song-weilong-milan-denim',category:'people',tag:'PEOPLE',date:'2026-09-27',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
+ title:{en:'Song Weilong in denim, after dark in Milan',zh:'宋威龙的米兰牛仔造型：短夹克与宽裤'},
+ summary:{en:'A waist-length zip jacket and wide-leg trousers give this dark denim look its shape in portraits released by Song Weilong Studio.',zh:'合身的短款拉链夹克，搭配裤腿宽阔的深色牛仔裤。细看宋威龙工作室发布的米兰造型照。'},
+ image:'/images/edition/song-milan-denim-01.jpg',alt:{en:'Song Weilong in a dark denim jacket and wide-leg jeans in Milan',zh:'宋威龙在米兰身穿深色牛仔夹克与宽腿裤'},
+ credit:{en:'Song Weilong Studio / 辣条补给站, via Weibo. Individual photographer not identified.',zh:'图片来源：宋威龙工作室／辣条补给站，微博。原帖未注明个人摄影师。'},
+ original:'https://www.instagram.com/c33zine/p/Ddt7Q5yCI-o/',
+ body:{en:[
+ 'Song Weilong Studio released these Milan portraits on 25 September 2026. They show a Gucci denim outfit. These studio portraits are not photographs taken inside the show or of him on its front row.',
+ '## The jacket sets the waist',
+ 'The zip jacket fits close through the shoulders and torso, then stops at the waist. The jeans move in the opposite direction: wide through the leg, with a rounded fall towards the shoes. That difference in width gives a single dark denim colour two distinct shapes.',
+ 'The faded seams stand out under the flash, especially across the jacket and down the trousers. They make the construction visible without introducing another colour. Black sunglasses and silver-toned jewellery keep the smaller details crisp.',
+ 'These portraits follow the earlier departure photographs, but show a separate look. The clothes are best read on their own terms: short above, generous below, and denim doing most of the work.'
+ ],zh:[
+ '宋威龙工作室于 2026 年 9 月 25 日发布了这组米兰造型照。照片记录的是一套 Gucci 牛仔装，并非秀场内或前排现场画面。',
+ '## 夹克把腰线定下来',
+ '拉链夹克贴合肩部与上身，收在腰间。裤子则向下放宽，裤腿带着圆润的垂坠感。同一身深色牛仔，上下两部分的宽窄差别，让造型有了清晰的轮廓。',
+ '闪光灯下，夹克和裤子的褪色接缝格外明显。它们勾出了衣服的结构，却没有再添一种颜色。黑色墨镜与银色调首饰，把小处的细节收得利落。',
+ '这组照片接在此前的出发照之后，衣服却是另一套。看这一身，关键还是上短下宽的比例，以及牛仔面料本身的变化。'
+ ]},
+ gallery:[{src:'/images/edition/song-milan-denim-04.jpg',alt:{en:'Close-up of Song Weilong’s jacket collar and silver-toned jewellery',zh:'宋威龙牛仔夹克的领口与银色调首饰近景'}}],
+ sources:[{label:'Song Weilong Studio · Weibo, 25 September 2026',url:'https://weibo.com/7444403273/RjLbK1PZX'},{label:'C33 · Instagram',url:'https://www.instagram.com/c33zine/p/Ddt7Q5yCI-o/'}]
+},
+{
  slug:'song-weilong-gucci-departure',category:'people',tag:'PEOPLE',date:'2026-09-26',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
  title:{en:'Song Weilong heads to Milan in Gucci',zh:'宋威龙身穿 Gucci 启程米兰'},
  summary:{en:'A dark jacket, a white T-shirt and a red-and-green strap: the details of a departure look.',zh:'深色夹克搭配白色内搭，红绿织带为这套出发造型添了一处亮色。'},
