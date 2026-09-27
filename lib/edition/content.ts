@@ -28,6 +28,7 @@ const translations=[{
 }];
 export const getStories=cache(():Story[]=>[...edited,...translations.map(t=>{
  const a=getArchive().find(a=>a.slug===t.original)!;
- return {slug:t.slug,category:t.category,tag:'VIEW',date:a.date,updated:'2026-09-26',title:t.title,summary:t.summary,original:a.original,body:{en:t.en,zh:a.body.trim().split(/\n\s*\n/)},sources:[{label:'C33 · Original text / 原文',url:a.original}],note:{en:'Translated archive commentary, retaining the original date and opinions. The source file has no individual byline. It is not a current market report or a survey of either city.',zh:'旧刊评论的双语版本，保留原始日期及观点。源文件未记录个人署名。本文不作为当下市场报告或对城市的调查结论。'}};
+ const cityEssay=t.slug==='two-windows';
+ return {slug:t.slug,category:t.category,tag:'VIEW',date:a.date,updated:'2026-09-26',title:t.title,summary:t.summary,original:a.original,body:{en:t.en,zh:a.body.trim().split(/\n\s*\n/)},sources:[{label:'C33 · Original text / 原文',url:a.original}],note:cityEssay?{en:'Archive commentary with its original publication date. It reflects an editorial view of two displays, not a survey of either city. No individual byline appears in the source.',zh:'旧刊评论，保留原始发表日期。文中是对两种展示方式的编辑观察，并非对两座城市的调查；原稿未记录个人署名。'}:{en:'Archive commentary with its original publication date. It is an opinion piece, not a current market report. No individual byline appears in the source.',zh:'旧刊评论，保留原始发表日期。文中表达的是观点，并非当下市场报道；原稿未记录个人署名。'}};
 })]);
 export function storyHref(s:Story,l:Locale){return `/${l}/read/${s.slug}`;}
