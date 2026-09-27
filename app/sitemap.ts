@@ -4,6 +4,8 @@ import { issues } from "@/lib/issues";
 import { categories } from "@/lib/categories";
 import { getAllJournalPosts } from "@/lib/journal";
 
+import { getStories, getArchive } from '@/lib/edition/content';
+
 const BASE_URL = "https://c33zine.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -51,7 +53,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const paths = ['', 'fashion', 'culture', 'people', 'about', 'contact', 'legal', 'issues', 'archive', 'topics', 'topics/milan-ss27'];
+  const editionPages: MetadataRoute.Sitemap = ['en', 'zh'].flatMap(locale => [
+    ...paths.map(p => ({url: BASE_URL + '/' + locale + (p ? '/' + p : ''), changeFrequency: 'weekly' as const, priority: p ? 0.7 : 1})),
+    ...getStories().map(s => ({url: BASE_URL + '/' + locale + '/read/' + s.slug, lastModified: new Date(s.updated || s.date), changeFrequency: 'monthly' as const, priority: 0.9})),
+    ...getArchive().filter(a => locale === 'zh' || a.fullTranslation).map(a => ({url: BASE_URL + '/' + locale + '/archive/' + a.slug, lastModified: new Date(a.date), changeFrequency: 'monthly' as const, priority: 0.6}))
+  ]);
   return [
+    ...editionPages,
     ...staticPages,
     ...issuePages,
     ...articlePages,

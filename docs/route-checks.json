@@ -1,0 +1,551 @@
+{
+  "checkedAt": "2026-09-27T11:35:57.078Z",
+  "base": "http://127.0.0.1:3336",
+  "total": 136,
+  "results": [
+    {
+      "route": "/about",
+      "status": 200
+    },
+    {
+      "route": "/contact",
+      "status": 200
+    },
+    {
+      "route": "/mentions-legales",
+      "status": 200
+    },
+    {
+      "route": "/",
+      "status": 200
+    },
+    {
+      "route": "/issues",
+      "status": 200
+    },
+    {
+      "route": "/journal",
+      "status": 200
+    },
+    {
+      "route": "/medias",
+      "status": 200
+    },
+    {
+      "route": "/lexique",
+      "status": 200
+    },
+    {
+      "route": "/manifeste",
+      "status": 200
+    },
+    {
+      "route": "/pitch",
+      "status": 200
+    },
+    {
+      "route": "/contributeurs",
+      "status": 200
+    },
+    {
+      "route": "/issue/01",
+      "status": 200
+    },
+    {
+      "route": "/issue/02",
+      "status": 200
+    },
+    {
+      "route": "/category/mode",
+      "status": 200
+    },
+    {
+      "route": "/category/culture",
+      "status": 200
+    },
+    {
+      "route": "/category/art-design",
+      "status": 200
+    },
+    {
+      "route": "/category/villes",
+      "status": 200
+    },
+    {
+      "route": "/category/chroniques",
+      "status": 200
+    },
+    {
+      "route": "/article/a-qui-appartient-une-fleur",
+      "status": 200
+    },
+    {
+      "route": "/article/alaia-apres-pieter-mulier",
+      "status": 200
+    },
+    {
+      "route": "/article/and-coach-gen-z",
+      "status": 200
+    },
+    {
+      "route": "/article/appartement-parisien",
+      "status": 200
+    },
+    {
+      "route": "/article/appartement-temoin",
+      "status": 200
+    },
+    {
+      "route": "/article/appropriation-culturelle",
+      "status": 200
+    },
+    {
+      "route": "/article/du-tapis-rouge-a-latelier",
+      "status": 200
+    },
+    {
+      "route": "/article/la-chaise-de-designer",
+      "status": 200
+    },
+    {
+      "route": "/article/la-mode-a-tue-le-serif",
+      "status": 200
+    },
+    {
+      "route": "/article/la-valse-des-directeurs-artistiques",
+      "status": 200
+    },
+    {
+      "route": "/article/le-salon-wabi-sabi",
+      "status": 200
+    },
+    {
+      "route": "/article/max-mara-shanghai",
+      "status": 200
+    },
+    {
+      "route": "/article/lexique-du-deplacement",
+      "status": 200
+    },
+    {
+      "route": "/article/mode-au-cinema",
+      "status": 200
+    },
+    {
+      "route": "/article/pourquoi-c33",
+      "status": 200
+    },
+    {
+      "route": "/article/pourquoi-la-mode-se-deplace",
+      "status": 200
+    },
+    {
+      "route": "/article/projets-mode-transfrontaliers",
+      "status": 200
+    },
+    {
+      "route": "/article/ralph-lauren-encore-a-la-mode",
+      "status": 200
+    },
+    {
+      "route": "/journal/depuis-latelier-juin-2026",
+      "status": 200
+    },
+    {
+      "route": "/article/representation-et-narration",
+      "status": 200
+    },
+    {
+      "route": "/journal/depuis-les-defiles-juin-2026",
+      "status": 200
+    },
+    {
+      "route": "/article/tres-parisien",
+      "status": 200
+    },
+    {
+      "route": "/journal/deux-vitrines-paris-shanghai",
+      "status": 200
+    },
+    {
+      "route": "/journal/le-reflux-du-quiet-luxury",
+      "status": 200
+    },
+    {
+      "route": "/journal/note-editrice-pourquoi-la-mode",
+      "status": 200
+    },
+    {
+      "route": "/journal/un-bouton-noue",
+      "status": 200
+    },
+    {
+      "route": "/en",
+      "status": 200
+    },
+    {
+      "route": "/en/fashion",
+      "status": 200
+    },
+    {
+      "route": "/en/culture",
+      "status": 200
+    },
+    {
+      "route": "/en/people",
+      "status": 200
+    },
+    {
+      "route": "/en/about",
+      "status": 200
+    },
+    {
+      "route": "/en/contact",
+      "status": 200
+    },
+    {
+      "route": "/en/legal",
+      "status": 200
+    },
+    {
+      "route": "/en/issues",
+      "status": 200
+    },
+    {
+      "route": "/en/topics",
+      "status": 200
+    },
+    {
+      "route": "/en/topics/milan-ss27",
+      "status": 200
+    },
+    {
+      "route": "/en/archive",
+      "status": 200
+    },
+    {
+      "route": "/en/search",
+      "status": 200
+    },
+    {
+      "route": "/en/saved",
+      "status": 200
+    },
+    {
+      "route": "/en/read/marni-colour-off-centre",
+      "status": 200
+    },
+    {
+      "route": "/en/read/tres-parisien-in-print",
+      "status": 200
+    },
+    {
+      "route": "/en/read/song-weilong-gucci-departure",
+      "status": 200
+    },
+    {
+      "route": "/en/read/two-windows",
+      "status": 200
+    },
+    {
+      "route": "/en/read/after-quiet-luxury",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/a-qui-appartient-une-fleur",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/alaia-apres-pieter-mulier",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/appartement-parisien",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/appartement-temoin",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/and-coach-gen-z",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/appropriation-culturelle",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/la-chaise-de-designer",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/du-tapis-rouge-a-latelier",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/la-mode-a-tue-le-serif",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/la-valse-des-directeurs-artistiques",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/max-mara-shanghai",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/le-salon-wabi-sabi",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/lexique-du-deplacement",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/mode-au-cinema",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/pourquoi-c33",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/ralph-lauren-encore-a-la-mode",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/pourquoi-la-mode-se-deplace",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/projets-mode-transfrontaliers",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/tres-parisien",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/representation-et-narration",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/depuis-latelier-juin-2026",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/depuis-les-defiles-juin-2026",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/le-reflux-du-quiet-luxury",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/deux-vitrines-paris-shanghai",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/note-editrice-pourquoi-la-mode",
+      "status": 200
+    },
+    {
+      "route": "/en/archive/un-bouton-noue",
+      "status": 200
+    },
+    {
+      "route": "/zh",
+      "status": 200
+    },
+    {
+      "route": "/zh/people",
+      "status": 200
+    },
+    {
+      "route": "/zh/culture",
+      "status": 200
+    },
+    {
+      "route": "/zh/fashion",
+      "status": 200
+    },
+    {
+      "route": "/zh/about",
+      "status": 200
+    },
+    {
+      "route": "/zh/legal",
+      "status": 200
+    },
+    {
+      "route": "/zh/contact",
+      "status": 200
+    },
+    {
+      "route": "/zh/issues",
+      "status": 200
+    },
+    {
+      "route": "/zh/topics",
+      "status": 200
+    },
+    {
+      "route": "/zh/topics/milan-ss27",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive",
+      "status": 200
+    },
+    {
+      "route": "/zh/search",
+      "status": 200
+    },
+    {
+      "route": "/zh/saved",
+      "status": 200
+    },
+    {
+      "route": "/zh/read/marni-colour-off-centre",
+      "status": 200
+    },
+    {
+      "route": "/zh/read/song-weilong-gucci-departure",
+      "status": 200
+    },
+    {
+      "route": "/zh/read/tres-parisien-in-print",
+      "status": 200
+    },
+    {
+      "route": "/zh/read/after-quiet-luxury",
+      "status": 200
+    },
+    {
+      "route": "/zh/read/two-windows",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/alaia-apres-pieter-mulier",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/a-qui-appartient-une-fleur",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/appartement-parisien",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/and-coach-gen-z",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/appartement-temoin",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/appropriation-culturelle",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/la-mode-a-tue-le-serif",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/du-tapis-rouge-a-latelier",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/la-valse-des-directeurs-artistiques",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/la-chaise-de-designer",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/lexique-du-deplacement",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/le-salon-wabi-sabi",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/mode-au-cinema",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/max-mara-shanghai",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/pourquoi-c33",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/pourquoi-la-mode-se-deplace",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/ralph-lauren-encore-a-la-mode",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/projets-mode-transfrontaliers",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/depuis-les-defiles-juin-2026",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/depuis-latelier-juin-2026",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/representation-et-narration",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/tres-parisien",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/deux-vitrines-paris-shanghai",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/note-editrice-pourquoi-la-mode",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/le-reflux-du-quiet-luxury",
+      "status": 200
+    },
+    {
+      "route": "/zh/archive/un-bouton-noue",
+      "status": 200
+    },
+    {
+      "route": "/en/no-such-page",
+      "status": 404
+    },
+    {
+      "route": "/en/read/missing-story",
+      "status": 404
+    },
+    {
+      "route": "/zh/archive/missing-story",
+      "status": 404
+    },
+    {
+      "route": "/de",
+      "status": 404
+    }
+  ]
+}
