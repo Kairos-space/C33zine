@@ -130,7 +130,7 @@ export const stories:Story[]=[
  title:{en:'Très Parisien: style, printed by hand',zh:'Très Parisien：一页页印出来的时髦'},
  summary:{en:'The fashion plate as a way of looking: returning to a magazine whose colours were applied through stencils.',zh:'回看一本以模板着色图版记录时装的刊物：图像不只展示衣服，也塑造观看衣服的方式。'},
  original:'/article/tres-parisien',
- note:{en:'A shorter, source-checked edition of the archive essay. The original remains available. The original cover has no documented image credit, so it is not reused here.',zh:'根据旧稿整理的核源短版，保留原文入口。旧封面缺少明确图片署名，本版暂不复用。'},
+ note:{en:'This shorter edition was checked against the cited source. The first-published article remains available. Its cover has no documented image credit and is omitted here.',zh:'这是根据首次发表文章核对来源后整理的短版，原文仍可阅读。原封面图片缺少明确署名，暂未用于本版。'},
  body:{en:[
  'Très Parisien began publication in 1920. The Palais Galliera archive identifies Germaine Joumard as its director and one of its illustrators, signing as “Joujou”. Its fashion plates used pochoir: colour applied through stencils.',
  '## The page is part of the story',
