@@ -1,6 +1,74 @@
 import type {Story} from './types';
 export const stories:Story[]=[
 {
+ slug:'becky-armstrong-tods-lake-look',category:'people',tag:'PEOPLE',date:'2026-09-28',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
+ title:{en:'Becky Armstrong’s Tod’s look starts with a white shirt',zh:'Becky Armstrong 的 Tod’s 湖畔造型，层次从白衬衫开始'},
+ summary:{en:'A navy knit vest, loose denim and black loafers make a familiar combination. The shirt’s collar, cuffs and untucked hem give it shape.',zh:'深蓝针织、白衬衫和宽松牛仔裤是熟悉的搭配。衬衫露出的领口、袖口与下摆，让这组秀前照片有了明确的层次。'},
+ image:'/images/edition/becky-tods-02.jpg',alt:{en:'Becky Armstrong by the lake in a navy vest, white shirt and denim',zh:'Becky Armstrong 身穿深蓝背心、白衬衫和牛仔裤站在湖畔'},
+ credit:{en:'Images via Becky Armstrong / Instagram; photographer not identified in the source.',zh:'图片来源：Becky Armstrong／Instagram；原帖未注明摄影师。'},
+ original:'https://www.instagram.com/c33zine/p/DdtTp_aCMmc/',
+ body:{en:[
+ 'In a set of photographs taken by the lake, Becky Armstrong wears a navy knit vest over a white shirt with loose jeans. The shirt is given room to show: its collar, cuffs and untucked hem break up the darker knit and the relaxed denim.',
+ 'Black loafers pick up the vest’s colour, while the bag’s curved handle and gold hardware bring a sharper outline. The interest lies in the proportions of the layers, rather than the number of pieces.',
+ 'The images appeared ahead of Tod’s Spring/Summer 2027 show. They document Armstrong’s look before the event; they are not photographs of the collection.'
+ ],zh:[
+ 'Becky Armstrong 在湖畔拍摄的这组照片里，穿着深蓝色针织背心、白衬衫和宽松牛仔裤。衬衫没有被藏在背心里：领口、袖口和未收起的下摆都清楚可见，也让宽松的上下装有了层次。',
+ '黑色乐福鞋接住了背心的深色，手袋的弧形提手和金色配件则给造型添了一个更鲜明的轮廓。单品并不繁复，整套搭配的重点是每一层露出多少、落在什么位置。',
+ '这组照片发布于 Tod’s 2027 春夏活动前。它记录的是 Becky 当时的穿着，而非秀场系列本身。'
+ ]},
+ gallery:[
+  {src:'/images/edition/becky-tods-05.jpg',alt:{en:'Becky Armstrong at the railing in a white shirt, loose jeans and black loafers',zh:'Becky Armstrong 倚在栏杆旁，白衬衫、宽松牛仔裤与黑色乐福鞋清晰可见'}},
+  {src:'/images/edition/becky-tods-01.jpg',alt:{en:'Becky Armstrong seated on a boat, with her black loafers visible',zh:'Becky Armstrong 坐在船上，黑色乐福鞋入镜'}}
+ ],
+ sources:[{label:{en:'Becky Armstrong · Instagram post',zh:'Becky Armstrong · Instagram 原帖'},url:'https://www.instagram.com/p/DdopHecE1Wi/'}]
+},
+{
+ slug:'billkin-pp-krit-gucci-milan-2027',category:'people',tag:'PEOPLE',date:'2026-09-28',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
+ title:{en:'Billkin and PP Krit bring two silhouettes to Gucci',zh:'Billkin 与 PP Krit 在 Gucci：两种深色造型'},
+ summary:{en:'At Gucci’s Spring/Summer 2027 presentation in Milan, a cropped leather jacket and a voluminous wrap offered two distinct ways to dress in dark tones.',zh:'一件短款皮夹克配宽松长裤，一套带光泽的合身衣服配蓬松披搭。两人在 Gucci 前排的穿法，靠不同的比例和质感区分开来。'},
+ image:'/images/edition/bkpp-gucci-21.jpg',alt:{en:'Billkin and PP Krit seated together at the Gucci Spring/Summer 2027 presentation',zh:'Billkin 与 PP Krit 坐在 Gucci 2027 春夏发布现场'},
+ credit:{en:'Front-row images via a Weibo repost credited to Mint Magazine Thailand; photographer not identified.',zh:'前排图片转引自标注 Mint Magazine Thailand 的微博转载；摄影师未注明。'},
+ original:'https://www.instagram.com/c33zine/p/DdvoILUiEOQ/',
+ body:{en:[
+ 'Billkin and PP Krit attended Gucci’s Spring/Summer 2027 presentation in Milan on 25 September 2026. Billkin wore a zipped leather jacket cut around the waist with relaxed trousers. PP Krit paired a close-fitting, glittering dark look with a much fuller outer layer. The shared palette makes the difference in proportion easier to see.',
+ 'Billkin’s jacket leaves the trousers to carry the volume. PP Krit’s wrap brings it up around the shoulders, while the clothes underneath keep a narrower line. Their front-row photographs show the contrast together; the individual images reveal how each outfit is put together.',
+ 'Vogue Thailand published separate portraits of both artists on 24 September, before the show. They record another set of looks and a different setting from the front-row photographs taken the following day.'
+ ],zh:[
+ '2026 年 9 月 25 日，Billkin 与 PP Krit 出现在米兰 Gucci 2027 春夏发布现场。Billkin 的拉链皮夹克收在腰部附近，下接宽松长裤；PP Krit 的深色造型则把贴身的闪亮表面与体积较大的披搭放在一起。两人都穿深色，轮廓却截然不同。',
+ 'Billkin 的短上装让裤型成为造型的一部分。PP Krit 的披搭把视线带到肩部，里面的合身衣服保留了清晰的身体线条。前排同框照适合看两种比例并置，细节则要回到各自的单人照片里看。',
+ 'Vogue Thailand 在 9 月 24 日发布了两人的秀前肖像，记录的是另一组造型和拍摄场景，与次日的前排照片应分开看。'
+ ]},
+ gallery:[
+  {src:'/images/edition/bkpp-gucci-22.jpg',alt:{en:'Billkin in a zipped leather jacket and relaxed trousers at Gucci',zh:'Billkin 在 Gucci 现场，身穿拉链皮夹克与宽松长裤'}},
+  {src:'/images/edition/bkpp-gucci-26.jpg',alt:{en:'PP Krit in a dark glittering outfit with a fuller outer layer at Gucci',zh:'PP Krit 在 Gucci 现场，身穿深色闪亮造型，外搭蓬松披搭'}}
+ ],
+ sources:[{label:{en:'Front-row images · Weibo repost credited to Mint Magazine Thailand',zh:'前排图片 · 标注 Mint Magazine Thailand 的微博转载'},url:'https://weibo.com/2832585457/RjTqjrKVy'},{label:{en:'Vogue Thailand · Pre-show portraits, 24 September 2026',zh:'Vogue Thailand · 2026 年 9 月 24 日秀前肖像'},url:'https://vogue.co.th/article/billkin-ppkrit-gucci-photo-album-milan-fashion-week-exclusive'},{label:{en:'ELLE Vietnam · Gucci front row, 26 September 2026',zh:'ELLE Vietnam · 2026 年 9 月 26 日 Gucci 前排报道'},url:'https://www.elle.vn/sao-style/ho-ngoc-ha-cung-dan-sao-quoc-te-gucci-xuan-he-2027/amp/'}]
+},
+{
+ slug:'loro-piana-spring-2027-solutions-for',category:'fashion',tag:'VIEW',date:'2026-09-28',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
+ title:{en:'Loro Piana Spring 2027, from one part of the day to another',zh:'Loro Piana 2027 春夏：衣橱里的不同时刻'},
+ summary:{en:'For “Solutions For”, the house considers what to wear as the weather and the occasion change. Ease of movement runs through the collection’s varied looks.',zh:'“Solutions For”从天气、场合与一天的时段出发。帽子抓人眼球，衣服本身则用宽松的线条连接起不同的穿着场景。'},
+ image:'/images/edition/loro-piana-ss27-05.jpg',alt:{en:'Loro Piana Spring 2027 look: a navy dress with a sculptural dark hat',zh:'Loro Piana 2027 春夏造型：深蓝色长裙与立体帽饰'},
+ credit:{en:'Images: Loro Piana press materials.',zh:'图片：Loro Piana 品牌资料。'},
+ original:'https://www.instagram.com/c33zine/p/DdyyDariBMC/',
+ body:{en:[
+ 'The hats catch the eye first in Loro Piana’s Spring 2027 images. Beyond them, a lilac suit, navy wide-leg trousers, printed separates and a long coat share a sense of space around the body, each in a different proportion.',
+ 'The house calls the collection “Solutions For” and frames it around changing weather, occasions and hours. In the lilac suit, the jacket has a defined shoulder and waist without making the sleeves or trousers look rigid. The navy look takes a roomier route; the coat draws that ease into a long, straight line.',
+ 'The pieces answer different needs while still looking as though they belong in one wardrobe. That continuity is the collection’s clearest idea in these images.'
+ ],zh:[
+ '在 Loro Piana 2027 春夏系列的图片里，帽子最先吸引目光。再看衣服：淡紫色套装、深蓝上衣与宽裤、印花造型和长外套各有用途，线条却都给身体留了余地。',
+ '品牌把系列称作“Solutions For”，将衣橱放进天气、场合和时间的变化里。淡紫色套装的肩线与腰部有形，袖身和裤腿并不紧绷；深蓝宽裤把类似的松弛感带入另一套衣服。长外套落下的直线，又让这种宽松显得更加完整。',
+ '这些造型没有依赖同一种单品反复制造辨识度。它们可以应对不同的时刻，看起来仍属于同一个衣橱。'
+ ]},
+ gallery:[
+  {src:'/images/edition/loro-piana-ss27-01.jpg',alt:{en:'Lilac suit with a shaped waist and relaxed sleeves, Loro Piana Spring 2027',zh:'淡紫色套装：收出腰线的上装与宽松袖身，Loro Piana 2027 春夏'}},
+  {src:'/images/edition/loro-piana-ss27-02.jpg',alt:{en:'Navy top and wide-leg trousers, Loro Piana Spring 2027',zh:'深蓝上衣与宽腿裤，Loro Piana 2027 春夏'}},
+  {src:'/images/edition/loro-piana-ss27-03.jpg',alt:{en:'Printed separates with generous trousers, Loro Piana Spring 2027',zh:'印花上装与宽松长裤，Loro Piana 2027 春夏'}},
+  {src:'/images/edition/loro-piana-ss27-06.jpg',alt:{en:'Long brown coat over a red top, Loro Piana Spring 2027',zh:'棕色长外套与红色上装，Loro Piana 2027 春夏'}}
+ ],
+ sources:[{label:{en:'Loro Piana Japan · Spring/Summer 2027 press release',zh:'Loro Piana Japan · 2027 春夏系列通稿'},url:'https://prtimes.jp/main/html/rd/p/000000219.000061598.html'}]
+},
+{
  slug:'marni-colour-off-centre',category:'fashion',tag:'VIEW',date:'2026-09-26',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
  title:{en:'Marni: checks and contrasts',zh:'Marni：格纹与撞色'},
  summary:{en:'Yellow checks with orange boots, khaki with a bright orange top: a look at colour and proportion in three outfits from Marni’s Spring/Summer 2027 collection.',zh:'格纹、橙色靴子与比例的变化。从 2027 春夏系列的三套造型，看熟悉单品如何重新组合。'},
