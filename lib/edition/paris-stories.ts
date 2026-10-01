@@ -1,6 +1,5 @@
 import type {Story} from './types';
 
-// Review edition: runway photography is sourced and credited, but reuse permission still needs confirmation before publication.
 export const parisStories:Story[]=[
  {
   slug:'courreges-drew-henry-first-show',category:'fashion',tag:'VIEW',date:'2026-10-02',dateLabel:{en:'Website edition',zh:'网站版'},topic:'paris-ss27',author:'C33',
