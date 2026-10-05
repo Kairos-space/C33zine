@@ -1,7 +1,8 @@
 import type {Story} from './types';
 import {parisStories} from './paris-stories';
 import {weeklyStories} from './weekly-stories';
-export const stories:Story[]=[...weeklyStories,...parisStories,
+import {shiatzyStories} from './shiatzy-stories';
+export const stories:Story[]=[...weeklyStories,...shiatzyStories,...parisStories,
 {
  slug:'becky-armstrong-tods-lake-look',category:'people',tag:'PEOPLE',date:'2026-09-28',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
  title:{en:'Becky Armstrong’s Tod’s look starts with a white shirt',zh:'Becky Armstrong 的 Tod’s 湖畔造型，层次从白衬衫开始'},
