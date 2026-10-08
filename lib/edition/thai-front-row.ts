@@ -1,4 +1,5 @@
 import type {Story} from './types';
+import {chineseOriginalBody,chineseOriginalTitle} from './thai-front-row-zh';
 
 const englishBody = [
   'At the Spring–Summer 2027 shows, Thai performers appeared across very different front rows. Lingling Kwong and Orm Kornnaphat attended Dior; Milk Pansa was at Saint Laurent; Freen Sarocha appeared at Valentino; Becky Armstrong and Minnie were at Miu Miu. In the final days of Paris Fashion Week, Mai Davika attended Lacoste, while Lisa joined the guests at Louis Vuitton. Seen together, the appearances suggest a broader change in whom fashion houses expect their shows to reach.',
@@ -18,13 +19,13 @@ const englishBody = [
 
 export const thaiFrontRow:Story = {
   slug:'fashion-month-thai-front-row', category:'fashion', tag:'ANALYSIS', date:'2026-10-09', author:'readmeifyoucan and the editorial team',
-  title:{en:'Fashion Month’s Thai Front Row',zh:'时装月前排的泰国艺人（英文）'},
-  summary:{en:'From Dior to Miu Miu, Thai performers were a visible part of this season’s show circuit. Their presence reveals how fashion’s guest lists are changing—and what a front-row seat can, and cannot, deliver.',zh:'从 Dior 到 Miu Miu，泰国艺人频繁出现在本季秀场前排。本文为英文全文，讨论秀场邀请如何成为品牌传播的一部分，以及一个前排座位能带来什么。'},
+  title:{en:'Fashion Month’s Thai Front Row',zh:chineseOriginalTitle},
+  summary:{en:'From Dior to Miu Miu, Thai performers were a visible part of this season’s show circuit. Their presence reveals how fashion’s guest lists are changing—and what a front-row seat can, and cannot, deliver.',zh:'刚刚落幕的时装月，泰国艺人以空前的密度与声量出现在国际时装周。'},
   image:'/images/edition/thai-front-row/lingling-dior.jpg',
   alt:{en:'Lingling Kwong at Dior Spring–Summer 2027',zh:'邝玲玲出席 Dior 2027 春夏大秀'},
   credit:{en:'Arnold Jerocki / Getty Images for Dior, via Red Carpet Fashion Awards.',zh:'Arnold Jerocki／Getty Images for Dior，转引自 Red Carpet Fashion Awards。'},
   original:'https://mp.weixin.qq.com/s/5rKRDMgE_Q5o86E_6SqSGA',
-  body:{en:englishBody,zh:englishBody},
+  body:{en:englishBody,zh:chineseOriginalBody},
   sources:[
     {label:{en:'Original Chinese commentary · readmeifyoucan',zh:'中文原文 · readmeifyoucan'},url:'https://mp.weixin.qq.com/s/5rKRDMgE_Q5o86E_6SqSGA'},
     {label:'Dior · Lingling Kwong and Orm Kornnaphat',url:'https://www.linkedin.com/posts/christian-dior-couture_we-are-delighted-to-announce-actresses-sirilak-activity-7398649597666947072-9d-B'},

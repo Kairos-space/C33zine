@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = ['', 'fashion', 'culture', 'people', 'about', 'contact', 'legal', 'issues', 'archive', 'topics', 'topics/milan-ss27', 'topics/paris-ss27'];
   const editionPages: MetadataRoute.Sitemap = ['en', 'zh'].flatMap(locale => [
     ...paths.map(p => ({url: BASE_URL + '/' + locale + (p ? '/' + p : ''), changeFrequency: 'weekly' as const, priority: p ? 0.7 : 1})),
-    ...getStories().filter(s => locale === 'en' || s.slug !== 'fashion-month-thai-front-row').map(s => ({url: BASE_URL + '/' + locale + '/read/' + s.slug, lastModified: new Date(s.updated || s.date), changeFrequency: 'monthly' as const, priority: 0.9})),
+    ...getStories().map(s => ({url: BASE_URL + '/' + locale + '/read/' + s.slug, lastModified: new Date(s.updated || s.date), changeFrequency: 'monthly' as const, priority: 0.9})),
     ...getArchive().filter(a => locale === 'zh' || a.fullTranslation).map(a => ({url: BASE_URL + '/' + locale + '/archive/' + a.slug, lastModified: new Date(a.date), changeFrequency: 'monthly' as const, priority: 0.6}))
   ]);
   return [
