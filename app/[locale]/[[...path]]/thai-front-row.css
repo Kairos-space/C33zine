@@ -1,0 +1,41 @@
+.thai-feature{color:#191919}
+.thai-intro{max-width:1040px;margin:0 auto;padding:76px 24px 55px}
+.thai-eyebrow{color:#262cff;font:11px/1.5 var(--font-inter),Arial,sans-serif;letter-spacing:.12em;margin:0 0 25px}
+.thai-intro h1{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(54px,8.7vw,115px)!important;font-weight:400;letter-spacing:-.055em!important;line-height:.95!important;max-width:980px;margin:0 0 38px}
+.thai-dek{font-family:Georgia,'Times New Roman',serif;font-size:clamp(21px,2.5vw,31px);line-height:1.35;letter-spacing:-.018em;max-width:810px;margin:0 0 30px}
+.thai-meta{display:flex;flex-wrap:wrap;gap:8px 24px;color:#62625f;font:11px/1.5 var(--font-inter),Arial,sans-serif;letter-spacing:.06em}
+.thai-intro .ed-actions{justify-content:flex-start;margin-top:24px}
+.thai-language-note{font:13px/1.7 var(--font-noto-serif-sc),serif;margin:28px 0 0;color:#555}
+.thai-language-note a{color:#262cff;text-decoration:underline;text-underline-offset:3px;margin-left:12px}
+.thai-figure{margin:65px auto;max-width:700px;padding:0 22px}
+.thai-figure img,.thai-duo img{display:block;width:100%;height:auto}
+.thai-figure figcaption,.thai-duo figcaption{color:#62625f;font:11px/1.5 var(--font-inter),Arial,sans-serif;letter-spacing:.02em;padding:12px 0 0}
+.thai-hero{max-width:780px;margin:0 auto 85px}
+.thai-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.thai-pair img{aspect-ratio:4/5;object-fit:cover}
+.thai-copy{width:min(100% - 44px,710px);margin:0 auto;font:19px/1.65 Georgia,'Times New Roman',serif}
+.thai-copy p{margin:0 0 1.25em}
+.thai-copy .thai-lead:first-letter{float:left;font-size:5.1em;line-height:.77;padding:.11em .12em 0 0}
+.thai-copy h2{font-family:Georgia,'Times New Roman',serif!important;font-weight:400;font-size:clamp(35px,4vw,52px)!important;letter-spacing:-.045em!important;line-height:1.06!important;margin:70px 0 28px}
+.thai-duo{max-width:1060px;margin:70px auto;padding:0 22px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.thai-duo figure{min-width:0;margin:0}
+.thai-duo img{aspect-ratio:3/4;object-fit:cover}
+.thai-ending{border-top:1px solid #d8d8d3;padding-top:36px;margin:50px auto 0;max-width:710px}
+.thai-sources{max-width:710px;margin:75px auto 0;border-top:1px solid #d8d8d3;padding:24px 0 0;font:12px/1.8 var(--font-inter),Arial,sans-serif}
+.thai-sources h2{font:14px/1.5 var(--font-inter),Arial,sans-serif!important;margin:0 0 12px}
+.thai-sources ul{padding-left:20px;list-style:decimal}
+.thai-sources a,.thai-back a{text-decoration:underline;text-underline-offset:3px}
+.thai-back{max-width:710px;margin:30px auto 90px;font:12px/1.6 var(--font-inter),Arial,sans-serif}
+@media(max-width:700px){
+ .thai-intro{padding:48px 0 38px}
+ .thai-intro h1{font-size:clamp(53px,13.2vw,80px)!important}
+ .thai-copy{width:100%;font-size:18px}
+ .thai-figure{margin:50px -18px;padding:0}
+ .thai-figure figcaption{padding:10px 18px}
+ .thai-hero{margin:0 -18px 58px}
+ .thai-pair{gap:6px}
+ .thai-duo{margin:50px -18px;padding:0;grid-template-columns:1fr;gap:32px}
+ .thai-duo figcaption{padding:10px 18px}
+ .thai-copy h2{font-size:35px!important;margin:54px 0 22px}
+ .thai-ending,.thai-sources,.thai-back{max-width:none}
+}
