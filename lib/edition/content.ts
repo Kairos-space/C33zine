@@ -4,13 +4,13 @@ import matter from 'gray-matter';
 import {cache} from 'react';
 import {stories as edited} from './stories';
 import {archiveLabels,journalChinese,journalChineseSummary} from './archive-labels';
-import type {Category,Story,Locale} from './types';
-export type ArchiveItem={slug:string;type:string;date:string;title:{en:string;zh:string};summary:{en:string;zh:string};category:Category;original:string;author?:string;body:string;image?:string;missingCover:boolean;fullTranslation?:string};
+import type {Category,Story,Locale,Subsection} from './types';
+export type ArchiveItem={slug:string;type:string;date:string;title:{en:string;zh:string};summary:{en:string;zh:string};category:Category;subsection?:Subsection;original:string;author?:string;body:string;image?:string;missingCover:boolean;fullTranslation?:string};
 export const getArchive=cache(():ArchiveItem[]=>['articles','journal'].flatMap(type=>fs.readdirSync(path.join(process.cwd(),'content',type)).filter(f=>f.endsWith('.mdx')).map(file=>{
  const {data:d,content}=matter(fs.readFileSync(path.join(process.cwd(),'content',type,file),'utf8'));
  const slug=file.replace('.mdx',''); const [en,summary,category]=archiveLabels[slug];
  const zhBlock=content.match(/<div lang="zh-CN">([\s\S]*?)<\/div>/);
- return {slug,type,date:String(d.date||''),title:{en,zh:type==='journal'?journalChinese[slug]:d.title},summary:{en:summary,zh:d.excerpt&&type==='articles'?d.excerpt:journalChineseSummary[slug]},category:category as Category,original:`/${type==='articles'?'article':'journal'}/${slug}`,author:d.author,body:zhBlock?.[1]||content,image:d.cover,missingCover:!!d.cover&&!fs.existsSync(path.join(process.cwd(),'public',d.cover)),fullTranslation:slug==='le-reflux-du-quiet-luxury'?'after-quiet-luxury':slug==='deux-vitrines-paris-shanghai'?'two-windows':undefined};
+ return {slug,type,date:String(d.date||''),title:{en,zh:type==='journal'?journalChinese[slug]:d.title},summary:{en:summary,zh:d.excerpt&&type==='articles'?d.excerpt:journalChineseSummary[slug]},category:category as Category,subsection:d.subsection==='film'&&category==='culture'?'film' as Subsection:undefined,original:`/${type==='articles'?'article':'journal'}/${slug}`,author:d.author,body:zhBlock?.[1]||content,image:d.cover,missingCover:!!d.cover&&!fs.existsSync(path.join(process.cwd(),'public',d.cover)),fullTranslation:slug==='le-reflux-du-quiet-luxury'?'after-quiet-luxury':slug==='deux-vitrines-paris-shanghai'?'two-windows':undefined};
 })).sort((a,b)=>b.date.localeCompare(a.date)));
 const translations=[{
  original:'le-reflux-du-quiet-luxury',slug:'after-quiet-luxury',category:'fashion' as Category,title:{en:'After quiet luxury',zh:'静奢之后'},summary:{en:'When clothes stop whispering, the question of distinction remains.',zh:'当衣服不再低声说话，关于区隔的问题仍在。'},
