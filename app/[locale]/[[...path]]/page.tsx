@@ -9,6 +9,7 @@ import {categoryNames,type Category,type Locale} from '@/lib/edition/types';
 import {filmCultureTitle,filmCultureIntro} from '@/lib/edition/film-culture';
 import './edition.css';
 import './thai-front-row.css';
+import './editorial-refresh.css';
 type Props={params:{locale:string;path?:string[]};searchParams:{q?:string|string[]}};
 function localeOf(s:string):Locale{if(s!=='en'&&s!=='zh')notFound();return s;}
 function resolve(params:Props['params']){const l=localeOf(params.locale),p=params.path||[],key=p.join('/'),en=l==='en';const story=p[0]==='read'&&p.length===2?getStories().find(s=>s.slug===p[1]):undefined;const film=p[0]==='read'&&p.length===2?getFilmArticle(p[1]):undefined;const archive=p[0]==='archive'&&p.length===2?getArchive().find(s=>s.slug===p[1]):undefined;const titles:Record<string,string>={'':en?'Fashion, art & culture':'时尚、艺术与文化',about:en?'About':'关于',contact:en?'Contact':'联系',legal:en?'Legal information':'法律信息',issues:en?'Issues':'期刊',archive:en?'All articles':'文章目录','culture/film':filmCultureTitle[l],topics:en?'Topics':'专题','topics/milan-ss27':en?'Milan Fashion Week':'米兰时装周','topics/paris-ss27':en?'Paris Fashion Week':'巴黎时装周',search:en?'Search':'搜索',saved:en?'Reading list':'收藏'};const category=Object.keys(categoryNames).includes(key)?key as Category:undefined;const title=story?.title[l]||film?.title[l]||archive?.title[l]||(category?categoryNames[category][l]:titles[key]);if(!title)notFound();return {l,p,key,story,film,archive,category,title};}
