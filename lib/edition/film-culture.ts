@@ -1,6 +1,6 @@
 import type {Pair} from './types';
 
-export const filmCultureTitle:Pair={en:'Film Culture',zh:'电影文化'};
+export const filmCultureTitle:Pair={en:'Film',zh:'电影'};
 
 export const filmCultureIntro:Pair={
  en:'Film can change how we see character, the body, place and time. This section follows the films, their makers and the experience of watching them, with criticism, interviews and reports that connect cinema to fashion, art and everyday life.',

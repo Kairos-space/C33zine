@@ -142,11 +142,11 @@ export default function AboutPage() {
           Modezine · WeChat 公众号
         </div>
         <Image
-          src="/logo-c33.png"
-          alt="C33"
-          width={779}
-          height={436}
-          className="mt-16 h-16 md:h-24 w-auto mx-auto"
+          src="/logo-c33-magazine.svg"
+          alt="C33 Magazine"
+          width={1000}
+          height={197}
+          className="mt-16 w-full max-w-[420px] h-auto mx-auto"
         />
         <div className="mt-6 font-display italic text-[18px] md:text-[22px] max-w-[640px] mx-auto leading-snug">
           <span lang="en">{brand.description}</span>

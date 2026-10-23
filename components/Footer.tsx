@@ -10,10 +10,10 @@ export default function Footer() {
       <div className="border-b border-line">
         <div className="px-5 md:px-10 py-16 md:py-24 text-center">
           <Image
-            src="/logo-c33.png"
-            alt="C33"
-            width={779}
-            height={436}
+            src="/logo-c33-magazine.svg"
+            alt="C33 Magazine"
+            width={1000}
+            height={197}
             className="w-[240px] md:w-[380px] h-auto mx-auto"
           />
           <div className="font-display italic text-[17px] md:text-[20px] mt-8 max-w-[540px] mx-auto leading-snug">

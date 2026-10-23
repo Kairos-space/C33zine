@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
-import { getAllArticles } from "@/lib/articles";
 import { issues } from "@/lib/issues";
 import { categories } from "@/lib/categories";
-import { getAllJournalPosts } from "@/lib/journal";
 
 import { getStories, getArchive } from '@/lib/edition/content';
 import { getFilmArticles } from '@/lib/edition/film-articles';
@@ -15,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE_URL}/issues`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/journal`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/lexique`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE_URL}/manifeste`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -33,13 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const articlePages: MetadataRoute.Sitemap = getAllArticles().map((a) => ({
-    url: `${BASE_URL}/article/${a.slug}`,
-    lastModified: a.date ? new Date(a.date) : now,
-    changeFrequency: "yearly",
-    priority: 0.9,
-  }));
-
   const categoryPages: MetadataRoute.Sitemap = categories.map((c) => ({
     url: `${BASE_URL}/category/${c.slug}`,
     lastModified: now,
@@ -47,26 +37,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const journalPages: MetadataRoute.Sitemap = getAllJournalPosts().map((p) => ({
-    url: `${BASE_URL}/journal/${p.slug}`,
-    lastModified: p.date ? new Date(p.date) : now,
-    changeFrequency: "yearly",
-    priority: 0.6,
-  }));
-
-  const paths = ['', 'fashion', 'culture', 'culture/film', 'people', 'about', 'contact', 'legal', 'issues', 'archive', 'topics', 'topics/milan-ss27', 'topics/paris-ss27'];
+  const paths = ['', 'fashion', 'culture', 'film', 'people', 'about', 'contact', 'legal', 'issues', 'archive', 'topics', 'topics/milan-ss27', 'topics/paris-ss27'];
   const editionPages: MetadataRoute.Sitemap = ['en', 'zh'].flatMap(locale => [
     ...paths.map(p => ({url: BASE_URL + '/' + locale + (p ? '/' + p : ''), changeFrequency: 'weekly' as const, priority: p ? 0.7 : 1})),
     ...getStories().map(s => ({url: BASE_URL + '/' + locale + '/read/' + s.slug, lastModified: new Date(s.updated || s.date), changeFrequency: 'monthly' as const, priority: 0.9})),
     ...getFilmArticles().filter(article => article.publishedAt).map(article => ({url: BASE_URL + '/' + locale + '/read/' + article.slug, lastModified: new Date(article.publishedAt!), changeFrequency: 'monthly' as const, priority: 0.8})),
-    ...getArchive().filter(a => locale === 'zh' || a.fullTranslation).map(a => ({url: BASE_URL + '/' + locale + '/archive/' + a.slug, lastModified: new Date(a.date), changeFrequency: 'monthly' as const, priority: 0.6}))
+    ...getArchive().filter(() => locale === 'zh').map(a => ({url: BASE_URL + '/' + locale + '/archive/' + a.slug, lastModified: new Date(a.date), changeFrequency: 'monthly' as const, priority: 0.6}))
   ]);
   return [
     ...editionPages,
     ...staticPages,
     ...issuePages,
-    ...articlePages,
     ...categoryPages,
-    ...journalPages,
   ];
 }

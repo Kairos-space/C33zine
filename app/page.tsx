@@ -23,12 +23,12 @@ export default function HomePage() {
           <div className="px-6 md:px-12 py-14 md:py-20 md:border-r border-line flex flex-col justify-between gap-14">
             <h1 className="leading-none">
               <Image
-                src="/logo-c33.png"
-                alt="C33"
-                width={779}
-                height={436}
+                src="/logo-c33-magazine.svg"
+                alt="C33 Magazine"
+                width={1000}
+                height={197}
                 priority
-                className="h-16 md:h-28 w-auto"
+                className="w-full max-w-[430px] h-auto"
               />
             </h1>
             <div>

@@ -7,7 +7,9 @@ import {thaiFrontRow} from './thai-front-row';
 import {maatStory} from './maat-story';
 import {newEditorialDrafts} from './new-editorial-drafts';
 import {octoberCultureStories} from './october-culture-stories';
-export const stories:Story[]=[thaiFrontRow,...octoberCultureStories,...newEditorialDrafts,...louisVuittonStories,maatStory,...weeklyStories,...shiatzyStories,...parisStories,
+import {ch24Story} from './ch24-story';
+import {burberryStory} from './burberry-story';
+export const stories:Story[]=[thaiFrontRow,ch24Story,burberryStory,...octoberCultureStories,...newEditorialDrafts,...louisVuittonStories,maatStory,...weeklyStories,...shiatzyStories,...parisStories,
 {
  slug:'becky-armstrong-tods-lake-look',category:'people',tag:'PEOPLE',date:'2026-09-28',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
  title:{en:'Becky Armstrong’s Tod’s look starts with a white shirt',zh:'Becky Armstrong 的 Tod’s 湖畔造型，层次从白衬衫开始'},
@@ -202,11 +204,13 @@ export const stories:Story[]=[thaiFrontRow,...octoberCultureStories,...newEditor
  ]},gallery:[{src:'/images/edition/song-detail.jpg',alt:{en:'Song Weilong’s departure look photographed beside a vehicle',zh:'宋威龙出发造型，在车辆旁拍摄'}}],sources:[{label:'Megastar_S · 23 September 2026',url:'https://www.sina.cn/news/detail/5346320581660359.html'},{label:'C33 · Instagram',url:'https://www.instagram.com/c33zine/p/DdtRAJ8CCz7/'}]
 },
 {
- slug:'tres-parisien-in-print',category:'culture',tag:'VIEW',date:'2026-06-17',updated:'2026-09-26',author:'Kairos Zhang',
+ slug:'tres-parisien-in-print',category:'culture',tag:'VIEW',date:'2026-06-17',updated:'2026-10-23',author:'Kairos Zhang',
  title:{en:'Très Parisien: style, printed by hand',zh:'Très Parisien：一页页印出来的时髦'},
  summary:{en:'The fashion plate as a way of looking: returning to a magazine whose colours were applied through stencils.',zh:'回看一本以模板着色图版记录时装的刊物：图像不只展示衣服，也塑造观看衣服的方式。'},
+ image:'/images/edition/tres-parisien-1923-louqsor-rijksmuseum.jpg',imageWidth:1600,imageHeight:2371,
+ alt:{en:'Très Parisien fashion plate from issue 6, 1923, showing a woman and a girl',zh:'《Très Parisien》1923 年第 6 期时装图版：一名女子与女孩'},
+ credit:{en:'Très Parisien, no. 6 (1923), “Sœurette”. Rijksmuseum, BI-1966-1051-6-11 (CC0).',zh:'《Très Parisien》1923 年第 6 期「Sœurette」。Rijksmuseum，BI-1966-1051-6-11（CC0）。'},
  original:'/article/tres-parisien',
- note:{en:'This shorter edition was checked against the cited source. The first-published article remains available. Its cover has no documented image credit and is omitted here.',zh:'这是根据首次发表文章核对来源后整理的短版，原文仍可阅读。原封面图片缺少明确署名，暂未用于本版。'},
  body:{en:[
  'Très Parisien began publication in 1920. The Palais Galliera archive identifies Germaine Joumard as its director and one of its illustrators, signing as “Joujou”. Its fashion plates used pochoir: colour applied through stencils.',
  '## The page is part of the story',
@@ -223,6 +227,6 @@ export const stories:Story[]=[thaiFrontRow,...octoberCultureStories,...newEditor
  '## 放回原来的页面',
  '在屏幕上，一张时装图版很容易成为又一张被收藏的图片，与原来的期号和说明分开。重新翻阅刊物，可以补回一部分语境：看完图，再看页面如何安排文字，图版怎样连续出现，注意力被引向哪里。',
  '人物的姿势、色块的边缘，以及插画师省略的服装细节，都会影响我们对衣服的理解。这些具体的处理，比单独一张图的风格更值得留意。'
- ]},sources:[{label:'Palais Galliera · Très Parisien',url:'https://www.palaisgalliera.paris.fr/en/collections/bibliotheque-numerique/tres-parisien'},{label:'C33 · Original essay / 原文',url:'/article/tres-parisien'}]
+ ]},sources:[{label:'Rijksmuseum · Très Parisien, no. 6, 1923',url:'https://data.rijksmuseum.nl/200518346?_profile=la-framed'},{label:'Palais Galliera · Très Parisien',url:'https://www.palaisgalliera.paris.fr/en/collections/bibliotheque-numerique/tres-parisien'},{label:'C33 · Original essay / 原文',url:'/article/tres-parisien'}]
 }
 ];

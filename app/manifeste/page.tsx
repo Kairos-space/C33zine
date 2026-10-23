@@ -133,11 +133,11 @@ export default function ManifestePage() {
       {/* Closing signoff */}
       <section className="px-5 md:px-10 py-24 md:py-32 text-center">
         <Image
-          src="/logo-c33.png"
-          alt="C33"
-          width={779}
-          height={436}
-          className="h-16 md:h-28 w-auto mx-auto"
+          src="/logo-c33-magazine.svg"
+          alt="C33 Magazine"
+          width={1000}
+          height={197}
+          className="w-full max-w-[460px] h-auto mx-auto"
         />
         <div className="mt-8 font-display italic text-[22px] md:text-[32px]">
           Regarder, raconter.

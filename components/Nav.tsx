@@ -28,7 +28,7 @@ export default function Nav() {
       </div>
 
       {/* Masthead */}
-      <div className="px-5 md:px-10 py-7 md:py-10 grid grid-cols-3 items-center">
+      <div className="px-5 md:px-10 py-7 md:py-10 grid grid-cols-[1fr_auto_1fr] items-center">
         <div className="justify-self-start flex items-center">
           <MobileMenu />
           <nav className="hidden lg:flex items-center gap-4 xl:gap-8 font-mono text-[11px] uppercase tracking-[0.16em]">
@@ -49,12 +49,12 @@ export default function Nav() {
           className="justify-self-center"
         >
           <Image
-            src="/logo-c33.png"
-            alt="C33"
-            width={779}
-            height={436}
+            src="/logo-c33-magazine.svg"
+            alt="C33 Magazine"
+            width={1000}
+            height={197}
             priority
-            className="h-9 md:h-14 w-auto"
+            className="w-[130px] min-[360px]:w-[170px] sm:w-[210px] md:w-[330px] lg:w-[390px] h-auto max-w-none"
           />
         </Link>
         <div className="justify-self-end flex items-center gap-5 xl:gap-8">
@@ -69,7 +69,7 @@ export default function Nav() {
               Contact
             </Link>
           </nav>
-          <Link href="/#newsletter" className="inline-flex min-h-11 items-center bg-klein px-3 md:px-4 text-white font-mono text-[10px] uppercase tracking-[0.08em] hover:bg-ink transition-colors">
+          <Link href="/#newsletter" className="inline-flex min-h-11 items-center bg-klein px-1.5 md:px-4 text-white font-mono text-[10px] uppercase tracking-[0.08em] hover:bg-ink transition-colors">
             <span lang="fr">S’abonner</span><span lang="zh-CN">订阅</span>
           </Link>
         </div>
