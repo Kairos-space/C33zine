@@ -9,7 +9,8 @@ import {newEditorialDrafts} from './new-editorial-drafts';
 import {octoberCultureStories} from './october-culture-stories';
 import {ch24Story} from './ch24-story';
 import {burberryStory} from './burberry-story';
-export const stories:Story[]=[thaiFrontRow,ch24Story,burberryStory,...octoberCultureStories,...newEditorialDrafts,...louisVuittonStories,maatStory,...weeklyStories,...shiatzyStories,...parisStories,
+import {lateOctoberStories} from './late-october-stories';
+export const stories:Story[]=[thaiFrontRow,...lateOctoberStories,ch24Story,burberryStory,...octoberCultureStories,...newEditorialDrafts,...louisVuittonStories,maatStory,...weeklyStories,...shiatzyStories,...parisStories,
 {
  slug:'becky-armstrong-tods-lake-look',category:'people',tag:'PEOPLE',date:'2026-09-28',dateLabel:{en:'Website edition',zh:'网站版'},topic:'milan-ss27',author:'C33',
  title:{en:'Becky Armstrong’s Tod’s look starts with a white shirt',zh:'Becky Armstrong 的 Tod’s 湖畔造型，层次从白衬衫开始'},
