@@ -320,3 +320,5 @@
   .ed-grid .ed-card p { font-size: 14px; line-height: 1.65; }
   .ed-grid .ed-card time { margin-top: 12px; }
 }
+.ed-info-list{list-style:disc;padding-left:1.2em;margin:0 0 1.45em}.ed-info-list li{margin:.3em 0}
+.ed-info h2{border-top:1px solid #222;padding-top:18px}
