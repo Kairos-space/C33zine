@@ -1,5 +1,81 @@
 [
   {
+    "slug": "fuxi-four-tales-of-feasting",
+    "category": "culture",
+    "subsection": "film",
+    "publishedAt": "2026-11-02",
+    "status": "published",
+    "tag": {
+      "zh": "电影节",
+      "en": "Festival"
+    },
+    "title": {
+      "zh": "《腹喜》：四场宴席，四千年",
+      "en": "Four Feasts Across Four Millennia: Qiu Jiongjiong’s Fuxi"
+    },
+    "summary": {
+      "zh": "邱炯炯的新片在东京国际电影节主竞赛单元首映。影片以四川方言讲述四段相隔千年的故事，每一段都围绕一场宴席展开。",
+      "en": "Premiering in Tokyo’s Competition, Qiu Jiongjiong’s new film moves through four feasts across four millennia."
+    },
+    "byline": {
+      "zh": "C33",
+      "en": "C33"
+    },
+    "body": {
+      "zh": "邱炯炯的《腹喜》于 10 月 29 日在第 39 届东京国际电影节主竞赛单元世界首映。影片长 135 分钟，以四川方言拍摄。四段故事分别落在先民的葬宴、君王的春祭、被放逐文人的宴席与孤儿的生日。时间横跨四千年，人物一次次回到餐桌前。[影片资料](https://www.midnightblurfilms.com/fuxi-four-tales-of-feasting)\n\n在东京的映后交流中，邱炯炯说，创作的起点是疫情期间人们对外出相聚、一起吃饭的渴望。电影全部在摄影棚拍摄；据电影节的现场报道，布景取材于邱炯炯绘制的约一千张分镜。李康生、李鸿其与陈庭妮参与演出。[东京国际电影节映后报道](https://2026.tiff-jp.net/news/en/?p=21060)",
+      "en": "Qiu Jiongjiong’s *Fuxi: Four Tales of Feasting* had its world premiere in the Tokyo International Film Festival’s Competition on 29 October. The 135-minute film is spoken in Sichuan dialect. Its four gatherings take place at an ancestor’s funeral, a king’s spring rite, an exiled writer’s banquet and an orphan’s birthday. They are separated by millennia but organised around the act of sitting down to eat. [Film details](https://www.midnightblurfilms.com/fuxi-four-tales-of-feasting)\n\nAt the festival Q&A, Qiu traced the idea to the pandemic, when meeting others for a meal suddenly felt less ordinary. The film was shot entirely in a studio; the festival reports that he worked from roughly 1,000 storyboards. Lee Kang-sheng, Lee Hong-chi and Annie Chen are among the cast. [Tokyo festival Q&A report](https://2026.tiff-jp.net/news/en/?p=21060)"
+    },
+    "relatedSlugs": [
+      "cannes-selections-discovering-cinema",
+      "portrait-lady-fire-looking",
+      "in-the-mood-for-love-qipao-time"
+    ],
+    "images": [
+      {
+        "id": "fuxi-feast",
+        "src": "/images/edition/film/fuxi-feast.webp",
+        "role": "cover",
+        "afterParagraph": null,
+        "caption": {
+          "zh": "《腹喜》（2026）剧照。",
+          "en": "Still from Fuxi: Four Tales of Feasting (2026)."
+        },
+        "alt": {
+          "zh": "昏暗的布景里，五人围在宴席桌旁",
+          "en": "Five figures gathered around a table in a dimly lit set"
+        },
+        "credit": {
+          "zh": "图片：Midnight Blur Films",
+          "en": "Image: Midnight Blur Films"
+        },
+        "sourcePage": "https://www.midnightblurfilms.com/fuxi-four-tales-of-feasting",
+        "width": 1600,
+        "height": 899
+      },
+      {
+        "id": "fuxi-flower",
+        "src": "/images/edition/film/fuxi-flower.webp",
+        "role": "body",
+        "afterParagraph": 0,
+        "caption": {
+          "zh": "《腹喜》（2026）剧照。",
+          "en": "Still from Fuxi: Four Tales of Feasting (2026)."
+        },
+        "alt": {
+          "zh": "白发人物坐在布景中，注视手中的花",
+          "en": "A white-haired figure seated in a set, looking at a flower"
+        },
+        "credit": {
+          "zh": "图片：Midnight Blur Films",
+          "en": "Image: Midnight Blur Films"
+        },
+        "sourcePage": "https://www.midnightblurfilms.com/fuxi-four-tales-of-feasting",
+        "width": 1600,
+        "height": 899
+      }
+    ]
+  },
+  {
     "slug": "screen-costume-character",
     "category": "culture",
     "subsection": "film",
