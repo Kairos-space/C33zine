@@ -1,5 +1,6 @@
 import entries from '@/content/film/entries.json';
 import asvoffInterviews from '@/content/film/asvoff18-interviews.json';
+import newAsvoffInterviews from '@/content/film/asvoff18-new-interviews.json';
 import type {Pair} from './types';
 
 export type FilmImage={
@@ -31,7 +32,7 @@ export type FilmArticle={
  video?:{src:string;poster:string;duration:string;aspectRatio:'16/9'|'9/16'};
 };
 
-const articles=[...asvoffInterviews,...entries] as FilmArticle[];
+const articles=[...newAsvoffInterviews,...asvoffInterviews,...entries] as FilmArticle[];
 
 export function getFilmArticles():FilmArticle[]{return articles.filter(article=>article.status==='published'||(process.env.C33_EDITORIAL_PREVIEW==='1'&&article.status==='draft'));}
 export function getFilmArticle(slug:string):FilmArticle|undefined{return getFilmArticles().find(a=>a.slug===slug);}
