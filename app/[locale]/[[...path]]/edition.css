@@ -59,8 +59,8 @@
 @media(min-width:480px) and (max-width:600px){.ed-nav{flex-wrap:nowrap;white-space:nowrap}.ed-nav>div{gap:18px}.ed-nav .ed-nav-tools{width:auto;padding-top:0;border-top:0;margin-left:auto}}
 .ed-featured-interviews .ed-film-grid{gap:30px}
 .ed-featured-interviews .ed-film-card{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);grid-template-rows:repeat(4,min-content);align-content:start;column-gap:22px;min-width:0}
-.ed-featured-interviews .ed-film-card-image{grid-column:1;grid-row:1 / span 4;width:100%;aspect-ratio:9/16;margin:0}
-.ed-featured-interviews .ed-film-card-image img{width:100%;height:100%;object-fit:contain}
+.ed-featured-interviews .ed-film-card-image{grid-column:1;grid-row:1 / span 4;width:100%;aspect-ratio:4/5;margin:0}
+.ed-featured-interviews .ed-film-card-image img{width:100%;height:100%;object-fit:cover}
 .ed-featured-interviews .ed-film-card>.ed-kicker,.ed-featured-interviews .ed-film-card>h3,.ed-featured-interviews .ed-film-card>p,.ed-featured-interviews .ed-film-card>small{grid-column:2}
 .ed-featured-interviews .ed-film-card h3{font-size:clamp(25px,2.4vw,34px);margin:8px 0 12px}
 .ed-featured-interviews .ed-film-card p{font-size:14px;line-height:1.55;margin:0}
