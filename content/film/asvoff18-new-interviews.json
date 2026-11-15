@@ -15,7 +15,7 @@
     },
     "relatedSlugs": ["asvoff18-stephen-jones-interview", "asvoff18-pascal-k-douglas-interview"],
     "images": [{"id":"diane-interview-still","src":"/images/edition/film/asvoff18-diane-official.jpg","role":"cover","afterParagraph":null,"caption":{"zh":"Diane Pernet，ASVOFF 创办人。","en":"Diane Pernet, founder of ASVOFF."},"alt":{"zh":"Diane Pernet 的黑白肖像","en":"Black-and-white portrait of Diane Pernet"},"credit":{"zh":"图片：ASVOFF 18","en":"Image: ASVOFF 18"},"sourcePage":"https://www.ashadedviewonfashionfilm.com/asvoff-18","width":800,"height":1037}],
-    "video": {"src":"/videos/asvoff18/diane-answer-portrait.mp4","poster":"/images/edition/film/asvoff18-diane-poster.jpg","duration":"1:55","aspectRatio":"9/16"}
+    "video": {"src":"/videos/asvoff18/diane-full-portrait.mp4","poster":"/images/edition/film/asvoff18-diane-poster.jpg","duration":"5:47","aspectRatio":"9/16","chapters":[{"start":0,"title":{"zh":"你希望这一届的评委为选片带来怎样的视角？","en":"What perspectives do you want this year’s jury to bring to the selection?"}},{"start":66.11,"title":{"zh":"今年特别关注亚洲、尤其是中国电影。你怎么看亚洲创作者的参与？","en":"What do you think of Asian creators’ participation?"}},{"start":181.61,"title":{"zh":"与往届相比，这一届有什么特别之处？","en":"What sets this edition apart from previous years?"}}]}
   },
   {
     "slug": "asvoff18-dita-interview",
@@ -28,12 +28,12 @@
     "summary": {"zh": "在 ASVOFF 18，时尚评论人 Dita 与 C33 谈「未来复古」、过度修饰的影像，以及文字和视频里的同一种声音。", "en": "At ASVOFF 18, fashion critic Dita talks to C33 about Future Vintage, overpolished images and keeping the same voice in print and on video."},
     "byline": {"zh": "C33", "en": "C33"},
     "body": {
-      "zh": "在 ASVOFF 18，C33 问评委 Dita 如何理解「未来复古」。她没有从年代或造型谈起，而是把它与现实联系起来：回望过去，不等于复制过去。能够留下来的风格，需要回应当下的世界，也要让后来的人仍愿意参与其中。\n\n她最厌倦的时尚电影套路，是把每个画面都打磨得过于完美。Dita 更喜欢作品保留一点瑕疵，就像略微晕开的睫毛膏：少一点修饰，画面反而有自己的味道。\n\n从文章转向视频，她说自己的表达方式并不会因此改变，重要的是始终忠于自己的判断。问到这一届是否有令她意外的影片，她暂时没有透露片名。\n\n[ASVOFF 18 官方网站](https://www.ashadedviewonfashionfilm.com/asvoff-18)",
-      "en": "Asked what Future Vintage means to her at ASVOFF 18, juror and fashion critic Dita did not begin with a decade or a silhouette. Looking back, she argued, should not amount to copying the past. Clothes and images that endure have something to say about the world around them—and give a later generation a reason to return.\n\nThe fashion-film habit she could do without is the pursuit of polish at any cost. Dita prefers an image with a little imperfection, comparing it to mascara that has smudged slightly. The flaw gives the work flavour.\n\nMoving between writing and video does not, she said, require a different persona: she tries to stay true to her own point of view. As for a film that surprised her at this year’s festival, she was not ready to name it. \n\n[ASVOFF 18 official website](https://www.ashadedviewonfashionfilm.com/asvoff-18)"
+      "zh": "在 ASVOFF 18，C33 问评委 Dita 如何理解「未来复古」。她没有从年代或造型谈起，而是把它与现实联系起来：回望过去，不等于复制过去。能够留下来的风格，需要回应当下的世界，也要让后来的人仍愿意参与其中。\n\n她最厌倦的时尚电影套路，是把每个画面都打磨得过于完美。Dita 更喜欢作品保留一点瑕疵，就像略微晕开的睫毛膏：少一点修饰，画面反而有自己的味道。\n\n从文章转向视频，她说自己的表达方式并不会因此改变，重要的是始终忠于自己的判断。\n\n[ASVOFF 18 官方网站](https://www.ashadedviewonfashionfilm.com/asvoff-18)",
+      "en": "Asked what Future Vintage means to her at ASVOFF 18, juror and fashion critic Dita did not begin with a decade or a silhouette. Looking back, she argued, should not amount to copying the past. Clothes and images that endure have something to say about the world around them—and give a later generation a reason to return.\n\nThe fashion-film habit she could do without is the pursuit of polish at any cost. Dita prefers an image with a little imperfection, comparing it to mascara that has smudged slightly. The flaw gives the work flavour.\n\nMoving between writing and video does not, she said, require a different persona: she tries to stay true to her own point of view.\n\n[ASVOFF 18 official website](https://www.ashadedviewonfashionfilm.com/asvoff-18)"
     },
     "relatedSlugs": ["asvoff18-diane-pernet-interview", "asvoff18-stephen-jones-interview"],
     "images": [{"id":"dita-interview-still","src":"/images/edition/film/asvoff18-dita-official.jpg","role":"cover","afterParagraph":null,"caption":{"zh":"Dita，ASVOFF 18 评委。","en":"Dita, ASVOFF 18 jury member."},"alt":{"zh":"Dita 的黑白肖像","en":"Black-and-white portrait of Dita"},"credit":{"zh":"图片：ASVOFF 18","en":"Image: ASVOFF 18"},"sourcePage":"https://www.ashadedviewonfashionfilm.com/asvoff-18","width":800,"height":1000}],
-    "video": {"src":"/videos/asvoff18/dita-answer-portrait.mp4","poster":"/images/edition/film/asvoff18-dita-poster.jpg","duration":"0:27","aspectRatio":"9/16"}
+    "video": {"src":"/videos/asvoff18/dita-full-portrait.mp4","poster":"/images/edition/film/asvoff18-dita-poster.jpg","duration":"1:24","aspectRatio":"9/16","chapters":[{"start":0,"title":{"zh":"在你看来，什么是「未来复古」？","en":"What does Future Vintage mean to you?"}},{"start":49.35,"title":{"zh":"你最看腻哪一种时尚电影套路？","en":"Which fashion-film cliché are you most tired of?"}},{"start":76.31,"title":{"zh":"写文章和拍视频时，你谈时尚的方式会变吗？","en":"Do you talk about fashion differently in articles and videos?"}}]}
   },
   {
     "slug": "asvoff18-stephen-jones-interview",
@@ -51,6 +51,6 @@
     },
     "relatedSlugs": ["asvoff18-diane-pernet-interview", "asvoff18-dita-interview"],
     "images": [{"id":"stephen-interview-still","src":"/images/edition/film/asvoff18-stephen-official.jpg","role":"cover","afterParagraph":null,"caption":{"zh":"Stephen Jones，ASVOFF 18 评委会主席。","en":"Stephen Jones, president of the ASVOFF 18 jury."},"alt":{"zh":"Stephen Jones 的黑白肖像","en":"Black-and-white portrait of Stephen Jones"},"credit":{"zh":"摄影：Francisco Chagas / ASVOFF 18","en":"Photo: Francisco Chagas / ASVOFF 18"},"sourcePage":"https://www.ashadedviewonfashionfilm.com/asvoff-18","width":800,"height":1000}],
-    "video": {"src":"/videos/asvoff18/stephen-answer-portrait.mp4","poster":"/images/edition/film/asvoff18-stephen-poster.jpg","duration":"0:54","aspectRatio":"9/16"}
+    "video": {"src":"/videos/asvoff18/stephen-full-portrait.mp4","poster":"/images/edition/film/asvoff18-stephen-poster.jpg","duration":"2:13","aspectRatio":"9/16","chapters":[{"start":0,"title":{"zh":"评选这一届的时尚电影时，你最关注什么？","en":"What mattered most to you when judging this year’s fashion films?"}},{"start":25.56,"title":{"zh":"你觉得大家对时尚电影最大的误解是什么？","en":"What’s the biggest misconception about fashion films?"}},{"start":79.91,"title":{"zh":"对一开始构思系列就拍时尚电影的年轻创作者，你有什么建议？","en":"What advice would you give young creators who start making a fashion film while developing a collection?"}}]}
   }
 ]

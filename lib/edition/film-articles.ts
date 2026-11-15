@@ -16,6 +16,14 @@ export type FilmImage={
  height:number;
 };
 
+export type FilmVideo={
+ src:string;
+ poster:string;
+ duration:string;
+ aspectRatio:'16/9'|'9/16';
+ chapters?:{start:number;title:Pair}[];
+};
+
 export type FilmArticle={
  slug:string;
  category:'culture';
@@ -29,7 +37,7 @@ export type FilmArticle={
  body:Pair;
  relatedSlugs:string[];
  images:FilmImage[];
- video?:{src:string;poster:string;duration:string;aspectRatio:'16/9'|'9/16'};
+ video?:FilmVideo;
 };
 
 const articles=[...newAsvoffInterviews,...asvoffInterviews,...entries] as FilmArticle[];

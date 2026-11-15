@@ -15,7 +15,7 @@
     },
     "relatedSlugs": ["asvoff18-eric-daman-interview", "cannes-selections-discovering-cinema"],
     "images": [{"id":"pascal-interview-still","src":"/images/edition/film/asvoff18-pascal-official.jpg","role":"cover","afterParagraph":null,"caption":{"zh":"Pascal K. Douglas，ASVOFF 18 评委。","en":"Pascal K. Douglas, ASVOFF 18 jury member."},"alt":{"zh":"Pascal K. Douglas 的黑白肖像","en":"Black-and-white portrait of Pascal K. Douglas"},"credit":{"zh":"图片：ASVOFF 18","en":"Image: ASVOFF 18"},"sourcePage":"https://www.ashadedviewonfashionfilm.com/asvoff-18","width":800,"height":1000}],
-    "video": {"src":"/videos/asvoff18/pascal-answer-portrait.mp4","poster":"/images/edition/film/asvoff18-pascal-poster.jpg","duration":"0:56","aspectRatio":"9/16"}
+    "video": {"src":"/videos/asvoff18/pascal-full-portrait.mp4","poster":"/images/edition/film/asvoff18-pascal-poster.jpg","duration":"3:43","aspectRatio":"9/16","chapters":[{"start":0,"title":{"zh":"本届时尚电影有哪些趋势？","en":"What trends have you noticed in this year’s fashion films?"}},{"start":55.66,"title":{"zh":"您有什么建议想给中国的年轻电影创作者？","en":"What advice would you give young filmmakers in China?"}},{"start":131.10,"title":{"zh":"作为评委，您评选时尚电影时最看重什么？","en":"As a juror, what do you look for in a fashion film?"}}]}
   },
   {
     "slug": "asvoff18-eric-daman-interview",
@@ -33,6 +33,6 @@
     },
     "relatedSlugs": ["asvoff18-pascal-k-douglas-interview", "screen-costume-character"],
     "images": [{"id":"eric-interview-still","src":"/images/edition/film/asvoff18-eric-official.jpg","role":"cover","afterParagraph":null,"caption":{"zh":"Eric Daman，ASVOFF 18 评委。","en":"Eric Daman, ASVOFF 18 jury member."},"alt":{"zh":"Eric Daman 的黑白肖像","en":"Black-and-white portrait of Eric Daman"},"credit":{"zh":"图片：ASVOFF 18","en":"Image: ASVOFF 18"},"sourcePage":"https://www.ashadedviewonfashionfilm.com/asvoff-18","width":800,"height":1000}],
-    "video": {"src":"/videos/asvoff18/eric-answer-portrait.mp4","poster":"/images/edition/film/asvoff18-eric-poster.jpg","duration":"0:27","aspectRatio":"9/16"}
+    "video": {"src":"/videos/asvoff18/eric-full-portrait.mp4","poster":"/images/edition/film/asvoff18-eric-poster.jpg","duration":"2:04","aspectRatio":"9/16","chapters":[{"start":0,"title":{"zh":"走到第 18 届，电影节有哪些变化？","en":"How has ASVOFF changed by its 18th edition?"}},{"start":57.49,"title":{"zh":"对想参加时尚电影节的年轻创作者，您有什么建议？","en":"What advice would you give young creators who want to take part in fashion film festivals?"}},{"start":85.02,"title":{"zh":"最近有哪些项目想和 C33 的读者分享？","en":"What recent projects would you like to share with C33 readers?"}}]}
   }
 ]
